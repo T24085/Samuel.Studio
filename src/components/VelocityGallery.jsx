@@ -7,6 +7,7 @@ import {
   useSpring,
   useVelocity,
 } from 'framer-motion'
+import { withBase } from '../utils/paths'
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value))
@@ -33,7 +34,7 @@ function GalleryCard({ item, index, onSelect }) {
         loading="lazy"
         decoding="async"
         onError={(event) => {
-          event.currentTarget.src = '/photos/self-port.jpg'
+          event.currentTarget.src = withBase('photos/self-port.jpg')
         }}
         className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.04]"
       />

@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
+import { withBase } from '../utils/paths'
 
 const tileVariants = [
   { width: 'w-[92%] sm:w-[88%]', height: 'h-[11rem] sm:h-[13rem]', align: 'self-start', offset: 'mt-0' },
@@ -95,7 +96,7 @@ function GalleryCard({ item, variant, onSelect }) {
         loading="lazy"
         decoding="async"
         onError={(event) => {
-          event.currentTarget.src = '/photos/self-port.jpg'
+          event.currentTarget.src = withBase('photos/self-port.jpg')
         }}
         className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.04]"
       />

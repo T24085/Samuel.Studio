@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async'
+import { siteUrl, withBase } from '../utils/paths'
 
-export function SEO({ title, description, path = '/', image = '/og-image.svg', schema }) {
+export function SEO({ title, description, path = '/', image = withBase('og-image.svg'), schema }) {
   const pageTitle = title ? `${title} | Samuel Studio` : 'Samuel Studio'
-  const canonical = typeof window !== 'undefined' ? `${window.location.origin}${path}` : path
+  const canonical = siteUrl(path)
 
   return (
     <Helmet>

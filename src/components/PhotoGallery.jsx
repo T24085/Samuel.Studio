@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { withBase } from '../utils/paths'
 
 export function PhotoGallery({
   items,
@@ -34,7 +35,7 @@ export function PhotoGallery({
                 loading="lazy"
                 decoding="async"
                 onError={(event) => {
-                  event.currentTarget.src = '/photos/self-port.jpg'
+                  event.currentTarget.src = withBase('photos/self-port.jpg')
                 }}
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
               />

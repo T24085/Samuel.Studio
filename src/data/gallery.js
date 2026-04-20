@@ -1,3 +1,5 @@
+import { withBase } from '../utils/paths'
+
 export const galleryModes = ['Panorama', 'Cinema', 'Overhead', 'Showcase', 'Gallery', 'Standard']
 export const categoryTabs = ['All', 'Portraits', 'Branding', 'Couples', 'Studio', 'Editorial', 'Fashion', 'Lifestyle', 'Fine Art']
 
@@ -97,7 +99,7 @@ export const galleryItems = galleryFiles.map((file, index) => {
   const title = titleOverrides[file] ?? toTitleCase(file)
   return {
     id: file.replace(/\.[^.]+$/, ''),
-    src: `/photos/${file}`,
+    src: withBase(`photos/${file}`),
     alt: `${title} from Samuel Studio.`,
     title,
     categories: inferCategories(file),

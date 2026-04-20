@@ -6,6 +6,7 @@ import { ContactForm } from '../components/ContactForm'
 import { site } from '../data/site'
 import { galleryItems } from '../data/gallery'
 import { GoldFrame, VerticalTag } from '../components/DecorativeElements'
+import { withBase } from '../utils/paths'
 
 function BookingBackdrop() {
   const reducedMotion = useReducedMotion()
@@ -46,7 +47,7 @@ function BookingBackdrop() {
                 : { duration: 8.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }
             }
             onError={(event) => {
-              event.currentTarget.src = '/photos/self-port.jpg'
+              event.currentTarget.src = withBase('photos/self-port.jpg')
             }}
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.16),rgba(0,0,0,0.6)),radial-gradient(circle_at_center,rgba(10,51,45,0.12),transparent_58%)]" />

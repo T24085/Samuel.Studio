@@ -12,6 +12,7 @@ import { CTASection } from '../components/CTASection'
 import { MotionDeckSection } from '../components/AboutPosterSection'
 import { Infinite3DGallery } from '../components/Infinite3DGallery'
 import { Lightbox } from '../components/Lightbox'
+import { siteUrl, withBase } from '../utils/paths'
 import leftPortrait from '../../Left2.png'
 import rightPortrait from '../../Right.png'
 
@@ -138,12 +139,12 @@ export function HomePage() {
           '@context': 'https://schema.org',
           '@type': 'LocalBusiness',
           name: site.name,
-          image: '/og-image.svg',
+          image: withBase('og-image.svg'),
           email: site.email,
           telephone: site.phone,
           areaServed: 'United States',
           description: site.tagline,
-          url: typeof window !== 'undefined' ? window.location.origin : '/',
+          url: siteUrl('/'),
         }}
       />
 
@@ -172,7 +173,7 @@ export function HomePage() {
             }
           >
             <img
-              src={confidenceImage?.src ?? '/photos/self-port.jpg'}
+              src={confidenceImage?.src ?? withBase('photos/self-port.jpg')}
               alt=""
               aria-hidden="true"
               className="h-full w-full object-cover object-center brightness-[1.08] contrast-[1.08] saturate-[1.03]"
@@ -204,7 +205,7 @@ export function HomePage() {
             }
           >
             <img
-              src={clearIntentImage?.src ?? '/photos/self-port.jpg'}
+              src={clearIntentImage?.src ?? withBase('photos/self-port.jpg')}
               alt=""
               aria-hidden="true"
               className="h-full w-full object-cover object-center brightness-[1.08] contrast-[1.08] saturate-[1.03]"

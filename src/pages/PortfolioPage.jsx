@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { SEO } from '../components/SEO'
 import { Lightbox } from '../components/Lightbox'
 import { galleryItems } from '../data/gallery'
+import { withBase } from '../utils/paths'
 
 const tileRatios = [0.82, 1.08, 0.92, 1.22, 0.88, 1.16, 0.96, 1.28]
 
@@ -56,7 +57,7 @@ export function PortfolioPage() {
                   aspectRatio: tileRatios[index % tileRatios.length],
                 }}
                 onError={(event) => {
-                  event.currentTarget.src = '/photos/self-port.jpg'
+                  event.currentTarget.src = withBase('photos/self-port.jpg')
                 }}
               />
             </button>
