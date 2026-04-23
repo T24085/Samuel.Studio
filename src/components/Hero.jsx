@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Camera } from 'lucide-react'
 import { galleryItems } from '../data/gallery'
-import { site } from '../data/site'
 import { FlowFieldBackdrop } from './FlowFieldBackdrop'
-import { FanArcBackdrop, GoldFrame, InkWashBackground, VerticalTag } from './DecorativeElements'
+import { FanArcBackdrop, GoldFrame, InkWashBackground } from './DecorativeElements'
 
 export function Hero() {
   const heroImage = galleryItems.find((item) => item.id === 'women-6') ?? galleryItems[0]
@@ -30,13 +29,14 @@ export function Hero() {
             transition={{ duration: 0.85, ease: 'easeOut' }}
             className="max-w-3xl space-y-7"
           >
-            <VerticalTag>Luxury editorial portraiture</VerticalTag>
             <div className="space-y-5">
               <h1 className="font-display text-5xl leading-[0.95] tracking-[-0.02em] text-ivory md:text-7xl lg:text-[5.8rem]">
                 Portraits shaped by light, restraint, and presence.
               </h1>
               <p className="max-w-2xl text-base leading-8 text-parchment/78 md:text-lg">
-                {site.tagline} Samuel Studio creates cinematic imagery for clients who want photographs that feel polished, intimate, and enduring.
+                Samuel Studio creates cinematic imagery designed around identity, presence, and perception.
+                {' '}
+                We work with individuals and brands to shape how they are seen, through refined, intentional visual storytelling.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4">

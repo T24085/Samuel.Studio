@@ -419,6 +419,45 @@
   .nav-draw-gold:focus-visible::after {
     transition-delay: 0s, 0.3s, 0s;
   }
+
+  .floating-booking-link {
+    box-shadow:
+      0 18px 50px rgba(0, 0, 0, 0.34),
+      0 0 0 1px rgba(198, 161, 91, 0.12);
+  }
+
+  .floating-booking-link::before,
+  .floating-booking-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .floating-booking-link::before {
+    inset: -10px;
+    border: 1px solid rgba(198, 161, 91, 0.18);
+    background: radial-gradient(circle, rgba(198, 161, 91, 0.18) 0%, transparent 68%);
+    opacity: 0.78;
+    filter: blur(8px);
+    animation: floating-booking-halo 5.4s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  .floating-booking-link::after {
+    background: linear-gradient(115deg, transparent 20%, rgba(245, 240, 230, 0.12) 46%, transparent 72%);
+    opacity: 0.42;
+    transform: translateX(-120%);
+    transition: transform 520ms ease, opacity 520ms ease;
+    z-index: 0;
+  }
+
+  .floating-booking-link:hover::after,
+  .floating-booking-link:focus-visible::after {
+    opacity: 0.56;
+    transform: translateX(120%);
+  }
 }
 
 @keyframes gold-shimmer {
@@ -519,6 +558,19 @@
   }
 }
 
+@keyframes floating-booking-halo {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+
+  50% {
+    opacity: 0.92;
+    transform: scale(1.03);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .about-marquee-track {
     animation: none !important;
@@ -526,6 +578,12 @@
 
   .signature-marquee-track {
     animation: none !important;
+  }
+
+  .floating-booking-link::before,
+  .floating-booking-link::after {
+    animation: none !important;
+    transition: none !important;
   }
 
   *,

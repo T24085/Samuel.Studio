@@ -1,0 +1,12 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1000" height="700" fill="#1C2C54"/>
+<path d="M0 490C142 334 252 274 418 244C604 210 756 248 1000 420V700H0V490Z" fill="#1F7A63"/>
+<rect x="118" y="316" width="92" height="214" fill="#F5E9DA"/>
+<rect x="236" y="266" width="74" height="264" fill="#FF6B5E"/>
+<rect x="326" y="338" width="110" height="192" fill="#F4A300"/>
+<rect x="470" y="286" width="84" height="244" fill="#F5E9DA"/>
+<rect x="584" y="238" width="122" height="292" fill="#C1442E"/>
+<rect x="738" y="300" width="86" height="230" fill="#F5E9DA"/>
+<rect x="848" y="344" width="54" height="186" fill="#FF6B5E"/>
+<text x="82" y="88" fill="#F5E9DA" font-family="Inter, sans-serif" font-size="22" letter-spacing="10">CITY / MOUNTAIN / RHYTHM</text>
+</svg>

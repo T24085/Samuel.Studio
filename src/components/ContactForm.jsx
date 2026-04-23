@@ -1,12 +1,13 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { site } from '../data/site'
+import { bookingServiceOptions } from '../data/services'
 
 const initialState = {
   name: '',
   email: '',
   phone: '',
-  sessionType: 'Portrait Session',
+  service: '',
   preferredDate: '',
   message: '',
 }
@@ -16,23 +17,13 @@ export function ContactForm() {
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
 
-  const sessionOptions = useMemo(
-    () => [
-      'Portrait Session',
-      'Branding Session',
-      'Couples Session',
-      'Family Session',
-      'Creative Editorial',
-    ],
-    [],
-  )
-
   function validate(nextValues) {
     const nextErrors = {}
     if (!nextValues.name.trim()) nextErrors.name = 'Please add your name.'
     if (!nextValues.email.trim()) nextErrors.email = 'Please add your email.'
     else if (!/^\S+@\S+\.\S+$/.test(nextValues.email)) nextErrors.email = 'Please enter a valid email.'
     if (!nextValues.phone.trim()) nextErrors.phone = 'Please add a phone number.'
+    if (!nextValues.service.trim()) nextErrors.service = 'Please select a service.'
     if (!nextValues.preferredDate.trim()) nextErrors.preferredDate = 'Please select a preferred date.'
     if (!nextValues.message.trim()) nextErrors.message = 'Please tell us a little about the session.'
     return nextErrors
@@ -80,7 +71,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="gold-frame p-8">
+    <form id="booking-form" onSubmit={onSubmit} className="gold-frame scroll-mt-32 p-8">
       <div className="grid gap-5 md:grid-cols-2">
         <Field label="Name" error={errors.name}>
           <input name="name" value={values.name} onChange={onChange} className="input-field" />
@@ -91,11 +82,14 @@ export function ContactForm() {
         <Field label="Phone" error={errors.phone}>
           <input name="phone" value={values.phone} onChange={onChange} className="input-field" />
         </Field>
-        <Field label="Session Type">
-          <select name="sessionType" value={values.sessionType} onChange={onChange} className="input-field">
-            {sessionOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
+        <Field label="Service" error={errors.service}>
+          <select name="service" value={values.service} onChange={onChange} className="input-field">
+            <option value="" disabled>
+              Select a service
+            </option>
+            {bookingServiceOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
               </option>
             ))}
           </select>

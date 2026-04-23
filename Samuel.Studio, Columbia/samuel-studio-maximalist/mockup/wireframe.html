@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Studio Wireframe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--t:#C1442E;--g:#F4A300;--b:#1C2C54;--gr:#1F7A63;--c:#FF6B5E;--k:#0A0A0A;--cr:#F5E9DA}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:#111;color:#fff}
+    .wrap{width:min(1200px,calc(100% - 24px));margin:0 auto;padding:28px 0 80px}
+    h1,h2{font-family:"Cormorant Garamond",serif;margin:0}.intro{padding:20px 0 34px}
+    .board{display:grid;gap:28px}.frame{border-radius:28px;overflow:hidden;box-shadow:0 22px 70px rgba(0,0,0,.25);min-height:78vh;position:relative;padding:22px}
+    .frame.hero{background:linear-gradient(135deg, rgba(10,10,10,.92), rgba(10,10,10,.72)), url('../assets/hero-poster.svg') center/cover}
+    .frame.manifesto{background:var(--cr);color:#0A0A0A}.frame.still{background:var(--t)}.frame.motion{background:var(--b)}
+    .frame.foundation{background:var(--cr);color:#0A0A0A}.frame.services{background:var(--gr)}.frame.project{background:var(--c);color:#0A0A0A}.frame.cta{background:var(--k)}
+    .label{text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:700}.hero h1{font-size:clamp(48px,10vw,132px);line-height:.88;max-width:7ch;margin-top:20px}
+    .hero p{max-width:40rem;font-size:1.15rem;line-height:1.6}.pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.pill{border:1px solid rgba(255,255,255,.25);padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.06)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;height:100%;align-items:center}.big{font-size:clamp(42px,7vw,92px);line-height:.9}.small{max-width:34rem;line-height:1.7}
+    .poster{height:74%;background:url('../assets/poster-portrait.svg') center/cover;border-radius:24px;transform:rotate(-3deg)}
+    .stillgrid{position:relative;height:66vh}.box{position:absolute;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+    .a{inset:0 28% 0 0;background:url('../assets/still-1.svg') center/cover}.b{top:0;right:0;width:30%;height:44%;background:url('../assets/still-2.svg') center/cover}.d{bottom:0;right:5%;width:34%;height:40%;background:url('../assets/still-3.svg') center/cover}
+    .motionshot{height:68vh;background:url('../assets/motion-reel.svg') center/cover;border-radius:24px;position:relative}.ticker{position:absolute;left:7%;right:7%;bottom:20px;display:flex;gap:10px;flex-wrap:wrap}.ticker span{padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2)}
+    .collage{position:relative;height:68vh}.layer{position:absolute;border-radius:24px;box-shadow:0 16px 40px rgba(0,0,0,.18)}.l1{width:42%;left:4%;top:7%}.l2{width:58%;right:2%;top:5%}.l3{width:40%;left:24%;bottom:5%}
+    .stack{position:relative;height:66vh}.svc{position:absolute;left:0;right:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:22px}.svc:nth-child(1){top:0;transform:rotate(-2deg)}.svc:nth-child(2){top:18%;transform:rotate(2deg)}.svc:nth-child(3){top:36%;transform:rotate(-1deg)}.svc:nth-child(4){top:54%;transform:rotate(1.5deg)}
+    .projectimg{height:70vh;background:url('../assets/featured-project.svg') center/cover;border-radius:24px}
+    .cta .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;background:var(--cr);color:#111;text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:700}
+    @media (max-width:900px){.grid2{grid-template-columns:1fr}.poster,.motionshot,.projectimg,.collage,.stack,.stillgrid{height:52vh}.a{inset:0 0 42% 0}.b{width:48%;left:0;top:auto;bottom:0}.d{width:48%;right:0;height:34%}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="intro">
+      <div class="label">Samuel Studio / Wireframe Preview</div>
+      <h1 style="font-size:clamp(44px,8vw,84px);line-height:.9">Full-screen maximalist Colombian homepage system</h1>
+    </div>
+    <div class="board">
+      <section class="frame hero"><div class="label">01 / Hero</div><h1>SAMUEL STUDIO</h1><p>Colombian image making for brands, people, and stories. Luxury photography and motion with color, tension, and editorial force.</p><div class="pillrow"><span class="pill">Photography</span><span class="pill">Film</span><span class="pill">Editorial</span><span class="pill">Campaigns</span></div></section>
+      <section class="frame manifesto"><div class="grid2"><div><div class="label">02 / Manifesto</div><h2 class="big">NOT CONTENT. PRESENCE.</h2><h2 class="big" style="transform:translateX(10%);margin-top:8px">NOT TRENDS. IDENTITY.</h2><p class="small">This is where luxury editorial energy meets Colombian heat, rhythm, shadow, and color.</p></div><div class="poster"></div></div></section>
+      <section class="frame still"><div class="label">03 / Photography</div><h2 class="big" style="max-width:10ch">PORTRAIT / CAMPAIGN / FASHION / DOCUMENTARY</h2><div class="stillgrid"><div class="box a"></div><div class="box b"></div><div class="box d"></div></div></section>
+      <section class="frame motion"><div class="grid2"><div class="motionshot"><div class="ticker"><span>DIRECTION</span><span>RHYTHM</span><span>ATMOSPHERE</span><span>TEXTURE</span></div></div><div><div class="label">04 / Motion</div><h2 class="big">FILMS THAT MOVE LIKE MEMORY.</h2><p class="small">A full-screen reel zone with muted loops, layered type, and premium transitions.</p></div></div></section>
+      <section class="frame foundation"><div class="grid2"><div><div class="label">05 / Foundation</div><h2 class="big">BORN FROM COLOR, CONTRAST, AND HEAT.</h2><p class="small">Architecture, city density, tropical tone, plaster texture, and art-directed restraint make the Colombian identity feel elevated instead of literal.</p></div><div class="collage"><img src="../assets/texture-wall.svg" class="layer l1"><img src="../assets/colombia-city.svg" class="layer l2"><img src="../assets/colombia-arch.svg" class="layer l3"></div></div></section>
+      <section class="frame services"><div class="grid2"><div><div class="label">06 / Services</div><h2 class="big">POSTER STACK OFFERS.</h2></div><div class="stack"><div class="svc">Campaign Photography</div><div class="svc">Portrait Direction</div><div class="svc">Brand Films</div><div class="svc">Social Visual Systems</div></div></div></section>
+      <section class="frame project"><div class="grid2"><div class="projectimg"></div><div><div class="label">07 / Selected Work</div><h2 class="big">CULTURAL TENSION, MOVEMENT, IDENTITY.</h2><p class="small">Use this area to spotlight one flagship campaign or case study.</p></div></div></section>
+      <section class="frame cta"><div class="label">08 / Contact</div><h2 class="big" style="max-width:9ch">LET'S BUILD THE IMAGE YOUR BRAND DESERVES.</h2><div class="actions"><span class="btn">Start a project</span><span class="btn" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.2)">View Instagram</span></div></section>
+    </div>
+  </div>
+</body>
+</html>

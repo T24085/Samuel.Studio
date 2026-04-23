@@ -29,8 +29,12 @@ export function Footer() {
         <div>
           <h2 className="text-xs uppercase tracking-[0.35em] text-gold/80">Contact</h2>
           <div className="mt-4 space-y-2 text-sm text-parchment/72">
-            <p>{site.email}</p>
-            <p>{site.phone}</p>
+            <a href={`mailto:${site.email}`} className="block transition hover:text-ivory">
+              {site.email}
+            </a>
+            <a href={`tel:${site.phone.replace(/[^\d+]/g, '')}`} className="block transition hover:text-ivory">
+              {site.phone}
+            </a>
             <p>{site.location}</p>
           </div>
         </div>

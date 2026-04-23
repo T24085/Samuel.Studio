@@ -1,0 +1,7 @@
+<svg width="700" height="900" viewBox="0 0 700 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="700" height="900" fill="#F5E9DA"/>
+<rect x="110" y="150" width="480" height="640" rx="30" fill="#F4A300"/>
+<path d="M190 760V470C190 336 262 250 350 250C438 250 510 336 510 470V760" stroke="#1C2C54" stroke-width="60" stroke-linecap="round"/>
+<path d="M190 730H510" stroke="#1C2C54" stroke-width="60" stroke-linecap="round"/>
+<text x="150" y="128" fill="#1C2C54" font-family="Inter, sans-serif" font-size="18" letter-spacing="7">ARCH / LIGHT / MEMORY</text>
+</svg>

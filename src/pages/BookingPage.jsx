@@ -66,7 +66,7 @@ export function BookingPage() {
     <>
       <SEO
         title="Booking"
-        description="Book a session with Samuel Studio. Submit an inquiry for portraits, branding, couples, family, or editorial photography."
+        description="Book an inquiry with Samuel Studio for editorial campaigns, personal brand identity, visual story projects, or private portrait sessions."
         path="/booking"
       />
       <section className="relative isolate min-h-screen overflow-hidden bg-ink py-24 text-ivory">
@@ -77,7 +77,7 @@ export function BookingPage() {
             <SectionHeading
               eyebrow="Booking / Contact"
               title="Begin with an inquiry, then shape the session around your story."
-              description="Use the form to share your goals, timing, and the kind of image language you want. The studio will respond with next steps and availability."
+              description="Use the form to share your goals, timing, and the service you want. The studio will respond with next steps and availability."
             />
 
             <div className="mt-14 grid gap-8 lg:grid-cols-[1.1fr_0.6fr]">

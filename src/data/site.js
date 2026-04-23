@@ -6,12 +6,12 @@ export const site = {
   location: 'By appointment',
   hours: 'Mon-Sat, 10am-6pm',
   turnaround: '2-3 weeks',
-  email: 'hello@samuelstudio.com',
-  phone: '(555) 014-2207',
+  email: 'capture@samuel.studio',
+  phone: '(707) 726-2279',
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ssp.capture/', external: true },
     { label: 'Pinterest', href: 'https://pinterest.com', external: true },
-    { label: 'Email', href: 'mailto:hello@samuelstudio.com', external: false },
+    { label: 'Email', href: 'mailto:capture@samuel.studio', external: false },
   ],
 }
 

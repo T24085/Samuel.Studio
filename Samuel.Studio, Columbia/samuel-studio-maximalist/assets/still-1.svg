@@ -1,0 +1,9 @@
+<svg width="1000" height="1100" viewBox="0 0 1000 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1000" height="1100" fill="#F5E9DA"/>
+<rect x="74" y="70" width="852" height="960" rx="28" fill="#C1442E"/>
+<circle cx="500" cy="430" r="180" fill="#F4A300"/>
+<path d="M250 930C350 760 660 780 748 930" stroke="#1C2C54" stroke-width="110" stroke-linecap="round"/>
+<rect x="326" y="226" width="112" height="246" rx="56" fill="#0A0A0A"/>
+<rect x="560" y="226" width="112" height="246" rx="56" fill="#0A0A0A"/>
+<text x="126" y="142" fill="#F5E9DA" font-family="Inter, sans-serif" font-size="18" letter-spacing="8">CAMPAIGN STILL</text>
+</svg>

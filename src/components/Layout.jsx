@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
+import { FloatingBookingButton } from './FloatingBookingButton'
 
 export function Layout() {
   const location = useLocation()
@@ -19,6 +20,7 @@ export function Layout() {
         <Outlet />
       </motion.main>
       {isPortfolioPage ? null : <Footer />}
+      <FloatingBookingButton />
     </div>
   )
 }

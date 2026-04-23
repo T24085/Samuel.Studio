@@ -1,0 +1,7 @@
+<svg width="700" height="700" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="700" height="700" fill="#1F7A63"/>
+<rect x="80" y="80" width="540" height="540" rx="24" fill="#F5E9DA"/>
+<rect x="140" y="140" width="420" height="420" rx="22" fill="#1C2C54"/>
+<circle cx="350" cy="350" r="128" fill="#FF6B5E"/>
+<text x="134" y="116" fill="#0A0A0A" font-family="Inter, sans-serif" font-size="18" letter-spacing="7">STUDIO DETAIL</text>
+</svg>
