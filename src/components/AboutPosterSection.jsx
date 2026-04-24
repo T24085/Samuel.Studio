@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import motionDeckVideo01 from '../../Screen Recording 2026-04-20 005001.mp4'
 import motionDeckVideo02 from '../../Recording 2026-04-20 092454.mp4'
@@ -16,26 +16,12 @@ const deckCards = [
   { x: '17rem', y: '1.8rem', rotate: '19deg', scale: 0.9, zIndex: 1, src: motionDeckVideo06 },
 ]
 
-function MotionDeckCard({ card, reduceMotion, index, hoveredIndex, setHoveredIndex }) {
+function MotionDeckCard({ card, reduceMotion, index }) {
   const videoRef = useRef(null)
-  const centerIndex = (deckCards.length - 1) / 2
-  const hoverShift = Math.round((index - centerIndex) * 6)
-  const isHovered = hoveredIndex === index
-  const isSibling = hoveredIndex !== null && hoveredIndex !== index
-  const direction = hoveredIndex === null ? 0 : index < hoveredIndex ? -1 : 1
-  const distance = hoveredIndex === null ? 0 : Math.abs(index - hoveredIndex)
-  const siblingShift = isSibling ? `${direction * Math.min(2.4 + distance * 1.05, 7.2)}rem` : '0rem'
-  const siblingLift = isSibling ? `${Math.min(0.3 + distance * 0.16, 0.9)}rem` : '0rem'
-  const siblingRotate = isSibling ? `${direction * Math.min(2.25 + distance * 0.95, 7)}deg` : '0deg'
 
   useEffect(() => {
     const video = videoRef.current
     if (!video) return undefined
-
-    if (reduceMotion || !isHovered) {
-      video.pause()
-      return undefined
-    }
 
     const startPlayback = () => {
       video.play().catch(() => {})
@@ -43,30 +29,25 @@ function MotionDeckCard({ card, reduceMotion, index, hoveredIndex, setHoveredInd
 
     if (video.readyState >= 1) {
       startPlayback()
-      return undefined
+    } else {
+      video.addEventListener('loadedmetadata', startPlayback, { once: true })
     }
 
-    video.addEventListener('loadedmetadata', startPlayback, { once: true })
     return () => {
       video.removeEventListener('loadedmetadata', startPlayback)
       video.pause()
     }
-  }, [isHovered, reduceMotion])
+  }, [])
 
   return (
-    <motion.button
-      type="button"
-      aria-label={`Preview motion deck video ${index + 1}`}
+    <motion.div
       initial={reduceMotion ? false : { opacity: 0, y: 12, scale: 0.96 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
-      whileHover={reduceMotion ? undefined : { y: -20, x: hoverShift, scale: 1.07 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.7, ease: 'easeOut', delay: index * 0.05 }}
-      className="motion-deck-card cursor-pointer border-0 bg-transparent p-0 text-left"
-      style={{ zIndex: isHovered ? 30 : card.zIndex }}
-      onMouseEnter={() => setHoveredIndex(index)}
-      onFocus={() => setHoveredIndex(index)}
-      onClick={() => setHoveredIndex(index)}
+      whileHover={reduceMotion ? undefined : { y: -14, scale: 1.03 }}
+      className="motion-deck-card border-0 bg-transparent p-0 text-left"
+      style={{ zIndex: card.zIndex }}
     >
       <div
         className="motion-deck-card-shell overflow-hidden rounded-[2rem] bg-[#0e0e0e] p-2 shadow-[0_30px_90px_rgba(0,0,0,0.26)]"
@@ -75,9 +56,6 @@ function MotionDeckCard({ card, reduceMotion, index, hoveredIndex, setHoveredInd
           '--deck-y': card.y,
           '--deck-rotate': card.rotate,
           '--deck-scale': card.scale,
-          '--deck-hover-x': siblingShift,
-          '--deck-hover-y': siblingLift,
-          '--deck-hover-rotate': siblingRotate,
         }}
       >
         <div className="relative aspect-[3/5] overflow-hidden rounded-[1.55rem] bg-black">
@@ -87,6 +65,7 @@ function MotionDeckCard({ card, reduceMotion, index, hoveredIndex, setHoveredInd
             muted
             loop
             playsInline
+            autoPlay
             preload="auto"
             className="absolute inset-0 h-full w-full object-cover"
             style={{ objectPosition: '50% 45%' }}
@@ -94,24 +73,12 @@ function MotionDeckCard({ card, reduceMotion, index, hoveredIndex, setHoveredInd
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0)_38%,rgba(0,0,0,0.36)_100%)]" />
         </div>
       </div>
-    </motion.button>
+    </motion.div>
   )
 }
 
 export function MotionDeckSection() {
   const reduceMotion = useReducedMotion()
-  const [hoveredIndex, setHoveredIndex] = useState(null)
-  const defaultActiveIndex = Math.floor((deckCards.length - 1) / 2)
-
-  useEffect(() => {
-    if (reduceMotion) {
-      setHoveredIndex(null)
-      return undefined
-    }
-
-    setHoveredIndex(defaultActiveIndex)
-    return undefined
-  }, [defaultActiveIndex, reduceMotion])
 
   return (
     <section className="home-snap-section relative isolate overflow-visible bg-[#f2eee6] text-[#111111]">
@@ -144,16 +111,9 @@ export function MotionDeckSection() {
           <div className="absolute left-[46%] top-[20%] h-[33rem] w-[min(108vw,1280px)] -translate-x-1/2 rounded-[4rem] bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.08),transparent_68%)] blur-3xl" />
 
           <div className="motion-deck-rack">
-            <div className="motion-deck-stage" onMouseLeave={() => setHoveredIndex(defaultActiveIndex)}>
+            <div className="motion-deck-stage">
               {deckCards.map((card, index) => (
-                <MotionDeckCard
-                  key={`${card.rotate}-${index}`}
-                  card={card}
-                  index={index}
-                  reduceMotion={reduceMotion}
-                  hoveredIndex={hoveredIndex}
-                  setHoveredIndex={setHoveredIndex}
-                />
+                <MotionDeckCard key={`${card.rotate}-${index}`} card={card} index={index} reduceMotion={reduceMotion} />
               ))}
             </div>
           </div>

@@ -5,6 +5,7 @@ import { Layout } from './components/Layout'
 import { HomePage } from './pages/HomePage'
 import { PortfolioPage } from './pages/PortfolioPage'
 import { ServicesPage } from './pages/ServicesPage'
+import { ServiceDetailPage } from './pages/ServiceDetailPage'
 import { AboutPage } from './pages/AboutPage'
 import { BookingPage } from './pages/BookingPage'
 
@@ -30,6 +31,7 @@ export default function App() {
             <Route index element={<HomePage />} />
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="services" element={<ServicesPage />} />
+            <Route path="services/:slug" element={<ServiceDetailPage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="booking" element={<BookingPage />} />
             <Route path="contact" element={<BookingPage />} />
