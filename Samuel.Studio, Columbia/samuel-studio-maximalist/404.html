@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="0; url=./" />
+  <title>Samuel Studio - Columbia</title>
+  <script>
+    (function () {
+      var sections = new Set(['hero', 'manifesto', 'still', 'motion', 'colombia', 'services', 'project', 'contact']);
+      var path = window.location.pathname.replace(/\/+$/, '');
+      var lastSegment = path.split('/').pop().toLowerCase();
+      var target = sections.has(lastSegment) ? './#' + lastSegment : './';
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  <noscript>
+    <p>Redirecting to the homepage.</p>
+  </noscript>
+</body>
+</html>
