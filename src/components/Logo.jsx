@@ -7,7 +7,7 @@ export function Logo({ compact = false }) {
         Samuel Studio
       </span>
       <span className="mt-1 text-[0.58rem] uppercase tracking-[0.48em] text-parchment/70 group-hover:text-gold/80">
-        Fine Art Photography
+        Cinematic brand identity
       </span>
     </Link>
   )

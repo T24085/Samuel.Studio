@@ -28,6 +28,7 @@ const contourPaths = [
 
 const studioLinks = [
   { label: 'Instagram', href: site.socials[0].href, hint: 'IG', external: true },
+  { label: 'TikTok', href: site.socials[1].href, hint: 'TT', external: true },
   { label: 'Facebook', href: 'https://www.facebook.com/search/top?q=samuel%20studio', hint: 'FB', external: true },
   { label: 'Contact', href: `mailto:${site.email}`, hint: 'CO', external: true },
   { label: 'Featured Work', href: '/portfolio', hint: 'FW', external: false },

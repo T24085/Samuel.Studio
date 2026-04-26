@@ -10,6 +10,7 @@ export const site = {
   phone: '(707) 726-2279',
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ssp.capture/', external: true },
+    { label: 'TikTok', href: 'https://www.tiktok.com/@samuelcary.art', external: true },
     { label: 'Pinterest', href: 'https://pinterest.com', external: true },
     { label: 'Email', href: 'mailto:capture@samuel.studio', external: false },
   ],
