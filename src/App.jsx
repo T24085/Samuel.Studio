@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 import { Layout } from './components/Layout'
 import { HomePage } from './pages/HomePage'
 import { PortfolioPage } from './pages/PortfolioPage'
+import { PortfolioCollectionPage } from './pages/PortfolioCollectionPage'
+import { PortfolioAlbumPage } from './pages/PortfolioAlbumPage'
 import { ServicesPage } from './pages/ServicesPage'
 import { ServiceDetailPage } from './pages/ServiceDetailPage'
 import { AboutPage } from './pages/AboutPage'
@@ -30,6 +32,8 @@ export default function App() {
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="portfolio" element={<PortfolioPage />} />
+            <Route path="portfolio/albums/:albumSlug" element={<PortfolioAlbumPage />} />
+            <Route path="portfolio/:slug" element={<PortfolioCollectionPage />} />
             <Route path="services" element={<ServicesPage />} />
             <Route path="services/:slug" element={<ServiceDetailPage />} />
             <Route path="about" element={<AboutPage />} />
