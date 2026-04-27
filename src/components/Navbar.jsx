@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation, useSearchParams } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { navLinks } from '../data/site'
@@ -17,6 +17,9 @@ function linkClass({ isActive }) {
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const location = useLocation()
+  const [searchParams] = useSearchParams()
+  const magazineOpen = location.pathname.startsWith('/portfolio') && searchParams.has('magazine')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -35,7 +38,7 @@ export function Navbar() {
   return (
     <header
       className={[
-        'fixed inset-x-0 top-0 z-50 transition-all duration-500',
+        `fixed inset-x-0 top-0 transition-all duration-500 ${magazineOpen ? 'z-[90]' : 'z-50'}`,
         scrolled
           ? 'border-b border-gold/10 bg-[linear-gradient(180deg,rgba(17,17,17,0.94),rgba(17,17,17,0.84))] shadow-luxury backdrop-blur-2xl'
           : 'border-b border-white/10 bg-[linear-gradient(180deg,rgba(17,17,17,0.84),rgba(17,17,17,0.58))] shadow-[0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-xl',

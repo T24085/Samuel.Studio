@@ -1,5 +1,10 @@
-import { galleryItems } from './gallery'
+import { portfolioGalleryItems } from './gallery'
 import { withBase } from '../utils/paths'
+
+const samStudioCover = new URL('../../SamStudio1.png', import.meta.url).href
+const allStreetCover = new URL('../../AllStreet1.png', import.meta.url).href
+const colombiaCover = new URL('../../Colombia1.png', import.meta.url).href
+const defiantModelsCover = withBase('portfolio-assets/cover-defiant-models.png')
 
 function makeLookup(items) {
   return new Map(items.map((item) => [item.id, item]))
@@ -9,7 +14,7 @@ function pickItems(lookup, ids) {
   return ids.map((id) => lookup.get(id)).filter(Boolean)
 }
 
-const galleryLookup = makeLookup(galleryItems)
+const galleryLookup = makeLookup(portfolioGalleryItems)
 
 const defiantModelsIds = [
   'modern-black-white',
@@ -86,7 +91,7 @@ export const portfolioCollections = [
     external: true,
     collectionLink: '/portfolio/defiant-models',
     albumSlugs: ['editorial-campaign', 'fashion-commercial'],
-    coverSrc: withBase('portfolio-assets/cover-defiant-models.png'),
+    coverSrc: defiantModelsCover,
     coverAlt: 'Defiant Models magazine cover.',
   },
   {
@@ -107,6 +112,36 @@ export const portfolioCollections = [
     coverAlt: 'Defiant Boudoir magazine cover.',
   },
   {
+    slug: 'samuel-studio',
+    eyebrow: 'Within the Studio / Brand House',
+    title: 'Samuel Studio',
+    description:
+      'The parent magazine that frames the full studio family with a broader editorial voice.',
+    body:
+      'This issue acts as the studio overview and links the brand chapters into one premium family of work.',
+    previewItems: pickItems(galleryLookup, [
+      'collection',
+      'group',
+      'modern-black-white',
+      'artist',
+      'confidence',
+      'blue-dress',
+      'women',
+      'women-6',
+      'silver-dress',
+      'man',
+      'flower',
+      'wild-pants',
+    ]),
+    linkLabel: 'Visit Samuel Studio',
+    href: '/portfolio/samuel-studio',
+    external: false,
+    collectionLink: '/portfolio/samuel-studio',
+    albumSlugs: ['editorial-campaign', 'fashion-commercial', 'personal-identity'],
+    coverSrc: samStudioCover,
+    coverAlt: 'Samuel Studio magazine cover.',
+  },
+  {
     slug: 'allstreet-apparel',
     eyebrow: 'Within the Studio / Culture',
     title: 'AllStreet Apparel',
@@ -120,7 +155,7 @@ export const portfolioCollections = [
     external: false,
     collectionLink: '/portfolio/allstreet-apparel',
     albumSlugs: ['fashion-commercial', 'editorial-campaign'],
-    coverSrc: withBase('portfolio-assets/cover-allstreet.png'),
+    coverSrc: allStreetCover,
     coverAlt: 'AllStreet Apparel magazine cover.',
   },
   {
@@ -137,7 +172,7 @@ export const portfolioCollections = [
     external: false,
     collectionLink: '/portfolio/colombia',
     albumSlugs: ['personal-identity', 'private-lifestyle', 'editorial-campaign'],
-    coverSrc: withBase('portfolio-assets/cover-colombia.png'),
+    coverSrc: colombiaCover,
     coverAlt: 'Samuel Studio Colombia magazine cover.',
   },
 ]
@@ -289,7 +324,7 @@ export const portfolioAlbumsBySlug = new Map(
 export const portfolioMagazineHero = {
   eyebrow: 'Magazine / Portfolio',
   title: 'The Studio Family',
-  coverSrc: withBase('portfolio-assets/cover-studio-family.png'),
+  coverSrc: samStudioCover,
   coverAlt: 'Samuel Studio The Studio Family magazine cover.',
   headline: 'Samuel Studio is the parent house for a growing editorial family.',
   description:

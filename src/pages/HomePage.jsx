@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { Brush, Compass, Gem, HeartHandshake } from 'lucide-react'
-import { galleryItems } from '../data/gallery'
+import { galleryItems, portfolioGalleryItems } from '../data/gallery'
 import { testimonials } from '../data/testimonials'
 import { site } from '../data/site'
 import { SEO } from '../components/SEO'
@@ -82,23 +82,23 @@ export function HomePage() {
   const testimonialTextOpacity = useTransform(testimonialScrollProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.88])
   const contourShiftY = useTransform(testimonialScrollProgress, [0, 1], [-22, 16])
   const mode = 'Panorama'
-  const activeItem = activeIndex !== null ? galleryItems[activeIndex] : null
+  const activeItem = activeIndex !== null ? portfolioGalleryItems[activeIndex] : null
   const clearIntentImage = galleryItems.find((item) => item.title === 'Clear Intent')
   const confidenceImage = galleryItems.find((item) => item.title === 'Confidence')
 
   const openById = (id) => {
-    const index = galleryItems.findIndex((item) => item.id === id)
+    const index = portfolioGalleryItems.findIndex((item) => item.id === id)
     if (index >= 0) setActiveIndex(index)
   }
 
   const close = () => setActiveIndex(null)
   const next = () => {
-    if (!galleryItems.length) return
-    setActiveIndex((current) => ((current ?? 0) + 1) % galleryItems.length)
+    if (!portfolioGalleryItems.length) return
+    setActiveIndex((current) => ((current ?? 0) + 1) % portfolioGalleryItems.length)
   }
   const prev = () => {
-    if (!galleryItems.length) return
-    setActiveIndex((current) => ((current ?? 0) - 1 + galleryItems.length) % galleryItems.length)
+    if (!portfolioGalleryItems.length) return
+    setActiveIndex((current) => ((current ?? 0) - 1 + portfolioGalleryItems.length) % portfolioGalleryItems.length)
   }
 
   useEffect(() => {
@@ -153,7 +153,7 @@ export function HomePage() {
       <section className="home-snap-section bg-[#050505] py-20 text-ivory">
         <div className="relative left-1/2 w-screen -translate-x-1/2">
           <div className="mt-0">
-            <Infinite3DGallery items={galleryItems} mode={mode} onSelect={openById} />
+            <Infinite3DGallery items={portfolioGalleryItems} mode={mode} onSelect={openById} />
           </div>
         </div>
       </section>
@@ -408,7 +408,7 @@ export function HomePage() {
 
       <Lightbox
         item={activeItem}
-        items={galleryItems}
+        items={portfolioGalleryItems}
         index={activeIndex ?? 0}
         onClose={close}
         onNext={next}

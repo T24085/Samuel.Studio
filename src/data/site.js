@@ -8,11 +8,17 @@ export const site = {
   turnaround: '2-3 weeks',
   email: 'capture@samuel.studio',
   phone: '(707) 726-2279',
+  website: 'https://samuel.studio',
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ssp.capture/', external: true },
     { label: 'TikTok', href: 'https://www.tiktok.com/@samuelcary.art', external: true },
-    { label: 'Pinterest', href: 'https://pinterest.com', external: true },
+    { label: 'Facebook', href: 'https://www.facebook.com/search/top?q=samuel%20studio', external: true },
     { label: 'Email', href: 'mailto:capture@samuel.studio', external: false },
+  ],
+  websiteLinks: [
+    { label: 'Website', href: '/', external: false },
+    { label: 'Portfolio', href: '/portfolio', external: false },
+    { label: 'Booking', href: '/booking', external: false },
   ],
 }
 
