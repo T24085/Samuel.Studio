@@ -621,6 +621,7 @@
     transform: translate(-50%, -50%);
     transform-style: preserve-3d;
     will-change: transform;
+    outline: none;
   }
 
   .motion-deck-card-shell {
@@ -640,6 +641,11 @@
   .motion-deck-card:focus-visible .motion-deck-card-shell {
     filter: saturate(1.05) contrast(1.02);
     box-shadow: 0 34px 110px rgba(0, 0, 0, 0.34);
+  }
+
+  .publication-marquee-track {
+    animation: publication-marquee 34s linear infinite;
+    will-change: transform;
   }
 
   .deck-title-gold {
@@ -1017,6 +1023,10 @@
     animation: none !important;
   }
 
+  .publication-marquee-track {
+    animation: none !important;
+  }
+
   .about-cover {
     animation: none !important;
     opacity: 1;
@@ -1122,5 +1132,19 @@
 
   .motion-deck-card-shell {
     transform: none;
+  }
+
+  .publication-marquee-wrap {
+    margin-top: 1.5rem;
+  }
+}
+
+@keyframes publication-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
