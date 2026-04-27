@@ -3,9 +3,101 @@ import { ArrowUpRight, Check, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { SEO } from '../components/SEO'
 import { services } from '../data/services'
+import { withBase } from '../utils/paths'
+
+const serviceFrames = [
+  {
+    src: withBase('photos/modern-black-white.jpg'),
+    alt: 'Black and white editorial portrait from Samuel Studio.',
+    label: 'Campaign',
+    className: 'left-[3%] top-[10%] w-[33%] rotate-[-7deg]',
+  },
+  {
+    src: withBase('photos/confidence.jpg'),
+    alt: 'Personal identity portrait from Samuel Studio.',
+    label: 'Identity',
+    className: 'right-[5%] top-[2%] w-[29%] rotate-[5deg]',
+  },
+  {
+    src: withBase('photos/rain.jpg'),
+    alt: 'Atmospheric lifestyle frame from Samuel Studio.',
+    label: 'Story',
+    className: 'left-[26%] top-[38%] w-[36%] rotate-[2deg]',
+  },
+  {
+    src: withBase('photos/negris-3.jpg'),
+    alt: 'Beauty portrait from Samuel Studio.',
+    label: 'Portrait',
+    className: 'right-[1%] bottom-[5%] w-[34%] rotate-[-4deg]',
+  },
+]
+
+const serviceLooks = [
+  { name: 'Hard light', value: 'Campaign edge' },
+  { name: 'Warm polish', value: 'Personal brand' },
+  { name: 'Slow mood', value: 'Visual story' },
+  { name: 'Soft intimacy', value: 'Portrait session' },
+]
+
+function ServicesContactSheet({ reduceMotion }) {
+  return (
+    <motion.div
+      initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 22, rotate: -1.5 }}
+      animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0, rotate: 0 }}
+      transition={{ duration: 1, ease: 'easeOut', delay: 0.18 }}
+      className="relative min-h-[31rem] overflow-hidden rounded-[2.4rem] border border-white/10 bg-[#0b0a08] shadow-[0_42px_140px_rgba(0,0,0,0.55)] sm:min-h-[35rem] lg:min-h-[39rem]"
+    >
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[linear-gradient(135deg,rgba(198,161,91,0.18),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(0,0,0,0.22))]"
+      />
+      <div aria-hidden="true" className="services-film-grain absolute inset-0 opacity-[0.12]" />
+      <div aria-hidden="true" className="absolute inset-x-7 top-7 flex justify-between gap-2">
+        {Array.from({ length: 9 }).map((_, index) => (
+          <span key={index} className="h-3 w-5 rounded-[2px] border border-black/40 bg-black/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]" />
+        ))}
+      </div>
+      <div aria-hidden="true" className="absolute inset-x-7 bottom-7 flex justify-between gap-2">
+        {Array.from({ length: 9 }).map((_, index) => (
+          <span key={index} className="h-3 w-5 rounded-[2px] border border-black/40 bg-black/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]" />
+        ))}
+      </div>
+
+      <div className="absolute inset-8 sm:inset-10">
+        {serviceFrames.map((frame, index) => (
+          <motion.figure
+            key={frame.src}
+            initial={reduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.94 }}
+            animate={reduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, ease: 'easeOut', delay: 0.28 + index * 0.08 }}
+            className={`absolute aspect-[4/5] overflow-hidden rounded-[1rem] border border-ivory/18 bg-black shadow-[0_24px_70px_rgba(0,0,0,0.52)] ${frame.className}`}
+          >
+            <img src={frame.src} alt={frame.alt} className="h-full w-full object-cover grayscale-[18%] saturate-[0.88]" />
+            <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,rgba(0,0,0,0.54))]" />
+            <figcaption className="absolute bottom-3 left-3 rounded-full border border-white/12 bg-black/38 px-3 py-1.5 text-[0.55rem] uppercase tracking-[0.28em] text-ivory/82 backdrop-blur-md">
+              {frame.label}
+            </figcaption>
+          </motion.figure>
+        ))}
+      </div>
+
+      <div className="absolute bottom-10 left-7 right-7 rounded-[1.2rem] border border-white/10 bg-black/42 p-4 backdrop-blur-md sm:left-10 sm:right-10">
+        <div className="grid gap-2 sm:grid-cols-2">
+          {serviceLooks.map((look) => (
+            <div key={look.name} className="flex items-center justify-between gap-3 border-b border-white/10 py-2 last:border-b sm:[&:nth-last-child(-n+2)]:border-b-0">
+              <span className="text-[0.58rem] uppercase tracking-[0.28em] text-gold/70">{look.name}</span>
+              <span className="text-right text-[0.72rem] text-parchment/76">{look.value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  )
+}
 
 function ServiceGatewayCard({ service, index, reduceMotion }) {
   const preview = service.included.slice(0, 3)
+  const frame = serviceFrames[index % serviceFrames.length]
 
   return (
     <motion.article
@@ -26,7 +118,20 @@ function ServiceGatewayCard({ service, index, reduceMotion }) {
       />
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-      <div className="relative grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="relative grid gap-0 lg:grid-cols-[0.72fr_1fr_0.88fr]">
+        <div className="relative min-h-[18rem] overflow-hidden border-b border-white/10 bg-black/30 lg:min-h-full lg:border-b-0 lg:border-r">
+          <img
+            src={frame.src}
+            alt={frame.alt}
+            className="absolute inset-0 h-full w-full object-cover opacity-[0.82] grayscale-[10%] saturate-[0.9] transition duration-700 group-hover:scale-[1.035] group-hover:opacity-95"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.66)),linear-gradient(90deg,rgba(0,0,0,0.2),transparent)]" />
+          <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-4">
+            <span className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/72">Look {String(index + 1).padStart(2, '0')}</span>
+            <span className="h-px flex-1 bg-gradient-to-r from-gold/45 to-transparent" />
+          </div>
+        </div>
+
         <div className="px-6 py-7 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
           <div className="flex flex-wrap items-center gap-4">
             <span className="font-display text-5xl leading-none tracking-[-0.06em] text-ivory/16 md:text-6xl">
@@ -88,12 +193,12 @@ function ServiceGatewayCard({ service, index, reduceMotion }) {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               to={`/services/${service.slug}`}
-              className="group inline-flex items-center justify-between gap-4 rounded-full border border-gold/35 bg-[linear-gradient(180deg,rgba(198,161,91,0.24),rgba(198,161,91,0.1))] px-6 py-4 text-xs uppercase tracking-[0.3em] text-ivory transition duration-300 hover:border-gold/70 hover:bg-[linear-gradient(180deg,rgba(198,161,91,0.34),rgba(198,161,91,0.12))]"
+              className="studio-primary-cta group inline-flex items-center justify-between gap-4 rounded-full px-6 py-4 text-xs font-semibold uppercase tracking-[0.3em] transition duration-300"
             >
-              <span>{service.cta}</span>
+              <span className="relative z-10">{service.cta}</span>
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
-            <div className="rounded-full border border-white/10 bg-white/[0.03] px-5 py-4 text-[0.62rem] uppercase tracking-[0.3em] text-parchment/72">
+            <div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-4 text-[0.62rem] uppercase tracking-[0.3em] text-parchment/72 sm:block">
               View full details
             </div>
           </div>
@@ -150,7 +255,7 @@ export function ServicesPage() {
 
         <div className="relative z-10">
           <section className="studio-shell pt-24 pb-12 sm:pt-28 lg:pb-16 lg:pt-32">
-            <div className="grid gap-10 lg:grid-cols-[1.18fr_0.82fr] lg:items-end">
+            <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
               <div className="max-w-5xl">
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Services</p>
                 <h1 className="mt-6 max-w-5xl font-display text-[3.2rem] leading-[0.86] tracking-[-0.055em] text-ivory sm:text-6xl md:text-[4.6rem] lg:text-[5.7rem] xl:text-[6.5rem]">
@@ -173,49 +278,7 @@ export function ServicesPage() {
                 </div>
               </div>
 
-              <aside className="relative overflow-hidden rounded-[2.2rem] border border-gold/16 bg-[linear-gradient(180deg,rgba(14,12,10,0.98),rgba(5,5,5,0.98))] p-7 shadow-[0_40px_120px_rgba(0,0,0,0.5)] backdrop-blur-[22px] sm:p-8 lg:p-9">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 opacity-90"
-                  style={{
-                    backgroundImage:
-                      'radial-gradient(circle at 18% 18%, rgba(198,161,91,0.16), transparent 24%), radial-gradient(circle at 84% 14%, rgba(255,255,255,0.06), transparent 20%), linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.14))',
-                  }}
-                />
-                <div aria-hidden="true" className="absolute inset-x-8 top-8 h-px bg-gradient-to-r from-transparent via-gold/45 to-transparent" />
-                <div aria-hidden="true" className="absolute inset-y-8 left-6 w-px bg-gradient-to-b from-transparent via-gold/25 to-transparent" />
-
-                <div className="relative">
-                  <p className="text-[0.67rem] uppercase tracking-[0.38em] text-gold/72">What to expect</p>
-                  <p className="mt-6 max-w-sm font-display text-3xl leading-[0.92] tracking-[-0.04em] text-ivory">
-                    A curated service menu, not a generic package grid.
-                  </p>
-
-                  <div className="mt-7 space-y-4 text-sm leading-7 text-parchment/74">
-                    <p>Every commission is tailored around audience, use case, and visual atmosphere.</p>
-                    <p>Planning includes concept direction, tone-setting, and a guided creative process.</p>
-                    <p>The delivery is built to hold up across web, print, social, and campaign systems.</p>
-                  </div>
-
-                  <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                    {['Editorial campaigns', 'Personal identity', 'Visual stories', 'Private portraits'].map((item) => (
-                      <div
-                        key={item}
-                        className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-3 text-center text-[0.67rem] uppercase tracking-[0.26em] text-parchment/78"
-                      >
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-8 rounded-[1.4rem] border border-white/10 bg-black/20 px-5 py-4">
-                    <p className="text-[0.64rem] uppercase tracking-[0.34em] text-gold/68">Studio cadence</p>
-                    <p className="mt-2 text-sm leading-7 text-parchment/72">
-                      By appointment, with limited commissions held to preserve attention and quality.
-                    </p>
-                  </div>
-                </div>
-              </aside>
+              <ServicesContactSheet reduceMotion={reduceMotion} />
             </div>
           </section>
 
@@ -319,20 +382,16 @@ export function ServicesPage() {
               <div className="flex flex-col justify-end gap-4">
                 <Link
                   to="/booking"
-                  className="group relative inline-flex items-center justify-between gap-4 overflow-hidden rounded-full border border-gold/40 bg-[linear-gradient(180deg,rgba(198,161,91,0.24),rgba(198,161,91,0.1))] px-6 py-4 text-xs uppercase tracking-[0.3em] text-ivory shadow-[0_16px_42px_rgba(0,0,0,0.28)] transition duration-300 hover:border-gold/70 hover:bg-[linear-gradient(180deg,rgba(198,161,91,0.34),rgba(198,161,91,0.12))] hover:shadow-[0_20px_55px_rgba(0,0,0,0.38)]"
+                  className="studio-primary-cta group inline-flex items-center justify-between gap-4 rounded-full px-6 py-4 text-xs font-semibold uppercase tracking-[0.3em] transition duration-300"
                 >
-                  <span
-                    aria-hidden="true"
-                    className="absolute inset-y-0 left-0 w-1/2 -translate-x-[130%] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent)] transition-transform duration-700 group-hover:translate-x-[260%]"
-                  />
-                  <span className="relative">Inquire about a project</span>
+                  <span className="relative z-10">Inquire about a project</span>
                   <ArrowUpRight className="relative h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="group inline-flex items-center justify-between gap-4 rounded-full border border-white/12 bg-white/[0.03] px-6 py-4 text-xs uppercase tracking-[0.3em] text-parchment/82 transition duration-300 hover:border-gold/35 hover:bg-white/[0.05] hover:text-ivory"
+                  className="studio-secondary-cta group inline-flex items-center justify-between gap-4 rounded-full px-6 py-4 text-xs uppercase tracking-[0.3em] text-parchment/86 transition duration-300"
                 >
-                  <span>Book a consultation</span>
+                  <span className="relative z-10">Book a consultation</span>
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
 

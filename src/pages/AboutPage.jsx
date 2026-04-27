@@ -1,4 +1,4 @@
-import { useId } from 'react'
+import { useEffect, useId, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { SEO } from '../components/SEO'
@@ -27,11 +27,40 @@ const contourPaths = [
 ]
 
 const studioLinks = [
-  { label: 'Instagram', href: site.socials[0].href, hint: 'IG', external: true },
-  { label: 'TikTok', href: site.socials[1].href, hint: 'TT', external: true },
-  { label: 'Facebook', href: 'https://www.facebook.com/search/top?q=samuel%20studio', hint: 'FB', external: true },
-  { label: 'Contact', href: `mailto:${site.email}`, hint: 'CO', external: true },
-  { label: 'Featured Work', href: '/portfolio', hint: 'FW', external: false },
+  ...site.socials.map((item) => ({
+    ...item,
+    hint: item.label
+      .split(' ')
+      .map((word) => word[0])
+      .join('')
+      .slice(0, 2),
+  })),
+  ...site.websiteLinks.map((item) => ({
+    ...item,
+    hint: item.label
+      .split(' ')
+      .map((word) => word[0])
+      .join('')
+      .slice(0, 2),
+  })),
+]
+
+const publicationFeatures = [
+  {
+    src: '/publications/pump-magazine-editorial.png',
+    title: 'PUMP Magazine',
+    caption: 'Editor\'s Choice feature crediting photographer Samuel Cary.',
+  },
+  {
+    src: '/publications/portrait-magazine-marika.png',
+    title: 'Portrait Magazine',
+    caption: 'Published feature: Tiffany Garcia by Samuel Cary.',
+  },
+  {
+    src: '/publications/moevir-magazine-negris.png',
+    title: 'MOEVIR Magazine',
+    caption: 'Published fashion editorial with cover-story presentation.',
+  },
 ]
 
 function SignatureWord({ className = '' }) {
@@ -124,6 +153,7 @@ function SplitRailLink({ label, href, active = false }) {
 
 export function AboutPage() {
   const reduceMotion = useReducedMotion()
+  const [activePublication, setActivePublication] = useState(0)
   const marqueeItems = [...aboutMarqueeItems, ...aboutMarqueeItems]
   const marqueeGoldStyle = {
     backgroundImage:
@@ -135,11 +165,21 @@ export function AboutPage() {
     filter: 'drop-shadow(0 0 18px rgba(201,164,88,0.15))',
   }
 
+  useEffect(() => {
+    if (reduceMotion) return undefined
+
+    const timer = window.setInterval(() => {
+      setActivePublication((current) => (current + 1) % publicationFeatures.length)
+    }, 4000)
+
+    return () => window.clearInterval(timer)
+  }, [reduceMotion])
+
   return (
     <>
       <SEO
         title="About"
-        description="A bold editorial About page for Samuel Studio, centered on refined portraiture, calm direction, and lasting impact."
+        description="A bold editorial About page for Samuel Studio, centered on published portraiture, calm direction, and lasting impact."
         path="/about"
         image={samPortrait}
         schema={{
@@ -154,8 +194,10 @@ export function AboutPage() {
         }}
       />
 
-      <section className="relative isolate min-h-[90svh] overflow-hidden bg-[#0b0b0b] text-ivory">
+      <section className="relative isolate min-h-[100svh] overflow-hidden bg-[#0b0b0b] text-ivory">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(198,161,91,0.18),transparent_14%),radial-gradient(circle_at_50%_64%,rgba(15,75,67,0.08),transparent_22%),radial-gradient(circle_at_12%_20%,rgba(255,255,255,0.75),transparent_28%),linear-gradient(180deg,rgba(11,11,11,0.98),rgba(11,11,11,0.96))]" />
+
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_43%,rgba(5,5,5,0.2),rgba(5,5,5,0.82)_56%,rgba(5,5,5,0.94)_100%),linear-gradient(90deg,rgba(5,5,5,0.94),rgba(5,5,5,0.42)_45%,rgba(5,5,5,0.94))]" />
 
         <div className="absolute inset-0 opacity-[0.42]">
           <svg viewBox="0 0 1600 900" className="h-full w-full">
@@ -185,116 +227,99 @@ export function AboutPage() {
           </svg>
         </div>
 
-        <div className="pointer-events-none absolute inset-x-0 top-[60%] z-0 -translate-y-1/2 overflow-hidden opacity-55 sm:top-[62%] lg:top-[66%]">
-          <div className="signature-marquee-wrap">
-            <div className="signature-marquee-track flex w-max items-center gap-16 px-6 sm:gap-20">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <span
-                  key={index}
-                  className="block whitespace-nowrap text-[clamp(4rem,8vw,7.25rem)] leading-none text-transparent"
-                  style={{
-                    fontFamily: 'var(--font-script)',
-                    ...marqueeGoldStyle,
-                  }}
+        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1500px] items-center px-5 pb-10 pt-22 sm:px-8 lg:px-10 lg:pt-24">
+          <div className="grid w-full items-center gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+            <motion.div
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.24 }}
+              transition={reduceMotion ? { duration: 0 } : { duration: 0.85, ease: 'easeOut' }}
+              className="about-cover-wall"
+            >
+              {publicationFeatures.map((item, index) => (
+                <figure
+                  className={`about-cover ${activePublication === index ? 'about-cover-active' : ''}`}
+                  key={item.src}
+                  aria-hidden={activePublication !== index}
                 >
-                  Samuel Studio
-                </span>
+                  <img src={item.src} alt={item.title} loading="eager" />
+                  <figcaption>
+                    <span>{item.title}</span>
+                    <small>{item.caption}</small>
+                  </figcaption>
+                </figure>
               ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="relative z-10 mx-auto grid min-h-[90svh] max-w-[1700px] grid-cols-1 gap-8 px-5 pb-18 pt-24 sm:px-8 lg:grid-cols-[190px_minmax(0,1fr)_210px] lg:gap-5 lg:px-10 lg:pt-26">
-          <aside className="hidden lg:flex lg:flex-col lg:justify-between">
-            <div className="space-y-3">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.42em] text-ivory/78">Navigation</p>
-              <div className="mt-3 space-y-2.5">
-                <SplitRailLink label="About" href="/about" active />
-                <SplitRailLink label="Portfolio" href="/portfolio" />
-                <SplitRailLink label="Services" href="/services" />
-                <SplitRailLink label="Booking" href="/booking" />
+              <div className="about-cover-dots" aria-hidden="true">
+                {publicationFeatures.map((item, index) => (
+                  <span
+                    key={item.title}
+                    className={activePublication === index ? 'is-active' : ''}
+                  />
+                ))}
               </div>
-            </div>
-          </aside>
+            </motion.div>
 
-          <div className="relative flex items-center justify-center">
-            <div className="absolute inset-x-0 top-8 mx-auto h-[66%] w-[min(92vw,980px)] rounded-[2rem] bg-[linear-gradient(180deg,rgba(17,17,17,0.72),rgba(17,17,17,0.42)),radial-gradient(circle_at_center,rgba(201,164,88,0.1),transparent_64%)] shadow-[0_26px_100px_rgba(0,0,0,0.42)] backdrop-blur-md" />
-            <div className="absolute inset-x-0 top-16 mx-auto h-[48%] w-[min(78vw,720px)] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,244,214,0.16),rgba(255,244,214,0.05)_34%,transparent_72%)] blur-3xl" />
-
-            <div className="relative w-full max-w-[1120px] px-2 text-center sm:px-4">
-              <div className="mx-auto h-[clamp(64px,8vw,118px)] w-[min(82vw,1100px)]">
+            <motion.div
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.24 }}
+              transition={reduceMotion ? { duration: 0 } : { duration: 0.85, ease: 'easeOut', delay: 0.08 }}
+              className="relative"
+            >
+              <div className="mb-5 h-[clamp(48px,7vh,76px)] w-[min(76vw,520px)]">
                 <SignatureWord className="h-full w-full opacity-70" />
               </div>
 
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.45em] text-ivory/75">
-                About / Samuel Studio
-              </p>
-
-              <motion.h1
-                initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-                whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.24 }}
-                transition={reduceMotion ? { duration: 0 } : { duration: 0.9, ease: 'easeOut', delay: 0.05 }}
-                className="relative z-10 mx-auto mt-5 max-w-[13ch] font-display text-[clamp(2.7rem,5.8vw,6.6rem)] leading-[0.93] tracking-[-0.05em] text-ivory"
-              >
-                Crafting portraits with presence.
-              </motion.h1>
-
-              <div className="relative mx-auto -mt-4 flex justify-center sm:-mt-6">
-                <div className="absolute inset-x-0 top-1/2 hidden h-[1px] bg-[linear-gradient(90deg,transparent,rgba(201,164,88,0.55),transparent)] lg:block" />
-                <motion.img
-                  src={samPortrait}
-                  alt="Samuel Studio portrait"
-                  initial={reduceMotion ? false : { opacity: 0, y: 16, scale: 0.98 }}
-                  whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={reduceMotion ? { duration: 0 } : { duration: 0.85, ease: 'easeOut', delay: 0.08 }}
-                  className="relative z-20 w-[min(32vw,480px)] min-w-[240px] max-w-[480px] drop-shadow-[0_24px_68px_rgba(0,0,0,0.48)]"
-                />
+              <div className="flex flex-wrap gap-2.5">
+                {publicationFeatures.map((item) => (
+                  <span className="about-proof-pill" key={item.title}>{item.title}</span>
+                ))}
               </div>
 
-            </div>
+              <h1 className="mt-6 max-w-[11ch] font-display text-[clamp(3.6rem,8.4vw,8.6rem)] leading-[0.82] tracking-[-0.05em] text-ivory">
+                Published photographer.
+              </h1>
+
+              <div className="mt-6 grid gap-5 border-y border-white/10 py-6 lg:grid-cols-[1fr_15rem]">
+                <p className="max-w-[40rem] text-base leading-8 text-ivory/76">
+                  Samuel Cary creates fashion, beauty, branding, and portrait imagery with a print-minded editorial
+                  point of view. His published work brings the same calm direction, polish, and visual confidence into
+                  every client session.
+                </p>
+
+                <figure className="about-author-card">
+                  <img src={samPortrait} alt="Samuel Cary" />
+                  <figcaption>
+                    <span>Photographer</span>
+                    <strong>Samuel Cary</strong>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <Link
+                  to="/portfolio"
+                  className="about-action-primary"
+                >
+                  View Portfolio
+                </Link>
+                <Link
+                  to="/booking"
+                  className="about-action-secondary"
+                >
+                  Book a Session
+                </Link>
+                <a
+                  href={site.socials[0].href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="about-action-ghost"
+                >
+                  Instagram
+                </a>
+              </div>
+            </motion.div>
           </div>
-
-          <aside className="hidden lg:flex lg:flex-col lg:items-end lg:justify-between">
-            <div className="space-y-3">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.42em] text-ivory/78">Studio links</p>
-              <div className="mt-6 space-y-4">
-                {studioLinks.map((item) =>
-                  item.external ? (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      target={item.href.startsWith('mailto:') ? undefined : '_blank'}
-                      rel={item.href.startsWith('mailto:') ? undefined : 'noreferrer'}
-                      className="group flex w-[210px] items-center justify-between rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4 text-left text-ivory/90 backdrop-blur-sm transition hover:border-gold/30 hover:bg-white/8"
-                    >
-                      <span className="text-[0.78rem] font-semibold uppercase tracking-[0.42em] text-ivory/82">
-                        {item.label}
-                      </span>
-                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/20 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-ivory/82 transition group-hover:border-gold/35 group-hover:text-gold">
-                        {item.hint}
-                      </span>
-                    </a>
-                  ) : (
-                    <Link
-                      key={item.label}
-                      to={item.href}
-                      className="group flex w-[210px] items-center justify-between rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4 text-left text-ivory/90 backdrop-blur-sm transition hover:border-gold/30 hover:bg-white/8"
-                    >
-                      <span className="text-[0.78rem] font-semibold uppercase tracking-[0.42em] text-ivory/82">
-                        {item.label}
-                      </span>
-                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/20 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-ivory/82 transition group-hover:border-gold/35 group-hover:text-gold">
-                        {item.hint}
-                      </span>
-                    </Link>
-                  ),
-                )}
-              </div>
-            </div>
-
-          </aside>
         </div>
 
       </section>
