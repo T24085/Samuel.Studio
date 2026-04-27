@@ -47,17 +47,17 @@ const studioLinks = [
 
 const publicationFeatures = [
   {
-    src: '/publications/pump-magazine-editorial.png',
+    src: `${import.meta.env.BASE_URL}publications/pump-magazine-editorial.png`,
     title: 'PUMP Magazine',
     caption: 'Editor\'s Choice feature crediting photographer Samuel Cary.',
   },
   {
-    src: '/publications/portrait-magazine-marika.png',
+    src: `${import.meta.env.BASE_URL}publications/portrait-magazine-marika.png`,
     title: 'Portrait Magazine',
     caption: 'Published feature: Tiffany Garcia by Samuel Cary.',
   },
   {
-    src: '/publications/moevir-magazine-negris.png',
+    src: `${import.meta.env.BASE_URL}publications/moevir-magazine-negris.png`,
     title: 'MOEVIR Magazine',
     caption: 'Published fashion editorial with cover-story presentation.',
   },
