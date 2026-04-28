@@ -5,7 +5,7 @@ import { SectionHeading } from '../components/SectionHeading'
 import { ContactForm } from '../components/ContactForm'
 import { site } from '../data/site'
 import { galleryItems } from '../data/gallery'
-import { GoldFrame, VerticalTag } from '../components/DecorativeElements'
+import { GoldFrame } from '../components/DecorativeElements'
 import { withBase } from '../utils/paths'
 
 function BookingBackdrop() {
@@ -84,7 +84,7 @@ export function BookingPage() {
               <ContactForm />
               <div className="space-y-5">
                 <GoldFrame className="p-7">
-                  <VerticalTag>Studio details</VerticalTag>
+                  <p className="text-xs uppercase tracking-[0.34em] text-gold/80">Studio details</p>
                   <div className="mt-6 space-y-5 text-sm leading-7 text-parchment/74">
                     <div>
                       <p className="text-xs uppercase tracking-[0.34em] text-gold/80">Hours</p>
