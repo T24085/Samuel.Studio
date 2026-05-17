@@ -1,0 +1,242 @@
+export const services = [
+  {
+    slug: 'editorial-campaign',
+    title: 'Editorial & Campaign Work',
+    label: 'Campaign-led',
+    eyebrow: 'Editorial Direction',
+    subheader: 'Editorial campaign imagery for brands, designers, lookbooks, and launch visuals.',
+    description: [
+      'Editorial and campaign work starts with the brand world: the product, the audience, the visual references, and the feeling the images need to carry.',
+      'Samuel builds the shoot around controlled light, intentional styling, and a clear image sequence so the final set can support launches, lookbooks, web assets, social campaigns, and print placement.',
+      'The work is polished without feeling generic. Every frame should help the brand look sharper, more intentional, and easier to remember.',
+    ],
+    whoFor: ['Fashion brands', 'Designers', 'Creative directors', 'Campaign launches', 'Lookbooks', 'Editorial storytelling'],
+    included: [
+      'Concept direction',
+      'Moodboard planning',
+      'Lighting direction',
+      'Location or studio planning',
+      'Guided shoot direction',
+      'Campaign-ready image delivery',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Concept Direction',
+        description: 'Define the campaign message, reference world, styling direction, and visual tone.',
+      },
+      {
+        step: '02',
+        title: 'Production Planning',
+        description: 'Lock the location or studio setup, lighting approach, wardrobe notes, and shot list.',
+      },
+      {
+        step: '03',
+        title: 'Shoot Direction',
+        description: 'Direct posing, movement, expression, and composition throughout the shoot.',
+      },
+      {
+        step: '04',
+        title: 'Final Delivery',
+        description: 'Retouched images prepared for web, social, print, and campaign rollout.',
+      },
+    ],
+    cta: 'Start a Project',
+    secondaryCta: 'Request Details',
+    quote:
+      'Sharper light, higher contrast. Built for fashion labels, campaign worlds, and lookbook moments that need presence.',
+    mood: 'Sharper light, higher contrast',
+    audience: 'Fashion labels, campaign worlds, lookbooks',
+    gallery: [
+      { label: 'Campaign frame one', tone: 'Tailored light and crisp contrast' },
+      { label: 'Campaign frame two', tone: 'Directional composition with editorial tension' },
+      { label: 'Campaign frame three', tone: 'Texture, styling, and visual rhythm' },
+    ],
+  },
+  {
+    slug: 'personal-identity',
+    title: 'Personal Identity',
+    label: 'Signature tier',
+    eyebrow: 'Personal Brand',
+    subheader: 'Portrait-led brand imagery for founders, creatives, speakers, and public-facing professionals.',
+    description: [
+      'Personal identity sessions are for people whose image has to work across a website, LinkedIn, Instagram, media features, speaking pages, and brand materials.',
+      'The session is planned around how you need to be seen: approachable, premium, authoritative, creative, calm, bold, or some combination of those traits.',
+      'Samuel directs posture, expression, wardrobe rhythm, and light so the final images feel confident without looking stiff or overproduced.',
+      'The result is a usable portrait library, not a single headshot.',
+    ],
+    whoFor: [
+      'Entrepreneurs',
+      'Professionals',
+      'Creatives',
+      'Consultants',
+      'Coaches',
+      'Artists',
+      'Public speakers',
+      'Sales professionals',
+    ],
+    included: [
+      'Personal brand direction',
+      'Wardrobe and mood guidance',
+      'Guided posing',
+      'Multiple usable looks',
+      'Platform-ready imagery',
+      'Website, LinkedIn, Instagram, profile, and media kit images',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Discovery',
+        description: 'Clarify your industry, audience, platforms, and the impression the portraits need to create.',
+      },
+      {
+        step: '02',
+        title: 'Visual Direction',
+        description: 'Plan wardrobe, location, mood, color, and the balance between professional and personal.',
+      },
+      {
+        step: '03',
+        title: 'Guided Session',
+        description: 'Receive direct guidance on posture, expression, movement, and small adjustments throughout.',
+      },
+      {
+        step: '04',
+        title: 'Final Image Set',
+        description: 'A cohesive portrait set ready for profiles, websites, press, social, and sales material.',
+      },
+    ],
+    cta: 'Book a Session',
+    secondaryCta: 'Request Details',
+    quote:
+      'Warmer, polished, assured. Designed for founders, influencers, and visible personal brands that need authority with ease.',
+    mood: 'Warmer, polished, assured',
+    audience: 'Founders, influencers, visible personal brands',
+    gallery: [
+      { label: 'Identity frame one', tone: 'Open posture and clean tonal warmth' },
+      { label: 'Identity frame two', tone: 'Confident profile with editorial polish' },
+      { label: 'Identity frame three', tone: 'Brand-ready portrait layering and depth' },
+    ],
+  },
+  {
+    slug: 'visual-story-projects',
+    title: 'Visual Story Projects',
+    label: 'Narrative-led',
+    eyebrow: 'Visual Storytelling',
+    subheader: 'Narrative image sets for artists, startups, creative launches, and concept-driven brands.',
+    description: [
+      'Visual story projects are for ideas that need a sequence: a launch, artist release, founder story, concept campaign, or personal creative world.',
+      'The work is shaped around pacing and emotion so the images can move together across a landing page, campaign rollout, pitch deck, social series, or editorial feature.',
+      'Samuel develops the visual world before the shoot, then directs each frame so the final gallery feels connected instead of scattered.',
+    ],
+    whoFor: [
+      'Artists',
+      'Startups',
+      'Musicians',
+      'Creative founders',
+      'Concept launches',
+      'Short-form visual campaigns',
+      'Story-driven personal projects',
+    ],
+    included: [
+      'Brief development',
+      'Concept and mood direction',
+      'Shot sequencing',
+      'Location or studio planning',
+      'On-location or studio coverage',
+      'Cinematic edits',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Story Brief',
+        description: 'Define the concept, audience, emotion, and where the images need to live.',
+      },
+      {
+        step: '02',
+        title: 'Visual World',
+        description: 'Map the locations, lighting mood, wardrobe rhythm, and sequence of key frames.',
+      },
+      {
+        step: '03',
+        title: 'Production',
+        description: 'Direct stills with movement, pacing, and transitions in mind.',
+      },
+      {
+        step: '04',
+        title: 'Final Sequence',
+        description: 'Deliver a cohesive gallery that can support launch assets, social storytelling, and brand pages.',
+      },
+    ],
+    cta: 'Shape a Visual Story',
+    secondaryCta: 'Request Details',
+    quote:
+      'Moodier, slower, cinematic. Built for narrative-first work that needs pacing and emotional continuity.',
+    mood: 'Moodier, slower, cinematic',
+    audience: 'Startups, artists, concept-driven launches',
+    gallery: [
+      { label: 'Story frame one', tone: 'Atmospheric introduction and visual pacing' },
+      { label: 'Story frame two', tone: 'Sequenced moment with narrative depth' },
+      { label: 'Story frame three', tone: 'Cinematic stillness with connected tone' },
+    ],
+  },
+  {
+    slug: 'private-portraits',
+    title: 'Private Portraits',
+    label: 'Private sessions',
+    eyebrow: 'Portrait Sessions',
+    subheader: 'Refined portrait sessions for individuals, couples, families, milestones, and private archives.',
+    description: [
+      'Private portraits bring the same editorial care into a quieter setting: individuals, couples, families, milestones, and personal keepsakes.',
+      'Samuel keeps the session guided and calm, with enough direction to remove uncertainty while leaving room for natural expression and connection.',
+      'The images are edited as a cohesive collection so they feel refined, personal, and worth keeping long after the session.',
+      'Sessions can be built for studio, outdoor, home, or lifestyle environments depending on the people and the story.',
+    ],
+    whoFor: ['Individuals', 'Couples', 'Families', 'Milestones', 'Lifestyle portraits', 'Studio portraits', 'Outdoor portraits'],
+    included: [
+      'Guided session direction',
+      'Refined lighting',
+      'Relaxed posing',
+      'Location planning',
+      'Cinematic editing',
+      'Final portrait collection',
+    ],
+    process: [
+      {
+        step: '01',
+        title: 'Session Planning',
+        description: 'Understand who is being photographed, why the session matters, and how the images will be used.',
+      },
+      {
+        step: '02',
+        title: 'Location / Mood Direction',
+        description: 'Choose the environment, wardrobe feel, timing, and visual atmosphere.',
+      },
+      {
+        step: '03',
+        title: 'Guided Portrait Session',
+        description: 'Use relaxed direction, refined light, and natural expression to build the portrait set.',
+      },
+      {
+        step: '04',
+        title: 'Final Collection',
+        description: 'Edited portraits delivered as a cohesive collection for print, sharing, and archive.',
+      },
+    ],
+    cta: 'Request a Session',
+    secondaryCta: 'Request Details',
+    quote:
+      'Softer, intimate, quieter. Tailored for private portrait clients and personal keepsakes with lasting value.',
+    mood: 'Softer, intimate, quieter',
+    audience: 'Private portrait clients, personal keepsakes',
+    gallery: [
+      { label: 'Portrait frame one', tone: 'Quiet connection and gentle light' },
+      { label: 'Portrait frame two', tone: 'Intimate composition with calm atmosphere' },
+      { label: 'Portrait frame three', tone: 'Lasting portrait collection with softness' },
+    ],
+  },
+]
+
+export const bookingServiceOptions = services.map((service) => ({
+  value: service.title,
+  label: service.title,
+}))
