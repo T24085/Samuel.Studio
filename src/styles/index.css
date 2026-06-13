@@ -172,8 +172,10 @@
     display: inline-block;
     font-family: var(--font-script);
     font-weight: 400;
-    line-height: 0.9;
+    line-height: 1.08;
     letter-spacing: 0.02em;
+    padding-left: 0.18em;
+    padding-top: 0.08em;
     color: transparent;
     background-image: linear-gradient(90deg, #fdf5db 0%, #c6a15b 20%, #f7e8c8 38%, #a88443 55%, #f5f0e6 72%, #c6a15b 100%);
     background-size: 220% 100%;

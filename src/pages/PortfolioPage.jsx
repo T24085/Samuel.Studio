@@ -13,7 +13,7 @@ const tileRatios = [0.82, 1.05, 0.92, 1.18]
 function ImageTile({ item, index }) {
   return (
     <div
-      className="group relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-white/[0.03] shadow-[0_18px_60px_rgba(0,0,0,0.22)]"
+      className="group relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#040404] shadow-[0_18px_60px_rgba(0,0,0,0.22)]"
       style={{ aspectRatio: tileRatios[index % tileRatios.length] }}
     >
       <img
@@ -21,7 +21,7 @@ function ImageTile({ item, index }) {
         alt={item.alt}
         loading="lazy"
         decoding="async"
-        className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+        className="h-full w-full object-contain p-3 transition duration-700 group-hover:scale-[1.01] sm:p-4"
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.42))] opacity-70 transition duration-500 group-hover:opacity-50" />
       <div className="absolute inset-x-0 bottom-0 px-3 py-3">
@@ -44,7 +44,7 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
       onClick={onClose}
     >
       <motion.section
-        className="relative h-full w-full overflow-y-auto bg-[linear-gradient(180deg,rgba(15,14,12,0.98),rgba(5,5,5,0.98))] lg:overflow-hidden"
+        className="relative h-[100dvh] w-full overflow-y-auto bg-[linear-gradient(180deg,rgba(15,14,12,0.98),rgba(5,5,5,0.98))] lg:overflow-hidden"
         initial={reduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.98, y: 18 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={reduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.98, y: 18 }}
@@ -60,7 +60,7 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
           Back to selection
         </button>
 
-        <div className="grid min-h-full gap-0 lg:grid-cols-[0.78fr_1.22fr]">
+        <div className="grid h-full min-h-full gap-0 lg:grid-cols-[0.78fr_1.22fr] lg:overflow-hidden">
           <motion.div
             className="relative min-h-[40svh] overflow-hidden border-b border-white/10 bg-[#080706] lg:min-h-0 lg:h-full lg:border-b-0 lg:border-r"
           >
@@ -106,8 +106,8 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
             </div>
           </motion.div>
 
-          <div className="px-6 py-7 sm:px-8 sm:py-8 lg:flex lg:h-full lg:flex-col lg:px-8 lg:py-8">
-            <div className="relative flex h-full flex-col min-h-0">
+          <div className="px-6 py-7 sm:px-8 sm:py-8 lg:flex lg:h-full lg:min-h-0 lg:flex-col lg:px-8 lg:py-8 lg:overflow-y-auto">
+            <div className="relative flex min-h-0 flex-col">
               <div className="flex flex-wrap items-center gap-3 text-[0.64rem] uppercase tracking-[0.34em] text-gold/72">
                 <span>{collection.eyebrow}</span>
                 <span className="text-white/20">/</span>
@@ -152,7 +152,7 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
                 ))}
               </div>
 
-              <div className="mt-5 grid flex-1 min-h-0 grid-cols-2 gap-3 sm:grid-cols-4">
+              <div className="mt-5 grid grid-cols-2 gap-3 pb-8 sm:grid-cols-4 lg:pb-10">
                 {preview.map((item, previewIndex) => (
                   <ImageTile key={item.id} item={item} index={previewIndex} />
                 ))}

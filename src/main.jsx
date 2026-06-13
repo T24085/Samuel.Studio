@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
+import './lib/firebase'
 import './styles/index.css'
 
 const redirectTarget = new URLSearchParams(window.location.search).get('redirect')

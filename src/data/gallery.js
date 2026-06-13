@@ -45,6 +45,11 @@ const galleryFiles = [
   'women.jpg',
   'women-6.jpg',
   'women-serious.jpg',
+  'headshots_personal_branding_013.jpg',
+  'headshots_personal_branding_014.jpg',
+  'headshots_personal_branding_015.jpg',
+  'headshots_personal_branding_016.jpg',
+  'headshots_personal_branding_017.jpg',
 ]
 
 const portfolioSources = {
@@ -60,6 +65,11 @@ const portfolioSources = {
   women: new URL('../../Headshots Personal Branding/headshots_personal_branding_010.jpg', import.meta.url).href,
   'women-6': new URL('../../Headshots Personal Branding/headshots_personal_branding_011.jpg', import.meta.url).href,
   'women-serious': new URL('../../Headshots Personal Branding/headshots_personal_branding_012.jpg', import.meta.url).href,
+  'headshots_personal_branding_013': new URL('../../Headshots Personal Branding/headshots_personal_branding_013.jpg', import.meta.url).href,
+  'headshots_personal_branding_014': new URL('../../Headshots Personal Branding/headshots_personal_branding_014.jpg', import.meta.url).href,
+  'headshots_personal_branding_015': new URL('../../Headshots Personal Branding/headshots_personal_branding_015.jpg', import.meta.url).href,
+  'headshots_personal_branding_016': new URL('../../Headshots Personal Branding/headshots_personal_branding_016.jpg', import.meta.url).href,
+  'headshots_personal_branding_017': new URL('../../Headshots Personal Branding/headshots_personal_branding_017.jpg', import.meta.url).href,
 
   'bridge-women': new URL('../../Commercial Life Style/commercial_lifestyle_001.jpg', import.meta.url).href,
   candid: new URL('../../Commercial Life Style/commercial_lifestyle_002.jpg', import.meta.url).href,
@@ -114,6 +124,11 @@ const titleOverrides = {
   'self-port.jpg': 'Self Portrait',
   'women-6.jpg': 'Flow State',
   'women-serious.jpg': 'Clear Intent',
+  'headshots_personal_branding_013.jpg': 'Warm Presence',
+  'headshots_personal_branding_014.jpg': 'Soft Smile',
+  'headshots_personal_branding_015.jpg': 'Clinical Focus',
+  'headshots_personal_branding_016.jpg': 'Open Ease',
+  'headshots_personal_branding_017.jpg': 'Steady Poise',
 }
 
 const portfolioGroups = [
@@ -131,6 +146,11 @@ const portfolioGroups = [
       'women',
       'women-6',
       'women-serious',
+      'headshots_personal_branding_013',
+      'headshots_personal_branding_014',
+      'headshots_personal_branding_015',
+      'headshots_personal_branding_016',
+      'headshots_personal_branding_017',
     ],
     titles: [
       'Quiet Authority',
@@ -145,6 +165,11 @@ const portfolioGroups = [
       'Golden Skin',
       'Flow State',
       'Clear Intent',
+      'Warm Presence',
+      'Soft Smile',
+      'Clinical Focus',
+      'Open Ease',
+      'Steady Poise',
     ],
     categories: ['Portraits', 'Studio'],
   },
@@ -200,6 +225,10 @@ function inferCategories(fileName) {
   }
 
   if (/(artist|confidence|contemplate|group|man|self|looking-up|women-serious|women\.jpg|self-port)/.test(name)) {
+    return ['Portraits', 'Studio']
+  }
+
+  if (/headshots_personal_branding/.test(name)) {
     return ['Portraits', 'Studio']
   }
 

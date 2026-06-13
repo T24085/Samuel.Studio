@@ -55,12 +55,12 @@ function RevealSection({ children, reduceMotion, className = '' }) {
 function GalleryBlock({ item, image, alt, index }) {
   return (
     <div
-      className="group relative min-h-[18rem] overflow-hidden rounded-[1.8rem] border border-white/10 bg-black shadow-[0_20px_70px_rgba(0,0,0,0.28)] sm:min-h-[22rem]"
+      className="group relative min-h-[18rem] overflow-hidden rounded-[1.8rem] border border-white/10 bg-[#040404] shadow-[0_20px_70px_rgba(0,0,0,0.28)] sm:min-h-[22rem]"
     >
       <img
         src={image}
         alt={alt}
-        className="absolute inset-0 h-full w-full object-cover opacity-[0.86] saturate-[0.9] transition duration-700 group-hover:scale-[1.04] group-hover:opacity-100"
+        className="absolute inset-0 h-full w-full object-contain p-4 opacity-[0.92] saturate-[0.95] transition duration-700 group-hover:scale-[1.01] group-hover:opacity-100 sm:p-5"
       />
       <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_20%,rgba(0,0,0,0.72)_100%)]" />
       <div aria-hidden="true" className="services-film-grain absolute inset-0 opacity-[0.1]" />
@@ -139,8 +139,8 @@ export function ServiceDetailPage() {
         </div>
 
         <div className="relative z-10">
-          <section className="studio-shell min-h-[92svh] pt-24 pb-14 sm:pt-28 lg:pb-18 lg:pt-32">
-            <div className="grid min-h-[calc(92svh-8rem)] gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
+          <section className="studio-shell min-h-[92svh] pt-16 pb-14 sm:pt-20 lg:pb-18 lg:pt-24">
+            <div className="grid min-h-[calc(92svh-6rem)] gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
               <div className="max-w-4xl">
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.42em] text-gold/70">
                   {service.eyebrow}
@@ -202,17 +202,14 @@ export function ServiceDetailPage() {
           </section>
 
           <RevealSection reduceMotion={reduceMotion} className="studio-shell pb-18 lg:pb-24">
-            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div className="space-y-5">
               <div>
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Service overview</p>
-                <h2 className="mt-4 max-w-xl font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl xl:text-[4.6rem]">
-                  {service.subheader}
-                </h2>
               </div>
 
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-[0_20px_80px_rgba(0,0,0,0.22)] sm:p-8">
-                <div aria-hidden="true" className="absolute inset-y-8 left-6 w-px bg-gradient-to-b from-transparent via-gold/35 to-transparent" />
-                <div className="relative space-y-5 pl-5 text-sm leading-8 text-parchment/74 md:text-base">
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-7 shadow-[0_20px_80px_rgba(0,0,0,0.22)] sm:p-9 lg:p-10">
+                <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.025),transparent_42%)]" />
+                <div className="relative max-w-4xl space-y-6 text-base leading-9 text-parchment/80 md:text-[1.05rem]">
                   {service.description.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
@@ -226,9 +223,9 @@ export function ServiceDetailPage() {
               {visuals.contact.map((image, index) => (
                 <div
                   key={image}
-                  className="relative min-h-[18rem] overflow-hidden rounded-[1.4rem] border border-white/10 bg-black shadow-[0_20px_70px_rgba(0,0,0,0.24)] md:min-h-[24rem]"
+                  className="relative min-h-[18rem] overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#040404] shadow-[0_20px_70px_rgba(0,0,0,0.24)] md:min-h-[24rem]"
                 >
-                  <img src={image} alt={`${service.title} visual reference ${index + 1}.`} className="absolute inset-0 h-full w-full object-cover opacity-[0.88] saturate-[0.9]" />
+                  <img src={image} alt={`${service.title} visual reference ${index + 1}.`} className="absolute inset-0 h-full w-full object-contain p-4 opacity-[0.94] saturate-[0.96] sm:p-5" />
                   <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,transparent_42%,rgba(0,0,0,0.58))]" />
                   <span className="absolute bottom-5 left-5 text-[0.6rem] uppercase tracking-[0.32em] text-ivory/72">
                     Reference {String(index + 1).padStart(2, '0')}

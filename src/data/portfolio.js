@@ -14,21 +14,58 @@ function pickItems(lookup, ids) {
   return ids.map((id) => lookup.get(id)).filter(Boolean)
 }
 
+function toEditorialTitle(value) {
+  return value
+    .replace(/\.[^.]+$/, '')
+    .replace(/^20\d{6}-/, '')
+    .replace(/^untitled-/i, 'Untitled ')
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, (char) => char.toUpperCase())
+}
+
+function createEditorialFashionItem(file, title = toEditorialTitle(file)) {
+  return {
+    id: file.replace(/\.[^.]+$/, ''),
+    src: new URL(`../../Editorial  Creative Fasion/${file}`, import.meta.url).href,
+    alt: `${title} from Samuel Studio.`,
+    title,
+    categories: ['Fashion', 'Editorial'],
+    featured: true,
+  }
+}
+
 const galleryLookup = makeLookup(portfolioGalleryItems)
 
-const defiantModelsIds = [
-  'modern-black-white',
-  'blue-dress',
-  'boots',
-  'cheetah',
-  'cheetah-2',
-  'cheetah-3',
-  'confidence',
-  'group',
-  'man',
-  'power',
-  'power-2',
-  'silver-dress',
+const defiantModelsItems = [
+  createEditorialFashionItem('2021.08_YoungTiff SE1-607-Edit-Edit.jpg', 'Monochrome Frame'),
+  createEditorialFashionItem('2021.08_YoungTiff SE1-1144-Edit-Edit.jpg', 'Editorial Line'),
+  createEditorialFashionItem('2021.08_YoungTiff SE1-1965.jpg', 'Blue Hour'),
+  createEditorialFashionItem('2021.08_YoungTiff SE1-198-Edit.JPG', 'Runway Edge'),
+  createEditorialFashionItem('2021.08_YoungTiff SE1-281-Edit-2.jpg', 'Styled Pause'),
+  createEditorialFashionItem('2021.08_YoungTiff SE1-376-Edit-2.jpg', 'Wild Rhythm'),
+  createEditorialFashionItem('20211105-untitled-1029-2.jpg', 'Power Study'),
+  createEditorialFashionItem('20211105-untitled-1188.jpg'),
+  createEditorialFashionItem('20211105-untitled-1357.jpg'),
+  createEditorialFashionItem('20211105-untitled-1373.jpg'),
+  createEditorialFashionItem('20211105-untitled-1399.jpg'),
+  createEditorialFashionItem('20211105-untitled-955.jpg'),
+  createEditorialFashionItem('20211105-untitled-999.jpg'),
+  createEditorialFashionItem('20230314-A30A1501-2.jpg'),
+  createEditorialFashionItem('20230914-A30A5376.jpg'),
+  createEditorialFashionItem('20230914-A30A5507.jpg'),
+  createEditorialFashionItem('20240324-untitled-280.jpg'),
+  createEditorialFashionItem('20240324-untitled-34.jpg'),
+  createEditorialFashionItem('20240324-untitled-513.jpg'),
+  createEditorialFashionItem('20240324-untitled-910.jpg'),
+  createEditorialFashionItem('20240324-untitled-948.jpg'),
+  createEditorialFashionItem('A30A0388-17.jpg'),
+  createEditorialFashionItem('untitled-1184-Edit.jpg'),
+  createEditorialFashionItem('untitled-153.jpg'),
+  createEditorialFashionItem('untitled-159.jpg'),
+  createEditorialFashionItem('untitled-388.jpg'),
+  createEditorialFashionItem('untitled-410-2.jpg'),
 ]
 
 const defiantBoudoirIds = [
@@ -63,17 +100,22 @@ const allStreetIds = [
 
 const colombiaIds = [
   'artist',
-  'bridge-women',
-  'candid',
-  'happy-women',
+  'confidence',
+  'contemplate-women',
+  'flower',
+  'group',
   'looking-up-women',
+  'man',
+  'self',
+  'self-port',
   'women',
   'women-6',
-  'collection',
-  'group',
-  'man',
-  'flower',
-  'contemplate-women',
+  'women-serious',
+  'headshots_personal_branding_013',
+  'headshots_personal_branding_014',
+  'headshots_personal_branding_015',
+  'headshots_personal_branding_016',
+  'headshots_personal_branding_017',
 ]
 
 export const portfolioCollections = [
@@ -82,10 +124,10 @@ export const portfolioCollections = [
     eyebrow: 'Within the Studio / Editorial',
     title: 'Defiant Models',
     description:
-      'A curated network of talent for editorial, commercial, and identity-driven work.',
+      'Model-led editorial with a sharper commercial line.',
     body:
-      'Built for clients who want clean art direction, strong casting, and image sets that can move between brand launch materials, lookbooks, and campaign storytelling.',
-    previewItems: pickItems(galleryLookup, defiantModelsIds),
+      'A cast-forward chapter built for strong silhouettes, disciplined styling, and image sets that hold their shape across campaigns, lookbooks, and launch material.',
+    previewItems: defiantModelsItems,
     linkLabel: 'Visit Defiant Models',
     href: 'https://defiantmodels.com/',
     external: true,
@@ -161,11 +203,11 @@ export const portfolioCollections = [
   {
     slug: 'colombia',
     eyebrow: 'Within the Studio / Colombia',
-    title: 'Samuel Studio Colombia',
+    title: 'Colombia at the Core',
     description:
-      'The Colombia chapter of the parent studio, grounded in portraiture and local narrative.',
+      'A portrait essay shaped by place, character, and a quieter kind of authority.',
     body:
-      'This is the studio-side overview for Colombia work and the place where the local portrait and story archives will live.',
+      'This chapter gathers the Colombia archive as a single visual chapter: grounded faces, restrained light, and images that breathe instead of compete.',
     previewItems: pickItems(galleryLookup, colombiaIds),
     linkLabel: 'View full collection',
     href: '/portfolio/colombia',
@@ -185,7 +227,7 @@ export const portfolioMagazineIssues = portfolioCollections.map((collection, ind
       ? 'Front cover / lead story'
       : index === 1
         ? 'Feature spread / intimate study'
-        : index === 2
+      : index === 2
           ? 'Style file / culture chapter'
           : 'Studio notes / local archive',
   issueNote:
@@ -195,7 +237,7 @@ export const portfolioMagazineIssues = portfolioCollections.map((collection, ind
         ? 'This chapter keeps the tone cinematic and personal.'
         : index === 2
           ? 'The culture pages sit between fashion energy and brand storytelling.'
-          : 'The Colombia chapter closes the magazine with a local story archive.',
+          : 'The Colombia chapter closes the magazine with a portrait essay rooted in place, light, and character.',
 })) 
 
 const editorialCampaignIds = [

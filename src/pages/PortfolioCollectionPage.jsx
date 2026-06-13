@@ -14,7 +14,7 @@ function CollectionTile({ item, index, onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="group relative overflow-hidden rounded-[1.3rem] border border-white/10 bg-white/[0.03] text-left shadow-[0_18px_60px_rgba(0,0,0,0.22)]"
+      className="group relative overflow-hidden rounded-[1.3rem] border border-white/10 bg-[#040404] text-left shadow-[0_18px_60px_rgba(0,0,0,0.22)]"
       style={{ aspectRatio: tileRatios[index % tileRatios.length] }}
       aria-label={`Open ${item.title}`}
     >
@@ -23,7 +23,7 @@ function CollectionTile({ item, index, onOpen }) {
         alt={item.alt}
         loading="lazy"
         decoding="async"
-        className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
+        className="h-full w-full object-contain p-3 transition duration-700 group-hover:scale-[1.01] sm:p-4"
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.42))] opacity-70 transition duration-500 group-hover:opacity-45" />
       <div className="absolute inset-x-0 bottom-0 px-3 py-3">
@@ -38,6 +38,8 @@ export function PortfolioCollectionPage() {
   const reduceMotion = useReducedMotion()
   const collection = portfolioCollectionsBySlug.get(slug)
   const [activeIndex, setActiveIndex] = useState(null)
+  const isEditorialCollection = collection?.slug === 'defiant-models'
+  const isColombiaCollection = collection?.slug === 'colombia'
 
   if (!collection) {
     return <Navigate to="/portfolio" replace />
@@ -166,14 +168,23 @@ export function PortfolioCollectionPage() {
           <section className="studio-shell pb-16 lg:pb-20">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/72">Top images</p>
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/72">
+                  {isEditorialCollection ? 'Editorial frames' : isColombiaCollection ? 'Archive images' : 'Top images'}
+                </p>
                 <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl xl:text-[5rem]">
-                  A tighter look at the collection.
+                  {isEditorialCollection
+                    ? 'A cleaner read on the model chapter.'
+                    : isColombiaCollection
+                      ? 'A portrait essay from Colombia.'
+                      : 'A tighter look at the collection.'}
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-8 text-parchment/72 md:text-base">
-                These are the top selections for the section, ready to become the full collection grid as the archive
-                expands.
+                {isEditorialCollection
+                  ? 'Pulled from the full editorial folder and sequenced to keep silhouette, movement, and attitude intact.'
+                  : isColombiaCollection
+                    ? 'Selected from the full Colombia archive, edited as one calm and coherent body of work.'
+                    : 'These are the top selections for the section, ready to become the full collection grid as the archive expands.'}
               </p>
             </div>
           </section>
