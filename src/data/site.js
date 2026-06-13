@@ -8,7 +8,7 @@ export const site = {
   turnaround: '2-3 weeks',
   email: 'capture@samuel.studio',
   phone: '(707) 726-2279',
-  website: 'https://samuel.studio',
+  website: 'https://www.samuel.studio',
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ssp.capture/', external: true },
     { label: 'TikTok', href: 'https://www.tiktok.com/@samuelcary.art', external: true },
