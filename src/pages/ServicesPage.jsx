@@ -39,6 +39,23 @@ const serviceLooks = [
   { name: 'Soft intimacy', value: 'Portrait session' },
 ]
 
+function AnimatedTitleWord({ children, className = '', delay = 0, reduceMotion = false }) {
+  if (reduceMotion) {
+    return <span className={className}>{children}</span>
+  }
+
+  return (
+    <motion.span
+      initial={{ opacity: 0, y: 18, filter: 'blur(8px)' }}
+      animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay }}
+      className={`inline-block ${className}`}
+    >
+      {children}
+    </motion.span>
+  )
+}
+
 function ServicesContactSheet({ reduceMotion }) {
   return (
     <motion.div
@@ -98,6 +115,10 @@ function ServicesContactSheet({ reduceMotion }) {
 function ServiceGatewayCard({ service, index, reduceMotion }) {
   const preview = service.included.slice(0, 3)
   const frame = serviceFrames[index % serviceFrames.length]
+  const primaryCtaLabel = 'Learn More'
+  const primaryCtaHref = `/services/${service.slug}`
+  const secondaryCtaLabel = 'Start a Project'
+  const secondaryCtaHref = '/booking'
 
   return (
     <motion.article
@@ -134,7 +155,7 @@ function ServiceGatewayCard({ service, index, reduceMotion }) {
 
         <div className="px-6 py-7 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
           <div className="flex flex-wrap items-center gap-4">
-            <span className="font-display text-5xl leading-none tracking-[-0.06em] text-ivory/16 md:text-6xl">
+            <span className="font-display text-5xl leading-none tracking-[-0.06em] text-[#ffd86f] drop-shadow-[0_0_12px_rgba(255,216,111,0.12)] md:text-6xl">
               {String(index + 1).padStart(2, '0')}
             </span>
             <span className="rounded-full border border-gold/20 bg-black/20 px-4 py-2 text-[0.66rem] uppercase tracking-[0.32em] text-gold/82">
@@ -192,15 +213,19 @@ function ServiceGatewayCard({ service, index, reduceMotion }) {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              to={`/services/${service.slug}`}
+              to={primaryCtaHref}
               className="studio-primary-cta group inline-flex items-center justify-between gap-4 rounded-full px-6 py-4 text-xs font-semibold uppercase tracking-[0.3em] transition duration-300"
             >
-              <span className="relative z-10">{service.cta}</span>
+              <span className="relative z-10">{primaryCtaLabel}</span>
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
-            <div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-4 text-[0.62rem] uppercase tracking-[0.3em] text-parchment/72 sm:block">
-              View full details
-            </div>
+            <Link
+              to={secondaryCtaHref}
+              className="studio-secondary-cta group inline-flex items-center justify-between gap-4 rounded-full px-6 py-4 text-xs uppercase tracking-[0.3em] text-parchment/86 transition duration-300"
+            >
+              <span className="relative z-10">{secondaryCtaLabel}</span>
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
           </div>
         </div>
       </div>
@@ -259,8 +284,37 @@ export function ServicesPage() {
               <div className="max-w-5xl">
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Services</p>
                 <h1 className="mt-6 max-w-5xl font-display text-[3.2rem] leading-[0.86] tracking-[-0.055em] text-ivory sm:text-6xl md:text-[4.6rem] lg:text-[5.7rem] xl:text-[6.5rem]">
-                  Cinematic services <span className="italic text-gold/90">built as gateways</span>
-                  <span className="block">into bespoke image-making.</span>
+                  <span className="block">
+                    <AnimatedTitleWord
+                      delay={0.08}
+                      reduceMotion={reduceMotion}
+                      className="text-[#ffd86f] drop-shadow-[0_0_10px_rgba(255,216,111,0.18)]"
+                    >
+                      Cinematic
+                    </AnimatedTitleWord>
+                  </span>
+                  <span className="block">
+                    Services <span className="italic text-ivory/90">Built as</span>
+                  </span>
+                  <span className="block">
+                    <AnimatedTitleWord
+                      delay={0.2}
+                      reduceMotion={reduceMotion}
+                      className="italic text-[#ffd86f] drop-shadow-[0_0_10px_rgba(255,216,111,0.18)]"
+                    >
+                      Gateways
+                    </AnimatedTitleWord>
+                  </span>
+                  <span className="block">
+                    into Bespoke{' '}
+                    <AnimatedTitleWord
+                      delay={0.32}
+                      reduceMotion={reduceMotion}
+                      className="text-[#ffd86f] drop-shadow-[0_0_10px_rgba(255,216,111,0.18)]"
+                    >
+                      Image-Making.
+                    </AnimatedTitleWord>
+                  </span>
                 </h1>
                 <p className="mt-8 max-w-2xl text-base leading-8 text-parchment/74 md:text-lg">
                   Four distinct commissions, each shaped with the same editorial discipline: clear direction, refined
@@ -292,16 +346,16 @@ export function ServicesPage() {
                     'linear-gradient(90deg, rgba(255,255,255,0.02), rgba(198,161,91,0.05) 24%, rgba(255,255,255,0.02) 52%, rgba(198,161,91,0.04) 76%, rgba(255,255,255,0.02))',
                 }}
               />
-              <div className="relative flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[0.64rem] uppercase tracking-[0.34em] text-parchment/68">
-                <span className="text-gold/70">Selected for</span>
-                <span className="text-white/20">/</span>
-                <span>Fashion labels</span>
-                <span className="text-white/20">/</span>
-                <span>Founders</span>
-                <span className="text-white/20">/</span>
-                <span>Narrative campaigns</span>
-                <span className="text-white/20">/</span>
-                <span>Private portrait sessions</span>
+              <div className="relative flex flex-wrap items-center justify-center gap-x-5 gap-y-2 rounded-full border border-gold/24 bg-[rgba(198,161,91,0.08)] px-5 py-4 text-[0.64rem] uppercase tracking-[0.34em] text-[#ffd86f] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] drop-shadow-[0_0_10px_rgba(245,205,92,0.16)]">
+                <span className="text-[#fff1b8]">Selected for</span>
+                <span className="text-[#c89a33]">/</span>
+                <span className="text-[#ffd86f]">Fashion labels</span>
+                <span className="text-[#c89a33]">/</span>
+                <span className="text-[#ffd86f]">Founders</span>
+                <span className="text-[#c89a33]">/</span>
+                <span className="text-[#ffd86f]">Narrative campaigns</span>
+                <span className="text-[#c89a33]">/</span>
+                <span className="text-[#ffd86f]">Private portrait sessions</span>
               </div>
             </div>
           </section>
@@ -387,13 +441,6 @@ export function ServicesPage() {
                 >
                   <span className="relative z-10">Inquire about a project</span>
                   <ArrowUpRight className="relative h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="studio-secondary-cta group inline-flex items-center justify-between gap-4 rounded-full px-6 py-4 text-xs uppercase tracking-[0.3em] text-parchment/86 transition duration-300"
-                >
-                  <span className="relative z-10">Book a consultation</span>
-                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
 
                 <div className="mt-2 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-gold/65">

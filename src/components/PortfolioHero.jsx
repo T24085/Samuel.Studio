@@ -103,7 +103,7 @@ function MagazineCover({ collection, activeSlug, onSelect, reduceMotion }) {
         loading={collection.slug === 'defiant-models' ? 'eager' : 'lazy'}
         decoding="async"
         className={[
-          'h-full w-full object-cover',
+          'h-full w-full object-contain p-2',
           allStreet ? 'object-center' : '',
           colombia ? 'object-center' : '',
         ].join(' ')}
@@ -130,7 +130,7 @@ function MobileCover({ collection, index, onSelect }) {
         alt={collection.coverAlt}
         loading={index === 0 ? 'eager' : 'lazy'}
         decoding="async"
-        className="h-full w-full object-cover"
+        className="h-full w-full object-contain p-2"
       />
     </motion.button>
   )

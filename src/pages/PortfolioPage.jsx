@@ -13,7 +13,7 @@ const tileRatios = [0.82, 1.05, 0.92, 1.18]
 function ImageTile({ item, index }) {
   return (
     <div
-      className="group relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-white/[0.03] shadow-[0_18px_60px_rgba(0,0,0,0.22)]"
+      className="group relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#040404] shadow-[0_18px_60px_rgba(0,0,0,0.22)]"
       style={{ aspectRatio: tileRatios[index % tileRatios.length] }}
     >
       <img
@@ -21,7 +21,7 @@ function ImageTile({ item, index }) {
         alt={item.alt}
         loading="lazy"
         decoding="async"
-        className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+        className="h-full w-full object-contain p-3 transition duration-700 group-hover:scale-[1.01] sm:p-4"
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.42))] opacity-70 transition duration-500 group-hover:opacity-50" />
       <div className="absolute inset-x-0 bottom-0 px-3 py-3">

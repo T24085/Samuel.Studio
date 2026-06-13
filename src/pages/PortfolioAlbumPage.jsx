@@ -14,7 +14,7 @@ function AlbumTile({ item, index, onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="group relative overflow-hidden rounded-[1.3rem] border border-white/10 bg-white/[0.03] text-left shadow-[0_18px_60px_rgba(0,0,0,0.22)]"
+      className="group relative overflow-hidden rounded-[1.3rem] border border-white/10 bg-[#040404] text-left shadow-[0_18px_60px_rgba(0,0,0,0.22)]"
       style={{ aspectRatio: tileRatios[index % tileRatios.length] }}
       aria-label={`Open ${item.title}`}
     >
@@ -23,7 +23,7 @@ function AlbumTile({ item, index, onOpen }) {
         alt={item.alt}
         loading="lazy"
         decoding="async"
-        className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
+        className="h-full w-full object-contain p-3 transition duration-700 group-hover:scale-[1.01] sm:p-4"
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.42))] opacity-70 transition duration-500 group-hover:opacity-45" />
       <div className="absolute inset-x-0 bottom-0 px-3 py-3">
