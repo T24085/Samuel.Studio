@@ -13,8 +13,8 @@ import { MotionDeckSection } from '../components/AboutPosterSection'
 import { Infinite3DGallery } from '../components/Infinite3DGallery'
 import { Lightbox } from '../components/Lightbox'
 import { siteUrl, withBase } from '../utils/paths'
-import leftPortrait from '../../Left2.png'
-import rightPortrait from '../../Right.png'
+import leftPortrait from '../../Left1.png'
+import rightPortrait from '../../Right3.png'
 
 const experienceCards = [
   {
@@ -358,7 +358,7 @@ export function HomePage() {
                 alt=""
                 aria-hidden="true"
                 className="relative z-10 h-full w-full object-cover drop-shadow-[0_32px_95px_rgba(0,0,0,0.5)]"
-                style={{ objectPosition: '78% 46%', transformOrigin: '78% 100%' }}
+                style={{ objectPosition: '78% 46%', transformOrigin: '78% 100%', scale: 0.97 }}
               />
               <motion.div
                 aria-hidden="true"
