@@ -7,7 +7,6 @@ import {
   assistantSystemPrompt,
   chatLogEndpoint,
   ollamaModelCandidates,
-  starterPrompts,
 } from '../data/assistant'
 import { site, siteKey } from '../data/site'
 
@@ -436,11 +435,6 @@ export function ChatAssistant() {
     }
   }
 
-  const handleSuggestionClick = (suggestion) => {
-    setDraft(suggestion)
-    inputRef.current?.focus()
-  }
-
   const onComposerKeyDown = (event) => {
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault()
@@ -509,19 +503,6 @@ export function ChatAssistant() {
               <div className="border-t border-white/10 px-4 py-4 sm:px-5">
                 {hasProfile ? (
                   <>
-                    <div className="mb-3 flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap sm:overflow-visible sm:pb-0">
-                      {starterPrompts.map((prompt) => (
-                        <button
-                          key={prompt}
-                          type="button"
-                          onClick={() => handleSuggestionClick(prompt)}
-                          className="shrink-0 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1.5 text-left text-[0.55rem] uppercase tracking-[0.18em] text-parchment/74 transition hover:border-gold/45 hover:text-ivory sm:shrink sm:px-3 sm:py-2 sm:text-[0.62rem] sm:tracking-[0.24em]"
-                        >
-                          {prompt}
-                        </button>
-                      ))}
-                    </div>
-
                     <div className="flex gap-3">
                       <textarea
                         ref={inputRef}
