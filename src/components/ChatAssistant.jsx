@@ -488,7 +488,7 @@ export function ChatAssistant() {
                 </button>
               </div>
 
-              <div ref={listRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-4 sm:px-5">
+              <div ref={listRef} className="flex-1 space-y-2 overflow-y-auto px-4 py-3 sm:space-y-3 sm:px-5 sm:py-4">
                 {hasProfile ? (
                   visibleMessages.map((message) => (
                     <MessageBubble key={message.id} message={message} />
@@ -631,13 +631,13 @@ function MessageBubble({ message }) {
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
       <div
         className={[
-          'max-w-[88%] rounded-[1.4rem] px-4 py-3 text-sm leading-7',
+          'max-w-[90%] rounded-[1.15rem] px-3 py-2 text-[0.82rem] leading-6 sm:max-w-[88%] sm:rounded-[1.4rem] sm:px-4 sm:py-3 sm:text-sm sm:leading-7',
           isUser
             ? 'border border-gold/24 bg-gold/12 text-ivory'
             : 'border border-white/10 bg-white/[0.03] text-parchment/76',
         ].join(' ')}
       >
-        <div className="mb-1 flex items-center gap-2 text-[0.58rem] uppercase tracking-[0.24em] text-gold/60">
+        <div className="mb-1 flex items-center gap-2 text-[0.5rem] uppercase tracking-[0.18em] text-gold/60 sm:text-[0.58rem] sm:tracking-[0.24em]">
           {isUser ? 'You' : assistantName}
         </div>
         <p className="whitespace-pre-wrap">{message.content}</p>
