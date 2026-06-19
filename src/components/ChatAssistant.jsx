@@ -462,8 +462,12 @@ export function ChatAssistant() {
               animate={reducedMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: 0, scale: 1 }}
               exit={reducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 12, scale: 0.98 }}
               transition={{ duration: 0.22, ease: 'easeOut' }}
-              className="relative z-50 flex h-[78vh] w-[min(92vw,26rem)] flex-col overflow-hidden rounded-[1.8rem] border border-gold/20 bg-[linear-gradient(180deg,rgba(11,11,11,0.96),rgba(6,6,6,0.98))] shadow-[0_28px_90px_rgba(0,0,0,0.45)] sm:h-[74vh]"
+              className="relative z-50 flex h-[78vh] w-[min(92vw,26rem)] flex-col overflow-hidden rounded-[1.8rem] border border-gold/30 bg-[linear-gradient(180deg,rgba(11,11,11,0.96),rgba(6,6,6,0.98))] shadow-[0_0_0_1px_rgba(198,161,91,0.14),0_0_28px_rgba(198,161,91,0.16),0_28px_90px_rgba(0,0,0,0.45)] sm:h-[74vh]"
             >
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-[1.8rem] border border-gold/15 shadow-[inset_0_0_0_1px_rgba(245,240,230,0.03),inset_0_0_24px_rgba(198,161,91,0.08)]" />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent opacity-80" />
+              <div aria-hidden="true" className="pointer-events-none absolute inset-x-8 top-0 h-20 bg-[radial-gradient(circle_at_center,rgba(198,161,91,0.18),transparent_70%)] blur-2xl" />
+
               <div className="flex items-start justify-between gap-4 border-b border-white/10 px-5 py-4">
                 <div>
                   <p className="text-[0.62rem] uppercase tracking-[0.36em] text-gold/70">Nova</p>
@@ -612,13 +616,18 @@ function MessageBubble({ message }) {
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
       <div
         className={[
-          'max-w-[90%] rounded-[1.15rem] px-3 py-2 text-[0.82rem] leading-6 sm:max-w-[88%] sm:rounded-[1.4rem] sm:px-4 sm:py-3 sm:text-sm sm:leading-7',
+          'max-w-[90%] rounded-[1.15rem] px-3 py-2 text-[0.82rem] leading-6 shadow-[0_8px_24px_rgba(0,0,0,0.18)] sm:max-w-[88%] sm:rounded-[1.4rem] sm:px-4 sm:py-3 sm:text-sm sm:leading-7',
           isUser
-            ? 'border border-gold/24 bg-gold/12 text-ivory'
-            : 'border border-white/10 bg-white/[0.03] text-parchment/76',
+            ? 'border border-cyan-300/20 bg-[linear-gradient(180deg,rgba(10,25,33,0.96),rgba(7,17,24,0.96))] text-[#d9f0ff] shadow-[0_0_0_1px_rgba(110,203,255,0.05),0_10px_28px_rgba(0,0,0,0.18)]'
+            : 'border border-gold/28 bg-[linear-gradient(180deg,rgba(198,161,91,0.16),rgba(120,88,36,0.10))] text-[#fff0c2] shadow-[0_0_0_1px_rgba(198,161,91,0.08),0_10px_28px_rgba(0,0,0,0.18)]',
         ].join(' ')}
       >
-        <div className="mb-1 flex items-center gap-2 text-[0.5rem] uppercase tracking-[0.18em] text-gold/60 sm:text-[0.58rem] sm:tracking-[0.24em]">
+        <div
+          className={[
+            'mb-1 flex items-center gap-2 text-[0.5rem] uppercase tracking-[0.18em] sm:text-[0.58rem] sm:tracking-[0.24em]',
+            isUser ? 'text-cyan-200/70' : 'text-gold/80',
+          ].join(' ')}
+        >
           {isUser ? 'You' : assistantName}
         </div>
         <p className="whitespace-pre-wrap">{message.content}</p>
