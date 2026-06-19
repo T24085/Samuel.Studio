@@ -89,3 +89,26 @@ Use this updated template markup in EmailJS:
 
 </div>
 ```
+
+## Chat Assistant
+
+This site also includes a floating chat assistant for lead intake and session scoping.
+
+The widget sends inquiries to the shared assistant backend and keeps transcripts separate by site key.
+
+Recommended env vars:
+
+- `VITE_SITE_KEY=samuel-studio`
+- `VITE_PUBLIC_CHAT_BASE_URL=https://chat.novatec.casa`
+- `VITE_ASSISTANT_CHAT_URL=https://chat.novatec.casa/api/assistant-chat`
+- `VITE_CHAT_LOG_ENDPOINT=https://chat.novatec.casa/api/chat-log`
+- `VITE_OLLAMA_MODEL_CANDIDATES=gemma4:12b,gemma3:12b,llama3.1:8b,qwen2.5:7b`
+
+The assistant is tuned for:
+
+- Editorial & Campaign Work
+- Personal Identity
+- Visual Story Projects
+- Private Portraits
+
+It asks for the project type, goal, date, location, budget, inspiration, and contact details before moving into the conversation.

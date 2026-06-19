@@ -3,6 +3,7 @@ export const site = {
   tagline: 'Timeless studio photography crafted with intention, elegance, and story.',
   shortTagline:
     'Luxury portraiture with a refined editorial point of view and calm, cinematic direction.',
+  siteKey: 'samuel-studio',
   location: 'By appointment',
   hours: 'Mon-Sat, 10am-6pm',
   turnaround: '2-3 weeks',
@@ -21,6 +22,8 @@ export const site = {
     { label: 'Booking', href: '/booking', external: false },
   ],
 }
+
+export const siteKey = site.siteKey
 
 export const navLinks = [
   { label: 'Home', href: '/' },

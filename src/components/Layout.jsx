@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 import { FloatingBookingButton } from './FloatingBookingButton'
+import { ChatAssistant } from './ChatAssistant'
 
 export function Layout() {
   const location = useLocation()
@@ -20,6 +21,7 @@ export function Layout() {
         <Outlet />
       </motion.main>
       {isPortfolioPage ? null : <Footer />}
+      <ChatAssistant />
       <FloatingBookingButton />
     </div>
   )
