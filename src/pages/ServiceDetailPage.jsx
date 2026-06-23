@@ -29,7 +29,11 @@ const serviceVisuals = {
   'visual-story-projects': {
     hero: withBase('photos/rain.jpg'),
     alt: 'Atmospheric visual story image from Samuel Studio.',
-    contact: [withBase('photos/bridge-women.jpg'), withBase('photos/candid.jpg'), withBase('photos/roses.jpg')],
+    contact: [
+      withBase('photos/visual-story-01.jpg'),
+      withBase('photos/visual-story-02.jpg'),
+      withBase('photos/visual-story-03.jpg'),
+    ],
     palette: 'Narrative pacing / soft tension / cinematic sequence',
   },
   'private-portraits': {
