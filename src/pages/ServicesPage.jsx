@@ -19,8 +19,8 @@ const serviceFrames = [
     className: 'right-[5%] top-[2%] w-[29%] rotate-[5deg]',
   },
   {
-    src: withBase('photos/rain.jpg'),
-    alt: 'Atmospheric lifestyle frame from Samuel Studio.',
+    src: withBase('photos/visual-story-03.jpg'),
+    alt: 'Visual story portrait from Samuel Studio.',
     label: 'Story',
     className: 'left-[26%] top-[38%] w-[36%] rotate-[2deg]',
   },
