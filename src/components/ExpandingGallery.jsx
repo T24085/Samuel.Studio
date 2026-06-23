@@ -159,7 +159,7 @@ function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen })
 
 export function ExpandingGallery({ items, onSelect, fullBleed = false }) {
   const reducedMotion = useReducedMotion()
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(4)
 
   const cards = useMemo(
     () =>
@@ -171,7 +171,7 @@ export function ExpandingGallery({ items, onSelect, fullBleed = false }) {
   )
 
   useEffect(() => {
-    setActiveIndex(0)
+    setActiveIndex(Math.min(4, Math.max(cards.length - 1, 0)))
   }, [cards.length])
 
   if (!cards.length) return null
