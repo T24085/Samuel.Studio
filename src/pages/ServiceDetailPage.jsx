@@ -37,9 +37,13 @@ const serviceVisuals = {
     palette: 'Narrative pacing / soft tension / cinematic sequence',
   },
   'private-portraits': {
-    hero: withBase('photos/negris-3.jpg'),
+    hero: withBase('photos/private-portraits-hero.jpg'),
     alt: 'Private portrait image from Samuel Studio.',
-    contact: [withBase('photos/negris.jpg'), withBase('photos/negris-2.jpg'), withBase('photos/negris-4.jpg')],
+    contact: [
+      withBase('photos/private-portraits-01.jpg'),
+      withBase('photos/private-portraits-02.jpg'),
+      withBase('photos/private-portraits-03.jpg'),
+    ],
     palette: 'Quiet intimacy / refined light / lasting presence',
   },
 }
