@@ -128,7 +128,7 @@ function MobileCover({ collection, index, onSelect }) {
       <img
         src={collection.coverSrc}
         alt={collection.coverAlt}
-        loading={index === 0 ? 'eager' : 'lazy'}
+        loading="eager"
         decoding="async"
         className="h-full w-full object-contain p-2"
       />
@@ -215,7 +215,7 @@ export function PortfolioHero({ activeSlug = null, onMagazineSelect }) {
           animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.05 }}
         >
-          {covers.slice(0, 3).map((collection, index) => (
+          {covers.map((collection, index) => (
             <MobileCover key={collection.slug} collection={collection} index={index} onSelect={onMagazineSelect} />
           ))}
         </motion.div>

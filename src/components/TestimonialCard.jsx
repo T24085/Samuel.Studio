@@ -1,13 +1,16 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 
-export function TestimonialCard({ quote, name, role }) {
+export function TestimonialCard({ quote, name, role, delay = 0 }) {
+  const reduceMotion = useReducedMotion()
+
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.7 }}
-      className="gold-frame relative p-7"
+      transition={{ duration: 0.75, ease: 'easeOut', delay }}
+      whileHover={reduceMotion ? undefined : { y: -6 }}
+      className="gold-frame relative p-7 will-change-transform"
     >
       <p className="font-display text-2xl leading-9 text-ivory">“{quote}”</p>
       <div className="mt-6 flex items-center gap-4">

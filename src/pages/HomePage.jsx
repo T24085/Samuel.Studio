@@ -155,6 +155,7 @@ export function HomePage() {
             <SectionHeading
               eyebrow="Featured gallery"
               title="A single frame should hold attention before it asks for more."
+              delay={0.04}
               align="center"
             />
           </div>
@@ -252,18 +253,20 @@ export function HomePage() {
             <SectionHeading
               eyebrow="Signature experience"
               title="A calm, premium process designed around the photograph and the person in front of it."
+              delay={0.05}
               align="center"
             />
             <div className="mt-14 grid gap-5 lg:grid-cols-4">
-              {experienceCards.map((card) => {
+              {experienceCards.map((card, index) => {
                 const Icon = card.icon
                 return (
                   <motion.article
                     key={card.title}
-                    initial={{ opacity: 0, y: 18 }}
+                    initial={{ opacity: 0, y: 22 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.65 }}
+                    whileHover={reduceMotion ? undefined : { y: -6, scale: 1.01 }}
+                    transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.08 }}
                     className="gold-frame p-6"
                   >
                     <div className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-gold/25 bg-gold/10 text-gold">
@@ -394,6 +397,7 @@ export function HomePage() {
               <SectionHeading
                 eyebrow="Client notes"
                 title="Refined words from the people who stepped into the frame."
+                delay={0.05}
                 align="center"
               />
               <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-parchment/72 sm:text-base">
@@ -402,8 +406,8 @@ export function HomePage() {
               </p>
             </div>
             <div className="mt-14 grid gap-5 lg:grid-cols-3">
-              {testimonials.map((testimonial) => (
-                <TestimonialCard key={testimonial.name} {...testimonial} />
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard key={testimonial.name} {...testimonial} delay={index * 0.08} />
               ))}
             </div>
           </div>
