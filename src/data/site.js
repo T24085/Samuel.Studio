@@ -8,7 +8,7 @@ export const site = {
   hours: 'Mon-Sat, 10am-6pm',
   turnaround: '2-3 weeks',
   email: 'capture@samuel.studio',
-  phone: '(707) 726-2279',
+  phone: '+1 281-515-7727',
   website: 'https://www.samuel.studio',
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ssp.capture/', external: true },
