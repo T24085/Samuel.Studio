@@ -17,9 +17,13 @@ const serviceVisuals = {
     palette: 'Sharp contrast / controlled styling / campaign-ready finish',
   },
   'personal-identity': {
-    hero: withBase('photos/confidence.jpg'),
+    hero: withBase('photos/personal-identity-hero.jpg'),
     alt: 'Personal identity portrait from Samuel Studio.',
-    contact: [withBase('photos/artist.jpg'), withBase('photos/self-port.jpg'), withBase('photos/women-serious.jpg')],
+    contact: [
+      withBase('photos/personal-identity-left.jpg'),
+      withBase('photos/personal-identity-middle.jpg'),
+      withBase('photos/personal-identity-right.jpg'),
+    ],
     palette: 'Warm authority / clear posture / visible confidence',
   },
   'visual-story-projects': {
