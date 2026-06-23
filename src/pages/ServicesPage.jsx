@@ -367,59 +367,6 @@ export function ServicesPage() {
           </section>
 
           <section className="studio-shell pb-24 lg:pb-28">
-            <motion.div
-              initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 }}
-              whileInView={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.9, ease: 'easeOut' }}
-              className="relative overflow-hidden rounded-[2.6rem] border border-white/10 bg-[#040404] px-7 py-16 sm:px-10 sm:py-20 lg:min-h-[28rem] lg:px-16 lg:py-24"
-            >
-              <div
-                aria-hidden="true"
-                className="absolute inset-0"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(circle at 16% 14%, rgba(198,161,91,0.16), transparent 26%), radial-gradient(circle at 78% 18%, rgba(255,255,255,0.08), transparent 20%), radial-gradient(circle at 50% 100%, rgba(198,161,91,0.06), transparent 35%), linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.18))',
-                }}
-              />
-              <div aria-hidden="true" className="absolute inset-y-0 left-8 hidden w-px bg-gradient-to-b from-transparent via-gold/35 to-transparent lg:block" />
-              <div
-                aria-hidden="true"
-                className="absolute -right-8 -top-10 font-display text-[8rem] uppercase tracking-[-0.08em] text-ivory/5 sm:text-[10rem] lg:text-[14rem]"
-              >
-                story
-              </div>
-
-              <div className="relative grid gap-10 lg:grid-cols-[1.18fr_0.82fr] lg:items-end">
-                <div>
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Studio position</p>
-                  <h2 className="mt-5 max-w-4xl font-display text-4xl leading-[0.9] tracking-[-0.05em] text-ivory md:text-6xl lg:text-[5.2rem] xl:text-[6rem]">
-                    Four routes, one editorial standard.
-                    <span className="block italic text-gold/90">Every project starts with direction.</span>
-                  </h2>
-                </div>
-
-                <p className="max-w-xl text-sm leading-8 text-parchment/72 md:text-base">
-                  Campaign work, identity sessions, story projects, and private portraits each need a different rhythm.
-                  The service pages show how Samuel plans the shoot, directs the room, and delivers polished images ready
-                  for brand use, publication, or personal archive.
-                </p>
-              </div>
-
-              <div className="relative mt-12 grid gap-4 sm:grid-cols-3">
-                {['Concept first', 'Tailored delivery', 'Limited booking calendar'].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-[1.3rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-sm text-parchment/76"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </section>
-
-          <section className="studio-shell pb-24 lg:pb-28">
             <div className="grid gap-8 rounded-[2.4rem] border border-gold/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(17,17,17,0.92))] p-7 shadow-[0_28px_100px_rgba(0,0,0,0.34)] sm:p-10 lg:grid-cols-[1.08fr_0.92fr] lg:p-12">
               <div>
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Inquiry</p>
