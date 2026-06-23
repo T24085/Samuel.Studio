@@ -9,7 +9,11 @@ const serviceVisuals = {
   'editorial-campaign': {
     hero: withBase('photos/modern-black-white.jpg'),
     alt: 'Black and white editorial campaign portrait from Samuel Studio.',
-    contact: [withBase('photos/blue-dress.jpg'), withBase('photos/cheetah-3.jpg'), withBase('photos/power.jpg')],
+    contact: [
+      withBase('photos/editorial-campaign-left.jpg'),
+      withBase('photos/cheetah-3.jpg'),
+      withBase('photos/editorial-campaign-right.jpg'),
+    ],
     palette: 'Sharp contrast / controlled styling / campaign-ready finish',
   },
   'personal-identity': {
