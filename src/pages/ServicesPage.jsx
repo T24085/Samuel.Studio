@@ -68,7 +68,6 @@ function ServicesContactSheet({ reduceMotion }) {
         aria-hidden="true"
         className="absolute inset-0 bg-[linear-gradient(135deg,rgba(198,161,91,0.18),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(0,0,0,0.22))]"
       />
-      <div aria-hidden="true" className="services-film-grain absolute inset-0 opacity-[0.12]" />
       <div aria-hidden="true" className="absolute inset-x-7 top-7 flex justify-between gap-2">
         {Array.from({ length: 9 }).map((_, index) => (
           <span key={index} className="h-3 w-5 rounded-[2px] border border-black/40 bg-black/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]" />
@@ -275,7 +274,6 @@ export function ServicesPage() {
             }
             transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
           />
-          <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,rgba(245,240,230,0.92)_1px,transparent_0)] [background-size:18px_18px]" />
         </div>
 
         <div className="relative z-10">

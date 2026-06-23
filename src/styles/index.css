@@ -845,16 +845,6 @@
     transform: translateX(95%);
   }
 
-  .services-film-grain {
-    background-image:
-      radial-gradient(circle at 12% 18%, rgba(245, 240, 230, 0.7) 0 1px, transparent 1px),
-      radial-gradient(circle at 82% 36%, rgba(198, 161, 91, 0.48) 0 1px, transparent 1px),
-      radial-gradient(circle at 34% 74%, rgba(245, 240, 230, 0.45) 0 1px, transparent 1px),
-      radial-gradient(circle at 68% 88%, rgba(245, 240, 230, 0.35) 0 1px, transparent 1px);
-    background-size: 11px 13px, 17px 19px, 23px 29px, 31px 37px;
-    mix-blend-mode: screen;
-    animation: services-grain-drift 9s steps(6) infinite;
-  }
 }
 
 @keyframes gold-shimmer {
@@ -993,29 +983,6 @@
   }
 }
 
-@keyframes services-grain-drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  20% {
-    transform: translate3d(-2%, 1%, 0);
-  }
-
-  40% {
-    transform: translate3d(1%, -2%, 0);
-  }
-
-  60% {
-    transform: translate3d(2%, 2%, 0);
-  }
-
-  80% {
-    transform: translate3d(-1%, -1%, 0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .about-marquee-track {
     animation: none !important;
@@ -1050,7 +1017,6 @@
 
   .floating-booking-link::before,
   .floating-booking-link::after,
-  .services-film-grain,
   .studio-primary-cta::before,
   .studio-primary-cta::after {
     animation: none !important;

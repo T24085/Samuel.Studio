@@ -79,7 +79,6 @@ function GalleryBlock({ item, image, alt, index }) {
         className="absolute inset-0 h-full w-full object-contain p-4 opacity-[0.92] saturate-[0.95] transition duration-700 group-hover:scale-[1.01] group-hover:opacity-100 sm:p-5"
       />
       <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_20%,rgba(0,0,0,0.72)_100%)]" />
-      <div aria-hidden="true" className="services-film-grain absolute inset-0 opacity-[0.1]" />
       <div className="relative flex h-full min-h-[18rem] flex-col justify-between p-6 sm:min-h-[22rem]">
         <div className="flex items-start justify-between gap-4">
           <span className="text-[0.62rem] uppercase tracking-[0.34em] text-gold/72">Frame {String(index + 1).padStart(2, '0')}</span>
@@ -151,7 +150,6 @@ export function ServiceDetailPage() {
             }
             transition={{ duration: 17, repeat: Infinity, ease: 'easeInOut' }}
           />
-          <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,rgba(245,240,230,0.92)_1px,transparent_0)] [background-size:18px_18px]" />
         </div>
 
         <div className="relative z-10">
@@ -196,7 +194,6 @@ export function ServiceDetailPage() {
               <div className="relative min-h-[34rem] overflow-hidden rounded-[2.35rem] border border-gold/16 bg-black shadow-[0_40px_120px_rgba(0,0,0,0.5)] lg:min-h-[42rem]">
                 <img src={visuals.hero} alt={visuals.alt} className="absolute inset-0 h-full w-full object-cover opacity-[0.88] saturate-[0.9]" />
                 <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08)_20%,rgba(0,0,0,0.82)_100%),linear-gradient(90deg,rgba(0,0,0,0.34),transparent_58%)]" />
-                <div aria-hidden="true" className="services-film-grain absolute inset-0 opacity-[0.12]" />
                 <div className="absolute inset-x-6 top-6 flex items-center justify-between gap-4">
                   <span className="rounded-full border border-white/12 bg-black/34 px-4 py-2 text-[0.58rem] uppercase tracking-[0.32em] text-ivory/78 backdrop-blur-md">
                     {service.label}
