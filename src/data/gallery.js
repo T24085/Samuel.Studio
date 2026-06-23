@@ -52,6 +52,18 @@ const galleryFiles = [
   'headshots_personal_branding_017.jpg',
 ]
 
+const portfolioOnlyFiles = [
+  '2021.08_YoungTiff SE1-717-Edit.jpg',
+  '2021.08_YoungTiff SE1-1372-Edit.jpg',
+  '2021.08_YoungTiff SE1-1493-Edit.jpg',
+  '2021.08_YoungTiff SE1-1760-Edit.jpg',
+  '2021.08_YoungTiff SE1-1821-Edit.jpg',
+  'A30A0125.jpg',
+  'A30A0259.jpg',
+  'A30A0357.jpg',
+  'untitled-2359.jpg',
+]
+
 const portfolioSources = {
   artist: new URL('../../Headshots Personal Branding/headshots_personal_branding_001.jpg', import.meta.url).href,
   confidence: new URL('../../Headshots Personal Branding/headshots_personal_branding_002.jpg', import.meta.url).href,
@@ -70,6 +82,15 @@ const portfolioSources = {
   'headshots_personal_branding_015': new URL('../../Headshots Personal Branding/headshots_personal_branding_015.jpg', import.meta.url).href,
   'headshots_personal_branding_016': new URL('../../Headshots Personal Branding/headshots_personal_branding_016.jpg', import.meta.url).href,
   'headshots_personal_branding_017': new URL('../../Headshots Personal Branding/headshots_personal_branding_017.jpg', import.meta.url).href,
+  '2021.08_YoungTiff SE1-1821-Edit': new URL('../../Beauty & Portrait/2021.08_YoungTiff SE1-1821-Edit.jpg', import.meta.url).href,
+  '2021.08_YoungTiff SE1-1372-Edit': new URL('../../Beauty & Portrait/2021.08_YoungTiff SE1-1372-Edit.jpg', import.meta.url).href,
+  '2021.08_YoungTiff SE1-1493-Edit': new URL('../../Beauty & Portrait/2021.08_YoungTiff SE1-1493-Edit.jpg', import.meta.url).href,
+  '2021.08_YoungTiff SE1-1760-Edit': new URL('../../Beauty & Portrait/2021.08_YoungTiff SE1-1760-Edit.jpg', import.meta.url).href,
+  A30A0259: new URL('../../Beauty & Portrait/A30A0259.jpg', import.meta.url).href,
+  '2021.08_YoungTiff SE1-717-Edit': new URL('../../Beauty & Portrait/2021.08_YoungTiff SE1-717-Edit.jpg', import.meta.url).href,
+  A30A0357: new URL('../../Beauty & Portrait/A30A0357.jpg', import.meta.url).href,
+  A30A0125: new URL('../../Beauty & Portrait/A30A0125.jpg', import.meta.url).href,
+  'untitled-2359': new URL('../../Beauty & Portrait/untitled-2359.jpg', import.meta.url).href,
 
   'bridge-women': new URL('../../Commercial Life Style/commercial_lifestyle_001.jpg', import.meta.url).href,
   candid: new URL('../../Commercial Life Style/commercial_lifestyle_002.jpg', import.meta.url).href,
@@ -129,6 +150,15 @@ const titleOverrides = {
   'headshots_personal_branding_015.jpg': 'Clinical Focus',
   'headshots_personal_branding_016.jpg': 'Open Ease',
   'headshots_personal_branding_017.jpg': 'Steady Poise',
+  '2021.08_YoungTiff SE1-717-Edit.jpg': 'Street Flame',
+  '2021.08_YoungTiff SE1-1372-Edit.jpg': 'Private Line',
+  '2021.08_YoungTiff SE1-1493-Edit.jpg': 'Inner Flame',
+  '2021.08_YoungTiff SE1-1760-Edit.jpg': 'Soft Motion',
+  '2021.08_YoungTiff SE1-1821-Edit.jpg': 'Velvet Arc',
+  'A30A0259.jpg': 'Liquid Gold',
+  'A30A0357.jpg': 'Dark Poise',
+  'A30A0125.jpg': 'Soft Axis',
+  'untitled-2359.jpg': 'Quiet Motion',
 }
 
 const portfolioGroups = [
@@ -232,6 +262,10 @@ function inferCategories(fileName) {
     return ['Portraits', 'Studio']
   }
 
+  if (/(2021\.08_youngtiff|a30a)/.test(name)) {
+    return ['Portraits', 'Beauty']
+  }
+
   if (/(dress|boots|cheetah|flame|jeans|jet|negris|power|silver|wild-pants|modern-black-white)/.test(name)) {
     return ['Fashion', 'Editorial']
   }
@@ -252,7 +286,7 @@ export const galleryItems = galleryFiles.map((file, index) => {
   }
 })
 
-export const portfolioGalleryItems = galleryFiles.map((file, index) => {
+export const portfolioGalleryItems = [...galleryFiles, ...portfolioOnlyFiles].map((file, index) => {
   const title = titleOverrides[file] ?? toTitleCase(file)
   const id = file.replace(/\.[^.]+$/, '')
   return {

@@ -10,7 +10,7 @@ import { SectionHeading } from '../components/SectionHeading'
 import { TestimonialCard } from '../components/TestimonialCard'
 import { CTASection } from '../components/CTASection'
 import { MotionDeckSection } from '../components/AboutPosterSection'
-import { Infinite3DGallery } from '../components/Infinite3DGallery'
+import { ExpandingGallery } from '../components/ExpandingGallery'
 import { Lightbox } from '../components/Lightbox'
 import { siteUrl, withBase } from '../utils/paths'
 import leftPortrait from '../../Left1.png'
@@ -81,7 +81,6 @@ export function HomePage() {
   const testimonialTextY = useTransform(testimonialScrollProgress, [0, 0.5, 1], [20, 0, -14])
   const testimonialTextOpacity = useTransform(testimonialScrollProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.88])
   const contourShiftY = useTransform(testimonialScrollProgress, [0, 1], [-22, 16])
-  const mode = 'Panorama'
   const activeItem = activeIndex !== null ? portfolioGalleryItems[activeIndex] : null
   const clearIntentImage = galleryItems.find((item) => item.title === 'Clear Intent')
   const confidenceImage = galleryItems.find((item) => item.title === 'Confidence')
@@ -150,11 +149,18 @@ export function HomePage() {
 
       <Hero />
 
-      <section className="home-snap-section bg-[#050505] py-20 text-ivory">
-        <div className="relative left-1/2 w-screen -translate-x-1/2">
-          <div className="mt-0">
-            <Infinite3DGallery items={portfolioGalleryItems} mode={mode} onSelect={openById} />
+      <section className="home-snap-section relative isolate overflow-x-clip bg-[#050505] pt-20 pb-14 text-ivory sm:pt-24 lg:pt-28">
+        <div className="studio-shell">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeading
+              eyebrow="Featured gallery"
+              title="A single frame should hold attention before it asks for more."
+              align="center"
+            />
           </div>
+        </div>
+        <div className="mt-8">
+          <ExpandingGallery items={portfolioGalleryItems} onSelect={openById} fullBleed />
         </div>
       </section>
 

@@ -73,9 +73,9 @@ export function VerticalTag({ children, className = '' }) {
   )
 }
 
-export function GoldFrame({ children, className = '' }) {
+export function GoldFrame({ children, className = '', style }) {
   return (
-    <div className={`gold-frame relative overflow-hidden rounded-[1.75rem] ${className}`}>
+    <div className={`gold-frame relative overflow-hidden rounded-[1.75rem] ${className}`} style={style}>
       <CornerOrnament className="left-4 top-4" />
       <CornerOrnament className="bottom-4 right-4 rotate-180" />
       {children}
