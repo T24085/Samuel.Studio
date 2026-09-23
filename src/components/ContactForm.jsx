@@ -90,7 +90,7 @@ export function ContactForm() {
     } catch (error) {
       console.error('EmailJS booking submission failed', error)
       setStatus('error')
-      setFeedback('Something went wrong while sending your inquiry. Please try again or email capture@samuel.studio directly.')
+      setFeedback('Something went wrong while sending your inquiry. Please try again or email studiodefiant@gmail.com directly.')
     }
   }
 

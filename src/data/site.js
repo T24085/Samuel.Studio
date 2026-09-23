@@ -7,14 +7,14 @@ export const site = {
   location: 'By appointment',
   hours: 'Mon-Sat, 10am-6pm',
   turnaround: '2-3 weeks',
-  email: 'capture@samuel.studio',
-  phone: '+1 281-515-7727',
+  email: 'studiodefiant@gmail.com',
+  phone: '832-310-9880',
   website: 'https://www.samuel.studio',
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ssp.capture/', external: true },
     { label: 'TikTok', href: 'https://www.tiktok.com/@samuelcary.art', external: true },
     { label: 'Facebook', href: 'https://www.facebook.com/search/top?q=samuel%20studio', external: true },
-    { label: 'Email', href: 'mailto:capture@samuel.studio', external: false },
+    { label: 'Email', href: 'mailto:studiodefiant@gmail.com', external: false },
   ],
   websiteLinks: [
     { label: 'Website', href: '/', external: false },
