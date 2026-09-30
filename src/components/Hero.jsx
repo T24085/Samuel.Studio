@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Camera } from 'lucide-react'
 import { galleryItems } from '../data/gallery'
 import { FanArcBackdrop, GoldFrame } from './DecorativeElements'
+import { HeroSocialLinks } from './HeroSocialLinks'
 import { withBase } from '../utils/paths'
 
 export function Hero() {
@@ -57,7 +58,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,24,22,0.72)_0%,rgba(9,24,22,0.48)_38%,rgba(9,24,22,0.66)_100%),linear-gradient(180deg,rgba(10,51,45,0.36)_0%,rgba(17,17,17,0.56)_100%)]" />
       </div>
       <FanArcBackdrop className="left-0 top-0 opacity-65" />
-      <div className="studio-shell relative z-10 flex min-h-[100svh] items-end pt-28 pb-14 md:pb-18">
+      <div className="studio-shell relative z-10 flex min-h-[100svh] flex-col justify-between gap-6 pt-28 pb-14 md:pb-18">
+        <HeroSocialLinks />
         <div className="grid w-full gap-10 lg:grid-cols-[1.1fr_0.65fr] lg:items-end">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

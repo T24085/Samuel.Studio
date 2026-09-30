@@ -13,7 +13,7 @@ export const site = {
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ssp.capture/', external: true },
     { label: 'TikTok', href: 'https://www.tiktok.com/@samuelcary.art', external: true },
-    { label: 'Facebook', href: 'https://www.facebook.com/search/top?q=samuel%20studio', external: true },
+    { label: 'Facebook', href: 'https://www.facebook.com/share/1Dma2oLKVa/?mibextid=wwXIfr', external: true },
     { label: 'Email', href: 'mailto:studiodefiant@gmail.com', external: false },
   ],
   websiteLinks: [
