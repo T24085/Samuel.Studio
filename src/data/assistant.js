@@ -2,7 +2,7 @@ import { site, siteKey } from './site'
 
 export const assistantName = 'Nova'
 
-const defaultOllamaModelCandidates = ['gemma4:12b', 'gemma3:12b', 'llama3.1:8b', 'qwen2.5:7b']
+const defaultOllamaModelCandidates = ['gemma4:e4b', 'gemma4:12b', 'gemma3:12b', 'llama3.1:8b', 'qwen2.5:7b']
 
 function normalizeModelCandidates(raw) {
   if (!raw) {

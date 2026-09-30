@@ -443,14 +443,14 @@ export function ChatAssistant() {
   }
 
   return (
-    <div className="fixed bottom-5 left-5 z-50 sm:bottom-6 sm:left-6">
+    <div className="floating-chat-button pointer-events-none fixed bottom-5 left-3 right-3 z-50 sm:bottom-6 sm:left-6 sm:right-auto">
       <AnimatePresence>
         {open ? (
           <>
             <motion.button
               type="button"
               aria-label="Close chat"
-              className="fixed inset-0 z-40 cursor-default bg-black/40 backdrop-blur-[1px]"
+              className="pointer-events-auto fixed inset-0 z-40 cursor-default bg-black/40 backdrop-blur-[1px]"
               initial={reducedMotion ? { opacity: 1 } : { opacity: 0 }}
               animate={reducedMotion ? { opacity: 1 } : { opacity: 1 }}
               exit={reducedMotion ? { opacity: 1 } : { opacity: 0 }}
@@ -462,13 +462,13 @@ export function ChatAssistant() {
               animate={reducedMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: 0, scale: 1 }}
               exit={reducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 12, scale: 0.98 }}
               transition={{ duration: 0.22, ease: 'easeOut' }}
-              className="relative z-50 flex h-[78vh] w-[min(92vw,26rem)] flex-col overflow-hidden rounded-[1.8rem] border border-gold/30 bg-[linear-gradient(180deg,rgba(11,11,11,0.96),rgba(6,6,6,0.98))] shadow-[0_0_0_1px_rgba(198,161,91,0.14),0_0_28px_rgba(198,161,91,0.16),0_28px_90px_rgba(0,0,0,0.45)] sm:h-[74vh]"
+              className="pointer-events-auto relative z-50 flex h-[78dvh] w-full flex-col overflow-x-hidden overflow-y-auto rounded-[1.8rem] border border-gold/30 bg-[linear-gradient(180deg,rgba(11,11,11,0.96),rgba(6,6,6,0.98))] shadow-[0_0_0_1px_rgba(198,161,91,0.14),0_0_28px_rgba(198,161,91,0.16),0_28px_90px_rgba(0,0,0,0.45)] sm:h-[74dvh] sm:w-[min(92vw,26rem)]"
             >
               <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-[1.8rem] border border-gold/15 shadow-[inset_0_0_0_1px_rgba(245,240,230,0.03),inset_0_0_24px_rgba(198,161,91,0.08)]" />
               <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent opacity-80" />
               <div aria-hidden="true" className="pointer-events-none absolute inset-x-8 top-0 h-20 bg-[radial-gradient(circle_at_center,rgba(198,161,91,0.18),transparent_70%)] blur-2xl" />
 
-              <div className="flex items-start justify-between gap-4 border-b border-white/10 px-5 py-4">
+              <div className="flex shrink-0 items-start justify-between gap-4 border-b border-white/10 px-5 py-4">
                 <div>
                   <p className="text-[0.62rem] uppercase tracking-[0.36em] text-gold/70">Nova</p>
                   <h2 className="mt-2 font-display text-3xl leading-[0.92] text-ivory">Samuel Studio chat</h2>
@@ -479,14 +479,14 @@ export function ChatAssistant() {
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-ivory transition hover:border-gold/50 hover:bg-gold/10"
+                  className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-ivory transition hover:border-gold/50 hover:bg-gold/10"
                   aria-label="Close chat"
                 >
                   <X size={18} />
                 </button>
               </div>
 
-              <div ref={listRef} className="flex-1 space-y-2 overflow-y-auto px-4 py-3 sm:space-y-3 sm:px-5 sm:py-4">
+              <div ref={listRef} className="min-h-24 flex-1 space-y-2 overflow-y-auto px-4 py-3 sm:space-y-3 sm:px-5 sm:py-4">
                 {hasProfile ? (
                   visibleMessages.map((message) => (
                     <MessageBubble key={message.id} message={message} />
@@ -504,7 +504,7 @@ export function ChatAssistant() {
                 ) : null}
               </div>
 
-              <div className="border-t border-white/10 px-4 py-4 sm:px-5">
+              <div className="shrink-0 border-t border-white/10 px-4 py-4 sm:px-5">
                 {hasProfile ? (
                   <>
                     <div className="flex gap-3">
@@ -595,15 +595,15 @@ export function ChatAssistant() {
         initial={reducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
         animate={reducedMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
         transition={{ duration: 0.35, ease: 'easeOut' }}
-        className="group inline-flex items-center gap-3 rounded-full border border-gold/40 bg-[linear-gradient(180deg,rgba(245,240,230,0.14),rgba(198,161,91,0.18)),linear-gradient(135deg,rgba(17,17,17,0.92),rgba(10,51,45,0.88))] px-4 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-ivory shadow-[0_18px_50px_rgba(0,0,0,0.34),0_0_0_1px_rgba(198,161,91,0.12)] backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:border-gold/70 hover:text-gold-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/55 focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:px-5"
+        className="floating-cta-link pointer-events-auto group relative z-50 inline-flex items-center gap-3 rounded-full border border-gold/40 bg-[linear-gradient(180deg,rgba(245,240,230,0.14),rgba(198,161,91,0.18)),linear-gradient(135deg,rgba(17,17,17,0.92),rgba(10,51,45,0.88))] px-4 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-ivory shadow-[0_18px_50px_rgba(0,0,0,0.34),0_0_0_1px_rgba(198,161,91,0.12)] backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:border-gold/70 hover:text-gold-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/55 focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:px-5"
         aria-label={open ? 'Close chat assistant' : 'Open chat assistant'}
       >
-        <span className="relative z-10 flex h-3 w-3">
+        <span className="floating-cta-dot relative z-10 flex h-3 w-3">
           <span className="absolute inline-flex h-full w-full rounded-full bg-gold/60 opacity-75 transition group-hover:opacity-100" />
           <span className="relative inline-flex h-3 w-3 rounded-full border border-gold/70 bg-gold/35" />
         </span>
         <span className="relative z-10">{open ? 'Close chat' : 'Chat with Nova'}</span>
-        <Sparkles size={16} className="relative z-10 transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <Sparkles size={16} className="floating-cta-icon relative z-10 transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </motion.button>
     </div>
   )

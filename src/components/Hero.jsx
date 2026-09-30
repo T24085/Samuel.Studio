@@ -75,16 +75,16 @@ export function Hero() {
                 We work with individuals and brands to shape how they are seen, through refined, intentional visual storytelling.
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="grid gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
               <Link
                 to="/portfolio"
-                className="inline-flex items-center gap-2 rounded-full border border-[#c6a15b] bg-transparent px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#c6a15b] shadow-[inset_0_0_0_1px_rgba(198,161,91,0.28)] transition hover:border-[#f7e8c8] hover:bg-[rgba(198,161,91,0.08)] hover:text-[#f7e8c8]"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#c6a15b] bg-transparent px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#c6a15b] shadow-[inset_0_0_0_1px_rgba(198,161,91,0.28)] transition hover:border-[#f7e8c8] hover:bg-[rgba(198,161,91,0.08)] hover:text-[#f7e8c8]"
               >
                 View Portfolio <ArrowRight size={15} />
               </Link>
               <Link
                 to="/booking"
-                className="inline-flex items-center gap-2 rounded-full border border-[#c6a15b] bg-transparent px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#c6a15b] shadow-[inset_0_0_0_1px_rgba(198,161,91,0.28)] transition hover:border-[#f7e8c8] hover:bg-[rgba(198,161,91,0.08)] hover:text-[#f7e8c8]"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#c6a15b] bg-transparent px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#c6a15b] shadow-[inset_0_0_0_1px_rgba(198,161,91,0.28)] transition hover:border-[#f7e8c8] hover:bg-[rgba(198,161,91,0.08)] hover:text-[#f7e8c8]"
               >
                 Book a Session
               </Link>

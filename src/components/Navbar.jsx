@@ -38,7 +38,7 @@ export function Navbar() {
   return (
     <header
       className={[
-        `fixed inset-x-0 top-0 transition-all duration-500 ${magazineOpen ? 'z-[90]' : 'z-50'}`,
+        `fixed inset-x-0 top-0 transition-all duration-500 ${magazineOpen ? 'z-[90]' : open ? 'z-[60]' : 'z-50'}`,
         scrolled
           ? 'border-b border-gold/10 bg-[linear-gradient(180deg,rgba(17,17,17,0.94),rgba(17,17,17,0.84))] shadow-luxury backdrop-blur-2xl'
           : 'border-b border-white/10 bg-[linear-gradient(180deg,rgba(17,17,17,0.84),rgba(17,17,17,0.58))] shadow-[0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-xl',
@@ -56,7 +56,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((value) => !value)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-ivory/5 text-ivory transition hover:border-gold/55 hover:bg-gold/10 lg:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/20 bg-ivory/5 text-ivory transition hover:border-gold/55 hover:bg-gold/10 lg:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
         >
@@ -71,7 +71,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="border-t border-gold/10 bg-ink/95 px-6 py-8 backdrop-blur-xl lg:hidden"
+            className="max-h-[calc(100dvh-5.75rem)] overflow-y-auto border-t border-gold/10 bg-ink/95 px-6 py-8 backdrop-blur-xl lg:hidden"
           >
             <div className="studio-shell flex flex-col gap-4">
               {navLinks.map((link) => (

@@ -1033,6 +1033,32 @@
   }
 }
 
+@media (max-width: 639px) {
+  .floating-chat-button,
+  .floating-booking-button {
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .floating-cta-link {
+    height: 44px;
+    gap: 0.375rem;
+    padding: 0 0.75rem;
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .floating-cta-dot {
+    display: none;
+  }
+
+  .floating-cta-icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+}
+
 @media (max-width: 1023px) {
   .about-cover-wall {
     min-height: auto;

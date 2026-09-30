@@ -46,12 +46,12 @@ export function CTASection() {
               From intimate portraits to editorial storytelling, Samuel Studio is designed for clients who value restraint, polish, and images that feel enduring.
             </p>
           </div>
-          <motion.div className="flex flex-wrap gap-4">
+          <motion.div className="grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
             <MotionLink
               to="/booking"
               whileHover={reduceMotion ? undefined : { y: -2, scale: 1.01 }}
               whileTap={reduceMotion ? undefined : { scale: 0.98 }}
-              className="inline-flex items-center justify-center rounded-full border border-gold/80 bg-[linear-gradient(180deg,rgba(198,161,91,0.98),rgba(168,132,67,0.92))] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-ink shadow-[0_0_0_1px_rgba(198,161,91,0.32),0_10px_28px_rgba(198,161,91,0.18)] transition hover:-translate-y-px hover:border-gold hover:bg-[linear-gradient(180deg,rgba(212,177,105,1),rgba(184,145,75,0.96))] hover:text-ink"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-gold/80 bg-[linear-gradient(180deg,rgba(198,161,91,0.98),rgba(168,132,67,0.92))] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-ink shadow-[0_0_0_1px_rgba(198,161,91,0.32),0_10px_28px_rgba(198,161,91,0.18)] transition hover:-translate-y-px hover:border-gold hover:bg-[linear-gradient(180deg,rgba(212,177,105,1),rgba(184,145,75,0.96))] hover:text-ink"
             >
               Book a Session
             </MotionLink>
@@ -59,7 +59,7 @@ export function CTASection() {
               to="/portfolio"
               whileHover={reduceMotion ? undefined : { y: -2, scale: 1.01 }}
               whileTap={reduceMotion ? undefined : { scale: 0.98 }}
-              className="inline-flex items-center justify-center rounded-full border border-gold/70 bg-ink/45 px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-ivory shadow-[0_0_0_1px_rgba(198,161,91,0.18)] transition hover:-translate-y-px hover:border-gold hover:bg-ink/65 hover:text-gold/95"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-gold/70 bg-ink/45 px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-ivory shadow-[0_0_0_1px_rgba(198,161,91,0.18)] transition hover:-translate-y-px hover:border-gold hover:bg-ink/65 hover:text-gold/95"
             >
               View Portfolio
             </MotionLink>

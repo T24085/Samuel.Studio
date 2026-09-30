@@ -177,7 +177,7 @@ export function ExpandingGallery({ items, onSelect, fullBleed = false }) {
   if (!cards.length) return null
 
   return (
-    <div className={fullBleed ? 'relative w-screen left-1/2 -translate-x-1/2' : 'relative'}>
+    <div className="relative w-full">
       <div
         className={[
           'pointer-events-none absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(198,161,91,0.48),transparent)]',
