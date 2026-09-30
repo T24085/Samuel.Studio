@@ -31,7 +31,7 @@ export function InstagramSection() {
             Follow the studio
           </div>
           <h2 id="instagram-heading" className="mt-6 max-w-md font-display text-5xl leading-[1.02] sm:text-6xl">
-            The studio,<br />in your feed.
+            The Studio,<br />in Your Feed.
           </h2>
           <a
             href={instagram.href}

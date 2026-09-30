@@ -224,12 +224,12 @@ export const portfolioMagazineIssues = portfolioCollections.map((collection, ind
   issueNumber: String(index + 1).padStart(2, '0'),
   issueTitle:
     index === 0
-      ? 'Front cover / lead story'
+      ? 'Front Cover / Lead Story'
       : index === 1
-        ? 'Feature spread / intimate study'
+        ? 'Feature Spread / Intimate Study'
       : index === 2
-          ? 'Style file / culture chapter'
-          : 'Studio notes / local archive',
+          ? 'Style File / Culture Chapter'
+          : 'Studio Notes / Local Archive',
   issueNote:
     index === 0
       ? 'Lead with the strongest cover and let the rest of the issue unfold like a real print publication.'
@@ -368,7 +368,7 @@ export const portfolioMagazineHero = {
   title: 'The Studio Family',
   coverSrc: samStudioCover,
   coverAlt: 'Samuel Studio The Studio Family magazine cover.',
-  headline: 'Samuel Studio is the parent house for a growing editorial family.',
+  headline: 'Samuel Studio Is the Parent House for a Growing Editorial Family.',
   description:
     'The portfolio is now laid out like a real magazine spread. The left side leads with the cover image, while the right side reads like a contents page and editorial note.',
   issueNote:

@@ -76,7 +76,7 @@ export function BookingPage() {
           <div className="studio-shell">
             <SectionHeading
               eyebrow="Booking / Contact"
-              title="Begin with an inquiry, then shape the session around your story."
+              title="Begin With an Inquiry, Then Shape the Session Around Your Story."
               description="Use the form to share your goals, timing, and the service you want. The studio will respond with next steps and availability."
             />
 

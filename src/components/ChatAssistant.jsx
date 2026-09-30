@@ -471,7 +471,7 @@ export function ChatAssistant() {
               <div className="flex shrink-0 items-start justify-between gap-4 border-b border-white/10 px-5 py-4">
                 <div>
                   <p className="text-[0.62rem] uppercase tracking-[0.36em] text-gold/70">Nova</p>
-                  <h2 className="mt-2 font-display text-3xl leading-[0.92] text-ivory">Samuel Studio chat</h2>
+                  <h2 className="mt-2 font-display text-3xl leading-[0.92] text-ivory">Samuel Studio Chat</h2>
                   <p className="mt-2 text-sm leading-6 text-parchment/68">
                     Tell me about the shoot, and I will help scope the right session path.
                   </p>

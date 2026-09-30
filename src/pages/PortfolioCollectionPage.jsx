@@ -173,10 +173,10 @@ export function PortfolioCollectionPage() {
                 </p>
                 <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl xl:text-[5rem]">
                   {isEditorialCollection
-                    ? 'A cleaner read on the model chapter.'
+                    ? 'A Cleaner Read on the Model Chapter.'
                     : isColombiaCollection
-                      ? 'A portrait essay from Colombia.'
-                      : 'A tighter look at the collection.'}
+                      ? 'A Portrait Essay From Colombia.'
+                      : 'A Tighter Look at the Collection.'}
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-8 text-parchment/72 md:text-base">
@@ -207,7 +207,7 @@ export function PortfolioCollectionPage() {
               <div>
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Related album houses</p>
                 <h2 className="mt-4 max-w-3xl font-display text-4xl leading-[0.92] tracking-[-0.04em] text-ivory md:text-5xl xl:text-[4.5rem]">
-                  {collection.title} connects into the deeper archive.
+                  {collection.title} Connects Into the Deeper Archive.
                 </h2>
                 <p className="mt-6 max-w-2xl text-sm leading-8 text-parchment/72 md:text-base">
                   The album pages are where the larger image bodies will sit once the studio finishes curating the

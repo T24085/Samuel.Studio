@@ -304,7 +304,7 @@ export function ServicesPage() {
                     </AnimatedTitleWord>
                   </span>
                   <span className="block">
-                    into Bespoke{' '}
+                    Into Bespoke{' '}
                     <AnimatedTitleWord
                       delay={0.32}
                       reduceMotion={reduceMotion}
@@ -371,7 +371,7 @@ export function ServicesPage() {
               <div>
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Inquiry</p>
                 <h2 className="mt-4 max-w-3xl font-display text-4xl leading-[0.92] tracking-[-0.04em] text-ivory md:text-5xl xl:text-[4.5rem]">
-                  Ready to choose the right commission path?
+                  Ready to Choose the Right Commission Path?
                 </h2>
                 <p className="mt-6 max-w-2xl text-sm leading-8 text-parchment/72 md:text-base">
                   Share the project type, timeline, intended use, and any reference direction. Samuel will respond with

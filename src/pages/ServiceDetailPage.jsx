@@ -254,7 +254,7 @@ export function ServiceDetailPage() {
                 <div>
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Who this is for</p>
                   <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl">
-                    The right fit for this service.
+                    The Right Fit for This Service.
                   </h2>
                 </div>
 
@@ -278,7 +278,7 @@ export function ServiceDetailPage() {
                 <div>
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">What’s included</p>
                   <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl">
-                    A complete creative frame.
+                    A Complete Creative Frame.
                   </h2>
                 </div>
 
@@ -303,7 +303,7 @@ export function ServiceDetailPage() {
                 <div>
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Planning process</p>
                   <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl">
-                    Four steps, one clear direction.
+                    Four Steps, One Clear Direction.
                   </h2>
                 </div>
                 <p className="max-w-xl text-sm leading-8 text-parchment/72 md:text-base">
@@ -340,7 +340,7 @@ export function ServiceDetailPage() {
                 <div>
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Visual references</p>
                   <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl">
-                    Image studies for the final direction.
+                    Image Studies for the Final Direction.
                   </h2>
                 </div>
                 <p className="max-w-xl text-sm leading-8 text-parchment/72 md:text-base">

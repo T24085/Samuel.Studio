@@ -157,7 +157,7 @@ export function PortfolioAlbumPage() {
               <div>
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/72">Full archive</p>
                 <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl xl:text-[5rem]">
-                  The album house in full.
+                  The Album House in Full.
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-8 text-parchment/72 md:text-base">
@@ -180,7 +180,7 @@ export function PortfolioAlbumPage() {
               <div>
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Archive note</p>
                 <h2 className="mt-4 max-w-3xl font-display text-4xl leading-[0.92] tracking-[-0.04em] text-ivory md:text-5xl xl:text-[4.5rem]">
-                  {album.title} is designed to expand as the collections grow.
+                  {album.title} Is Designed to Expand as the Collections Grow.
                 </h2>
                 <p className="mt-6 max-w-2xl text-sm leading-8 text-parchment/72 md:text-base">
                   Each album page can hold the real finished sets, supporting text, and any future sub-albums that need

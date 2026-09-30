@@ -277,7 +277,7 @@ export function AboutPage() {
               </div>
 
               <h1 className="mt-6 max-w-[11ch] font-display text-[clamp(3.6rem,8.4vw,8.6rem)] leading-[0.82] tracking-[-0.05em] text-ivory">
-                Published photographer.
+                Published Photographer.
               </h1>
 
               <div className="mt-6 grid gap-5 border-y border-white/10 py-6 lg:grid-cols-[1fr_15rem]">

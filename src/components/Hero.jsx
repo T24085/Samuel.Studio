@@ -69,7 +69,7 @@ export function Hero() {
           >
             <div className="space-y-5">
               <h1 className="font-display text-5xl leading-[0.95] tracking-[-0.02em] text-ivory md:text-7xl lg:text-[5.8rem]">
-                Portraits shaped by light, restraint, and presence.
+                Portraits Shaped by Light, Restraint, and Presence.
               </h1>
               <p className="max-w-2xl text-base leading-8 text-parchment/78 md:text-lg">
                 Samuel Studio creates cinematic imagery designed around identity, presence, and perception.
@@ -166,7 +166,7 @@ export function Hero() {
                   <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
                     <div>
                       <p className="text-[0.64rem] uppercase tracking-[0.32em] text-gold/75">Featured work</p>
-                      <p className="mt-2 font-display text-3xl text-ivory">Cinematic studio portrait</p>
+                      <p className="mt-2 font-display text-3xl text-ivory">Cinematic Studio Portrait</p>
                     </div>
                     <div className="rounded-full border border-gold/25 bg-ink/65 p-3 text-gold/80">
                       <Camera size={18} />

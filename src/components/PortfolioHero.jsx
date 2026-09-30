@@ -159,7 +159,7 @@ export function PortfolioHero({ activeSlug = null, onMagazineSelect }) {
               Portfolio / Editorial Archive
             </p>
 
-            <h1 className="max-w-3xl font-display text-[clamp(4.25rem,7vw,8.5rem)] font-medium uppercase leading-[0.86] tracking-[-0.05em] text-white">
+            <h1 className="max-w-3xl font-display text-[clamp(4.25rem,7vw,8.5rem)] font-medium uppercase leading-[0.86] tracking-[-0.05em] text-white max-[359px]:text-[3.5rem]">
               Visuals That
               <br />
               <span className="text-[#c9a14a]">Define Presence.</span>

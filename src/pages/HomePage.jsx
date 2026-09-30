@@ -20,22 +20,22 @@ import rightPortrait from '../../Right3.png'
 const experienceCards = [
   {
     icon: Brush,
-    title: 'Editorial direction',
+    title: 'Editorial Direction',
     text: 'Thoughtful posing and lighting shaped into imagery that feels considered rather than overproduced.',
   },
   {
     icon: Compass,
-    title: 'Guided process',
+    title: 'Guided Process',
     text: 'Clear communication from inquiry to delivery so every client feels confident and at ease.',
   },
   {
     icon: Gem,
-    title: 'Luxury finish',
+    title: 'Luxury Finish',
     text: 'Retouching and presentation that preserve texture, depth, and the natural elegance of the subject.',
   },
   {
     icon: HeartHandshake,
-    title: 'Warm experience',
+    title: 'Warm Experience',
     text: 'A calm session flow with enough space for presence, movement, and authentic expression.',
   },
 ]
@@ -155,7 +155,7 @@ export function HomePage() {
           <div className="mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="Featured gallery"
-              title="A single frame should hold attention before it asks for more."
+              title="A Single Frame Should Hold Attention Before It Asks for More."
               delay={0.04}
               align="center"
             />
@@ -255,7 +255,7 @@ export function HomePage() {
           <div className="studio-shell">
             <SectionHeading
               eyebrow="Signature experience"
-              title="A calm, premium process designed around the photograph and the person in front of it."
+              title="A Calm, Premium Process Designed Around the Photograph and the Person in Front of It."
               delay={0.05}
               align="center"
             />
@@ -399,7 +399,7 @@ export function HomePage() {
             <div className="mx-auto max-w-4xl text-center">
               <SectionHeading
                 eyebrow="Client notes"
-                title="Refined words from the people who stepped into the frame."
+                title="Refined Words From the People Who Stepped Into the Frame."
                 delay={0.05}
                 align="center"
               />

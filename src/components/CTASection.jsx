@@ -40,7 +40,7 @@ export function CTASection() {
           <div className="max-w-2xl space-y-4">
             <VerticalTag>Booking banner</VerticalTag>
             <h2 className="font-display text-4xl font-semibold md:text-5xl">
-              A premium session, directed with clarity and care.
+              A Premium Session, Directed With Clarity and Care.
             </h2>
             <p className="max-w-xl text-sm leading-7 text-parchment/72">
               From intimate portraits to editorial storytelling, Samuel Studio is designed for clients who value restraint, polish, and images that feel enduring.

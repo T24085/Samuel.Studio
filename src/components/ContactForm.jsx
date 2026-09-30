@@ -99,7 +99,7 @@ export function ContactForm() {
       {status === 'success' ? (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <p className="text-xs uppercase tracking-[0.36em] text-gold/80">Inquiry received</p>
-          <h3 className="mt-4 font-display text-4xl text-ivory">Thank you. We will be in touch soon.</h3>
+          <h3 className="mt-4 font-display text-4xl text-ivory">Thank You. We Will Be in Touch Soon.</h3>
           <p className="mt-4 max-w-xl text-sm leading-7 text-parchment/72">
             Your inquiry has been sent to {site.email}. The studio will follow up with availability and next steps.
           </p>
