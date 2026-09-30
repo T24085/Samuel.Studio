@@ -11,6 +11,7 @@ import { TestimonialCard } from '../components/TestimonialCard'
 import { CTASection } from '../components/CTASection'
 import { MotionDeckSection } from '../components/AboutPosterSection'
 import { ExpandingGallery } from '../components/ExpandingGallery'
+import { InstagramSection } from '../components/InstagramSection'
 import { Lightbox } from '../components/Lightbox'
 import { siteUrl, withBase } from '../utils/paths'
 import leftPortrait from '../../Left1.png'
@@ -164,6 +165,8 @@ export function HomePage() {
           <ExpandingGallery items={portfolioGalleryItems} onSelect={openById} fullBleed />
         </div>
       </section>
+
+      <InstagramSection />
 
       <section ref={signatureSectionRef} className="home-snap-section relative overflow-hidden bg-ink py-24 text-ivory">
         <div className="absolute inset-0 hidden md:grid md:grid-cols-2">

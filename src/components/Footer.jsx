@@ -1,10 +1,13 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { ArrowUpRight } from 'lucide-react'
+import { InstagramIcon } from './InstagramIcon'
 import { site, navLinks } from '../data/site'
 import { Logo } from './Logo'
 
 export function Footer() {
   const reduceMotion = useReducedMotion()
+  const instagram = site.socials.find((social) => social.label === 'Instagram')
 
   return (
     <motion.footer
@@ -26,6 +29,19 @@ export function Footer() {
           <p className="max-w-md text-sm leading-7 text-parchment/72">
             {site.tagline}
           </p>
+          {instagram ? (
+            <a
+              href={instagram.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Samuel Studio on Instagram (opens in a new tab)"
+              className="inline-flex min-h-12 items-center gap-3 rounded-full border border-gold-500/35 bg-emerald-700/35 px-4 py-3 text-sm text-gold-100 transition hover:border-gold-500 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+            >
+              <InstagramIcon size={19} />
+              Follow on Instagram
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
+          ) : null}
         </motion.div>
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 10 }}
