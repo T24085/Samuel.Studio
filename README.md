@@ -37,9 +37,12 @@ sender is unavailable, visitors see a direct studio email link instead.
 
 October 30, 2026 deployment: EmailJS removed; Brevo relay deployed. Initial
 synthetic test was rejected; live readiness reports `provider_authentication_failed`.
-The ASL Netlify `BREVO_API_KEY` needs a valid replacement through its secure
-environment-variable UI before form delivery can be verified. No successful
-test delivery or inbox placement has been confirmed. Chat changes remain separate.
+Brevo's dashboard shows the ASL API key is active, but API IP restrictions
+are enabled and the new Netlify outbound addresses were blocked at the test
+times. Do not rotate the key based on this HTTP 401 alone or disable account
+protections. A stable authorized-egress delivery path needs approval before
+form delivery can be verified. No successful test delivery or inbox placement
+has been confirmed. Chat changes remain separate.
 Run `node --test tests/inquiry.test.mjs` for delivery-client tests.
 
 Deploy the backend endpoint before publishing this frontend. Disable it with
