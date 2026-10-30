@@ -20,23 +20,23 @@ import rightPortrait from '../../Right3.png'
 const experienceCards = [
   {
     icon: Brush,
-    title: 'Editorial Direction',
-    text: 'Thoughtful posing and lighting shaped into imagery that feels considered rather than overproduced.',
+    title: 'Plan the Shoot',
+    text: 'We talk about what the photographs are for, the kind of shoot you want, and the location. Portfolio work, beauty, magazine submissions, or professional portraits each call for a different approach.',
   },
   {
     icon: Compass,
-    title: 'Guided Process',
-    text: 'Clear communication from inquiry to delivery so every client feels confident and at ease.',
-  },
-  {
-    icon: Gem,
-    title: 'Luxury Finish',
-    text: 'Retouching and presentation that preserve texture, depth, and the natural elegance of the subject.',
+    title: 'Find the Look',
+    text: 'Bring your own ideas, or we can work through outfit choices and references together. I offer as much guidance as you need for the shoot we are planning.',
   },
   {
     icon: HeartHandshake,
-    title: 'Warm Experience',
-    text: 'A calm session flow with enough space for presence, movement, and authentic expression.',
+    title: 'Settle Into the Flow',
+    text: 'I start with gentle direction and small adjustments. As you relax and begin moving in your own way, your personality and energy become part of the photographs.',
+  },
+  {
+    icon: Gem,
+    title: 'Curate & Retouch',
+    text: 'Careful curation and meticulous retouching bring out the strongest images, with the finish suited to your shoot. A few previews come first, followed by an album of the finished favorites.',
   },
 ]
 
@@ -133,7 +133,7 @@ export function HomePage() {
     <>
       <SEO
         title="Samuel Studio"
-        description="Luxury editorial photography with dark emerald, antique gold, and ivory visual storytelling."
+        description="Editorial fashion, personal branding, and portrait photography by Samuel Cary. Explore the portfolio and plan a shoot with Samuel Studio."
         path="/"
         schema={{
           '@context': 'https://schema.org',
@@ -155,7 +155,7 @@ export function HomePage() {
           <div className="mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="Featured gallery"
-              title="A Single Frame Should Hold Attention Before It Asks for More."
+              title="Selected Photographs"
               delay={0.04}
               align="center"
             />
@@ -255,7 +255,7 @@ export function HomePage() {
           <div className="studio-shell">
             <SectionHeading
               eyebrow="Signature experience"
-              title="A Calm, Premium Process Designed Around the Photograph and the Person in Front of It."
+              title="Good Photographs Start With a Conversation."
               delay={0.05}
               align="center"
             />
@@ -287,7 +287,7 @@ export function HomePage() {
 
       <MotionDeckSection />
 
-      <section ref={testimonialSectionRef} className="home-snap-section relative isolate overflow-hidden bg-[#111111] py-24 text-ivory">
+      <section hidden={testimonials.length === 0} ref={testimonialSectionRef} className="home-snap-section relative isolate overflow-hidden bg-[#111111] py-24 text-ivory">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,240,230,0.05),transparent_42%),linear-gradient(180deg,rgba(17,17,17,0.98),rgba(17,17,17,0.94))]" />
         <motion.div
           aria-hidden="true"
@@ -399,13 +399,12 @@ export function HomePage() {
             <div className="mx-auto max-w-4xl text-center">
               <SectionHeading
                 eyebrow="Client notes"
-                title="Refined Words From the People Who Stepped Into the Frame."
+                title="In Their Own Words"
                 delay={0.05}
                 align="center"
               />
               <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-parchment/72 sm:text-base">
-                The testimonials below reflect the kind of experience Samuel Studio is known for: calm direction, thoughtful
-                imagery, and a final gallery that feels polished without losing presence.
+                Clients share their experience of planning a shoot, being in front of the camera, and seeing the finished photographs.
               </p>
             </div>
             <div className="mt-14 grid gap-5 lg:grid-cols-3">

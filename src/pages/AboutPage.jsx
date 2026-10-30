@@ -277,14 +277,14 @@ export function AboutPage() {
               </div>
 
               <h1 className="mt-6 max-w-[11ch] font-display text-[clamp(3.6rem,8.4vw,8.6rem)] leading-[0.82] tracking-[-0.05em] text-ivory">
-                Published Photographer.
+                An Editorial Eye. A Personal Approach.
               </h1>
 
               <div className="mt-6 grid gap-5 border-y border-white/10 py-6 lg:grid-cols-[1fr_15rem]">
                 <p className="max-w-[40rem] text-base leading-8 text-ivory/76">
-                  Samuel Cary creates fashion, beauty, branding, and portrait imagery with a print-minded editorial
-                  point of view. His published work brings the same calm direction, polish, and visual confidence into
-                  every client session.
+                  I'm Samuel Cary. I photograph fashion, beauty, personal brands, and people who want to see
+                  themselves a little differently. My editorial experience gives me an eye for the light, styling,
+                  and small details that can make a photograph feel special.
                 </p>
 
                 <figure className="about-author-card">
@@ -294,6 +294,21 @@ export function AboutPage() {
                     <strong>Samuel Cary</strong>
                   </figcaption>
                 </figure>
+              </div>
+
+              <div className="mt-6 max-w-[40rem] space-y-4 text-base leading-8 text-ivory/76">
+                <p>
+                  Before a shoot, we talk about the purpose of the images, the location, and the look you have in mind.
+                  You may already have outfits and references ready. If you want help choosing, we work through those together.
+                </p>
+                <p>
+                  During the session, I guide gently and pay attention to what feels natural for you. As we settle
+                  into a rhythm, the best moments often come when you start moving independently and your own energy comes through.
+                </p>
+                <p>
+                  Afterward, I curate and retouch the strongest photographs, sharing a few previews before delivering
+                  an album of finished favorites. The aim is for you to recognize yourself in the images and love how you look.
+                </p>
               </div>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">

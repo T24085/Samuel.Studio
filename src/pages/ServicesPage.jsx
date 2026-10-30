@@ -288,11 +288,11 @@ export function ServicesPage() {
                       reduceMotion={reduceMotion}
                       className="text-[#ffd86f] drop-shadow-[0_0_10px_rgba(255,216,111,0.18)]"
                     >
-                      Cinematic
+                      Photography
                     </AnimatedTitleWord>
                   </span>
                   <span className="block">
-                    Services <span className="italic text-ivory/90">Built as</span>
+                    <span className="italic text-ivory/90">for People,</span>
                   </span>
                   <span className="block">
                     <AnimatedTitleWord
@@ -300,23 +300,23 @@ export function ServicesPage() {
                       reduceMotion={reduceMotion}
                       className="italic text-[#ffd86f] drop-shadow-[0_0_10px_rgba(255,216,111,0.18)]"
                     >
-                      Gateways
+                      Brands,
                     </AnimatedTitleWord>
                   </span>
                   <span className="block">
-                    Into Bespoke{' '}
+                    and{' '}
                     <AnimatedTitleWord
                       delay={0.32}
                       reduceMotion={reduceMotion}
                       className="text-[#ffd86f] drop-shadow-[0_0_10px_rgba(255,216,111,0.18)]"
                     >
-                      Image-Making.
+                      Ideas.
                     </AnimatedTitleWord>
                   </span>
                 </h1>
                 <p className="mt-8 max-w-2xl text-base leading-8 text-parchment/74 md:text-lg">
-                  Four distinct commissions, each shaped with the same editorial discipline: clear direction, refined
-                  atmosphere, and final imagery that feels considered from first frame to delivery.
+                  Fashion campaigns, personal branding, visual stories, and private portraits. Each starts with
+                  what you want to create and where the photographs need to work.
                 </p>
                 <div className="mt-10 flex flex-wrap gap-3">
                   {services.map((service) => (
@@ -345,7 +345,7 @@ export function ServicesPage() {
                 }}
               />
               <div className="relative flex flex-wrap items-center justify-center gap-x-5 gap-y-2 rounded-full border border-gold/24 bg-[rgba(198,161,91,0.08)] px-5 py-4 text-[0.64rem] uppercase tracking-[0.34em] text-[#ffd86f] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] drop-shadow-[0_0_10px_rgba(245,205,92,0.16)]">
-                <span className="text-[#fff1b8]">Selected for</span>
+                <span className="text-[#fff1b8]">For</span>
                 <span className="text-[#c89a33]">/</span>
                 <span className="text-[#ffd86f]">Fashion labels</span>
                 <span className="text-[#c89a33]">/</span>
@@ -371,11 +371,11 @@ export function ServicesPage() {
               <div>
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Inquiry</p>
                 <h2 className="mt-4 max-w-3xl font-display text-4xl leading-[0.92] tracking-[-0.04em] text-ivory md:text-5xl xl:text-[4.5rem]">
-                  Ready to Choose the Right Commission Path?
+                  Have a Shoot in Mind?
                 </h2>
                 <p className="mt-6 max-w-2xl text-sm leading-8 text-parchment/72 md:text-base">
-                  Share the project type, timeline, intended use, and any reference direction. Samuel will respond with
-                  the best-fit service path and next steps for planning the shoot.
+                  Share the idea, timing, and how you plan to use the photographs. You do not need a finished brief.
+                  We can talk through the details and decide where to start.
                 </p>
               </div>
 
@@ -390,7 +390,7 @@ export function ServicesPage() {
 
                 <div className="mt-2 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-gold/65">
                   <Sparkles className="h-4 w-4" />
-                  <span>Refined response within 1-2 business days</span>
+                  <span>Reply within 1-2 business days</span>
                 </div>
               </div>
             </div>

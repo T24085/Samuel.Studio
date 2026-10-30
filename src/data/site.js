@@ -1,12 +1,12 @@
 export const site = {
   name: 'Samuel Studio',
-  tagline: 'Timeless studio photography crafted with intention, elegance, and story.',
+  tagline: 'Editorial fashion, personal branding, and portrait photography by Samuel Cary.',
   shortTagline:
-    'Luxury portraiture with a refined editorial point of view and calm, cinematic direction.',
+    'Photography with an editorial eye and direction that helps you feel comfortable in front of the camera.',
   siteKey: 'samuel-studio',
   location: 'By appointment',
   hours: 'Mon-Sat, 10am-6pm',
-  turnaround: '2-3 weeks',
+  turnaround: 'Allow 2-3 weeks for your final gallery. Many shoots are ready sooner; we agree on timing when planning your session.',
   email: 'studiodefiant@gmail.com',
   phone: '832-310-9880',
   website: 'https://www.samuel.studio',
@@ -27,8 +27,9 @@ export const siteKey = site.siteKey
 
 export const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Portfolio', href: '/portfolio' },
   { label: 'Services', href: '/services' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Brands', href: '/brands' },
   { label: 'About', href: '/about' },
   { label: 'Booking', href: '/booking' },
 ]

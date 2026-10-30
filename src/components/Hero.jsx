@@ -69,12 +69,12 @@ export function Hero() {
           >
             <div className="space-y-5">
               <h1 className="font-display text-5xl leading-[0.95] tracking-[-0.02em] text-ivory md:text-7xl lg:text-[5.8rem]">
-                Portraits Shaped by Light, Restraint, and Presence.
+                The Real You, Through an Editorial Eye.
               </h1>
               <p className="max-w-2xl text-base leading-8 text-parchment/78 md:text-lg">
-                Samuel Studio creates cinematic imagery designed around identity, presence, and perception.
+                Editorial fashion, personal branding, and portraits by Samuel Cary.
                 {' '}
-                We work with individuals and brands to shape how they are seen, through refined, intentional visual storytelling.
+                Thoughtful direction, a feel for light, and space for your own energy to come through. Photographs that feel like you, at your best.
               </p>
             </div>
             <div className="grid gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">

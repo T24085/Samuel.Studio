@@ -19,7 +19,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
   const location = useLocation()
   const [searchParams] = useSearchParams()
-  const magazineOpen = location.pathname.startsWith('/portfolio') && searchParams.has('magazine')
+  const magazineOpen = location.pathname.startsWith('/brands') && searchParams.has('magazine')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -46,7 +46,7 @@ export function Navbar() {
     >
       <div className="studio-shell flex items-center justify-between py-3 sm:py-4">
         <Logo compact />
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-1 lg:flex xl:gap-4">
           {navLinks.map((link) => (
             <NavLink key={link.href} to={link.href} className={linkClass}>
               {link.label}

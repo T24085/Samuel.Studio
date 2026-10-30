@@ -38,12 +38,12 @@ export function CTASection() {
             transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
           />
           <div className="max-w-2xl space-y-4">
-            <VerticalTag>Booking banner</VerticalTag>
+            <VerticalTag>Plan a Shoot</VerticalTag>
             <h2 className="font-display text-4xl font-semibold md:text-5xl">
-              A Premium Session, Directed With Clarity and Care.
+              What Do You Want to Create?
             </h2>
             <p className="max-w-xl text-sm leading-7 text-parchment/72">
-              From intimate portraits to editorial storytelling, Samuel Studio is designed for clients who value restraint, polish, and images that feel enduring.
+              Tell me about the idea, the people involved, and where the photographs will be used. We can work out the right approach together.
             </p>
           </div>
           <motion.div className="grid gap-3 sm:flex sm:flex-wrap sm:gap-4">

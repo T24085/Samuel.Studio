@@ -32,7 +32,7 @@ function ImageTile({ item, index }) {
 }
 
 function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
-  const preview = collection.previewItems.slice(0, 8)
+  const preview = collection.previewItems.slice(0, 6)
 
   const panel = (
     <motion.div
@@ -99,8 +99,7 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
                   Magazine cover / {collection.title}
                 </p>
                 <p className="mt-3 max-w-sm text-sm leading-7 text-parchment/82">
-                  A cover-led visual entry point for the section. The right side carries the service details and
-                  collection previews.
+                  {collection.description}
                 </p>
               </div>
             </div>
@@ -125,7 +124,7 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
                   to={collection.collectionLink}
                   className="group inline-flex items-center justify-between gap-3 rounded-full border border-gold/35 bg-[linear-gradient(180deg,rgba(198,161,91,0.24),rgba(198,161,91,0.1))] px-5 py-3 text-[0.68rem] uppercase tracking-[0.28em] text-ivory transition duration-300 hover:border-gold/70 hover:bg-[linear-gradient(180deg,rgba(198,161,91,0.34),rgba(198,161,91,0.12))]"
                 >
-                  <span>View full collection</span>
+                  <span>{collection.comingSoon ? 'About the Brand' : 'View Collection'}</span>
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
                 {collection.external ? (
@@ -201,9 +200,9 @@ export function PortfolioPage() {
   return (
     <>
       <SEO
-        title="Portfolio"
-        description="Samuel Studio as the parent house for Defiant Models, Defiant Boudoir, Samuel Studio, AllStreet Apparel, and Samuel Studio Colombia."
-        path="/portfolio"
+        title="Brands"
+        description="Explore Samuel Studio's creative brands and projects: Defiant Models, Defiant Boudoir, AllStreet Apparel, and Colombia."
+        path="/brands"
       />
 
       <main className="relative isolate overflow-hidden bg-[#050505] text-ivory">

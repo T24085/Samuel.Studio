@@ -15,18 +15,6 @@ const featuredOrder = [
   'untitled-2359',
 ]
 
-const cardNotes = {
-  '2021.08_YoungTiff SE1-717-Edit': 'Forward movement with color and a more kinetic line.',
-  '2021.08_YoungTiff SE1-1372-Edit': 'Direct and centered, with a quiet studio finish.',
-  '2021.08_YoungTiff SE1-1493-Edit': 'Looser attitude and stronger contrast for the middle beat.',
-  '2021.08_YoungTiff SE1-1760-Edit': 'A softer frame with motion still held in check.',
-  '2021.08_YoungTiff SE1-1821-Edit': 'Grounded and sculptural, with a strong shape that opens the sequence.',
-  A30A0125: 'Closed composition, restrained light, and a final note of softness.',
-  A30A0259: 'Dark fabric, metallic light, and a stronger editorial presence.',
-  A30A0357: 'A quieter pose with depth in the face and texture in the frame.',
-  'untitled-2359': 'Airier tone and a lighter close to the sequence.',
-}
-
 function buildShowcaseItems(items) {
   const lookup = new Map(items.map((item) => [item.id, item]))
   const ordered = featuredOrder.map((id) => lookup.get(id)).filter(Boolean)
@@ -40,7 +28,6 @@ function buildShowcaseItems(items) {
 
 function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen }) {
   const title = item.title
-  const note = item.note ?? item.categories.join(' / ')
 
   return (
     <motion.button
@@ -56,7 +43,7 @@ function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen })
         onActivate(index)
       }}
       aria-pressed={active}
-      aria-label={`${active ? 'Open' : 'Focus'} ${title}`}
+      aria-label={`${active ? 'Open' : 'Focus'} ${title}, photograph ${index + 1}`}
       className={[
         'group relative isolate w-full flex-none overflow-hidden border border-white/10 bg-[#090909] text-left outline-none',
         'transition-[flex-grow,transform,filter,opacity,border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]',
@@ -131,9 +118,6 @@ function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen })
             <h3 className="mt-2 font-display text-[2rem] leading-none text-ivory sm:text-[2.4rem]">
               {title}
             </h3>
-            <p className="mt-3 text-sm leading-6 text-parchment/76 sm:text-[0.98rem]">
-              {note}
-            </p>
           </div>
 
           <span className="inline-flex shrink-0 items-center gap-2 rounded-full border border-gold/24 bg-ink/42 px-3 py-2 text-[0.6rem] uppercase tracking-[0.34em] text-gold/90 backdrop-blur-sm">
@@ -165,7 +149,7 @@ export function ExpandingGallery({ items, onSelect, fullBleed = false }) {
     () =>
       buildShowcaseItems(items).map((item) => ({
         ...item,
-        note: cardNotes[item.id] ?? item.note ?? item.categories.join(' / '),
+        title: item.categories.join(' / '),
       })),
     [items],
   )

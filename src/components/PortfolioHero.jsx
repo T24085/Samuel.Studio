@@ -156,18 +156,17 @@ export function PortfolioHero({ activeSlug = null, onMagazineSelect }) {
             transition={{ duration: 0.85, ease: 'easeOut' }}
           >
             <p className="mb-5 text-xs uppercase tracking-[0.45em] text-[#c9a14a]">
-              Portfolio / Editorial Archive
+              Brands / Creative Projects
             </p>
 
             <h1 className="max-w-3xl font-display text-[clamp(4.25rem,7vw,8.5rem)] font-medium uppercase leading-[0.86] tracking-[-0.05em] text-white max-[359px]:text-[3.5rem]">
-              Visuals That
+              Different Ideas.
               <br />
-              <span className="text-[#c9a14a]">Define Presence.</span>
+              <span className="text-[#c9a14a]">A Shared Eye.</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-base leading-7 text-white/75 md:text-lg">
-              A curated collection of editorial, identity, and portrait work crafted to inspire, elevate, and leave a
-              lasting impression.
+              Explore the brands and projects connected to Samuel Studio, from model portfolios and intimate portraits to a future streetwear collection.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-8">
@@ -175,7 +174,7 @@ export function PortfolioHero({ activeSlug = null, onMagazineSelect }) {
                 href="#portfolio-gallery"
                 className="border border-[#c9a14a] px-7 py-4 text-xs font-medium uppercase tracking-[0.28em] text-[#c9a14a] transition hover:bg-[#c9a14a] hover:text-black"
               >
-                Explore the Portfolio
+                Explore the Brands
               </a>
 
               <div className="flex items-center gap-4 text-sm uppercase tracking-[0.25em] text-white/55">

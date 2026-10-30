@@ -39,7 +39,7 @@ export function PortfolioAlbumPage() {
   const album = portfolioAlbumsBySlug.get(albumSlug)
   const [activeIndex, setActiveIndex] = useState(null)
 
-  if (!album) {
+  if (!album || album.previewItems.length === 0) {
     return <Navigate to="/portfolio" replace />
   }
 

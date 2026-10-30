@@ -278,7 +278,7 @@ export function ServiceDetailPage() {
                 <div>
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">What’s included</p>
                   <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl">
-                    A Complete Creative Frame.
+                    What Goes Into the Shoot.
                   </h2>
                 </div>
 
@@ -340,12 +340,11 @@ export function ServiceDetailPage() {
                 <div>
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Visual references</p>
                   <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl">
-                    Image Studies for the Final Direction.
+                    A Look at the Work.
                   </h2>
                 </div>
                 <p className="max-w-xl text-sm leading-8 text-parchment/72 md:text-base">
-                  These frames show the lighting, pacing, and mood range that can guide the final direction for this
-                  type of commission.
+                    A few examples to start the conversation about light, location, and the kind of photographs you want to make.
                 </p>
               </div>
 

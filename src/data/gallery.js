@@ -150,15 +150,15 @@ const titleOverrides = {
   'headshots_personal_branding_015.jpg': 'Clinical Focus',
   'headshots_personal_branding_016.jpg': 'Open Ease',
   'headshots_personal_branding_017.jpg': 'Steady Poise',
-  '2021.08_YoungTiff SE1-717-Edit.jpg': 'Street Flame',
-  '2021.08_YoungTiff SE1-1372-Edit.jpg': 'Private Line',
-  '2021.08_YoungTiff SE1-1493-Edit.jpg': 'Inner Flame',
-  '2021.08_YoungTiff SE1-1760-Edit.jpg': 'Soft Motion',
-  '2021.08_YoungTiff SE1-1821-Edit.jpg': 'Velvet Arc',
-  'A30A0259.jpg': 'Liquid Gold',
-  'A30A0357.jpg': 'Dark Poise',
-  'A30A0125.jpg': 'Soft Axis',
-  'untitled-2359.jpg': 'Quiet Motion',
+  '2021.08_YoungTiff SE1-717-Edit.jpg': 'Editorial Fashion',
+  '2021.08_YoungTiff SE1-1372-Edit.jpg': 'Editorial Fashion',
+  '2021.08_YoungTiff SE1-1493-Edit.jpg': 'Editorial Fashion',
+  '2021.08_YoungTiff SE1-1760-Edit.jpg': 'Editorial Fashion',
+  '2021.08_YoungTiff SE1-1821-Edit.jpg': 'Editorial Fashion',
+  'A30A0259.jpg': 'Beauty Portrait',
+  'A30A0357.jpg': 'Beauty Portrait',
+  'A30A0125.jpg': 'Beauty Portrait',
+  'untitled-2359.jpg': 'Portrait',
 }
 
 const portfolioGroups = [
@@ -262,7 +262,11 @@ function inferCategories(fileName) {
     return ['Portraits', 'Studio']
   }
 
-  if (/(2021\.08_youngtiff|a30a)/.test(name)) {
+  if (/2021\.08_youngtiff/.test(name)) {
+    return ['Fashion', 'Editorial']
+  }
+
+  if (/a30a/.test(name)) {
     return ['Portraits', 'Beauty']
   }
 

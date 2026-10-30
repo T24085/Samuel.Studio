@@ -7,7 +7,7 @@ import { ChatAssistant } from './ChatAssistant'
 
 export function Layout() {
   const location = useLocation()
-  const isPortfolioPage = location.pathname.startsWith('/portfolio')
+  const isPortfolioPage = location.pathname.startsWith('/portfolio') || location.pathname.startsWith('/brands')
 
   return (
     <div className="min-h-screen bg-ink text-ivory">

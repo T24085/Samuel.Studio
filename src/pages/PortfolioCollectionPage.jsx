@@ -42,7 +42,22 @@ export function PortfolioCollectionPage() {
   const isColombiaCollection = collection?.slug === 'colombia'
 
   if (!collection) {
-    return <Navigate to="/portfolio" replace />
+    return <Navigate to="/brands" replace />
+  }
+
+  if (collection.comingSoon) {
+    return (
+      <>
+        <SEO title={collection.title} description={collection.description} path={collection.collectionLink} />
+        <section className="studio-shell min-h-[70svh] pb-24 pt-32 text-ivory">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold">Coming Soon</p>
+          <h1 className="mt-6 font-display text-5xl sm:text-6xl">{collection.title}</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-parchment/80">{collection.body}</p>
+          <p className="mt-4 text-base text-parchment/80">The first collection is in development.</p>
+          <Link to="/brands" className="mt-8 inline-block border-b border-gold pb-2 text-gold">Back to Brands</Link>
+        </section>
+      </>
+    )
   }
 
   const activeItem = activeIndex !== null ? collection.previewItems[activeIndex] : null
@@ -142,10 +157,10 @@ export function PortfolioCollectionPage() {
 
                   <div className="mt-8 flex flex-wrap gap-3">
                     <Link
-                      to="/portfolio"
+                      to="/brands"
                       className="group inline-flex items-center justify-between gap-3 rounded-full border border-gold/35 bg-[linear-gradient(180deg,rgba(198,161,91,0.24),rgba(198,161,91,0.1))] px-5 py-3 text-[0.68rem] uppercase tracking-[0.28em] text-ivory transition duration-300 hover:border-gold/70 hover:bg-[linear-gradient(180deg,rgba(198,161,91,0.34),rgba(198,161,91,0.12))]"
                     >
-                      <span>Back to portfolio</span>
+                      <span>Back to brands</span>
                       <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </Link>
                     {collection.external ? (

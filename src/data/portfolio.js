@@ -126,12 +126,12 @@ export const portfolioCollections = [
     description:
       'Model-led editorial with a sharper commercial line.',
     body:
-      'A cast-forward chapter built for strong silhouettes, disciplined styling, and image sets that hold their shape across campaigns, lookbooks, and launch material.',
+      'Model portfolios and creative collaborations, with attention to expression, styling, and the range each person brings to a shoot.',
     previewItems: defiantModelsItems,
     linkLabel: 'Visit Defiant Models',
     href: 'https://defiantmodels.com/',
     external: true,
-    collectionLink: '/portfolio/defiant-models',
+    collectionLink: '/brands/defiant-models',
     albumSlugs: ['editorial-campaign', 'fashion-commercial'],
     coverSrc: defiantModelsCover,
     coverAlt: 'Defiant Models magazine cover.',
@@ -141,14 +141,14 @@ export const portfolioCollections = [
     eyebrow: 'Within the Studio / Sensual Identity',
     title: 'Defiant Boudoir',
     description:
-      'An elevated, cinematic approach to sensual identity and personal expression.',
+      'Intimate portraits shaped around confidence, expression, and your own comfort.',
     body:
-      'This chapter is shaped for clients who want intimate portraiture that still feels modern, elegant, and visually controlled.',
+      'We plan the look and boundaries together, then take time to find the light, movement, and expressions that feel right for you.',
     previewItems: pickItems(galleryLookup, defiantBoudoirIds),
     linkLabel: 'Visit Defiant Boudoir',
     href: 'https://defiantboudoir.com/',
     external: true,
-    collectionLink: '/portfolio/defiant-boudoir',
+    collectionLink: '/brands/defiant-boudoir',
     albumSlugs: ['personal-identity', 'private-lifestyle'],
     coverSrc: withBase('portfolio-assets/cover-defiant-boudoir.png'),
     coverAlt: 'Defiant Boudoir magazine cover.',
@@ -158,9 +158,9 @@ export const portfolioCollections = [
     eyebrow: 'Within the Studio / Brand House',
     title: 'Samuel Studio',
     description:
-      'The parent magazine that frames the full studio family with a broader editorial voice.',
+      'Fashion, personal branding, and portraits by Samuel Cary.',
     body:
-      'This issue acts as the studio overview and links the brand chapters into one premium family of work.',
+      'Editorial experience meets a personal approach to photography, with projects built around the people and ideas in front of the camera.',
     previewItems: pickItems(galleryLookup, [
       'collection',
       'group',
@@ -176,9 +176,9 @@ export const portfolioCollections = [
       'wild-pants',
     ]),
     linkLabel: 'Visit Samuel Studio',
-    href: '/portfolio/samuel-studio',
+    href: '/brands/samuel-studio',
     external: false,
-    collectionLink: '/portfolio/samuel-studio',
+    collectionLink: '/brands/samuel-studio',
     albumSlugs: ['editorial-campaign', 'fashion-commercial', 'personal-identity'],
     coverSrc: samStudioCover,
     coverAlt: 'Samuel Studio magazine cover.',
@@ -188,15 +188,16 @@ export const portfolioCollections = [
     eyebrow: 'Within the Studio / Culture',
     title: 'AllStreet Apparel',
     description:
-      'A future-facing expression of culture, identity, and visual storytelling.',
+      'A streetwear brand in development. First collection coming soon.',
     body:
-      'Developed for apparel, lifestyle, and cultural projects that need a sharper commercial rhythm with enough edge to feel current.',
-    previewItems: pickItems(galleryLookup, allStreetIds),
+      'AllStreet Apparel is a future streetwear brand Sam is developing, bringing his interest in fashion, photography, and street culture into a collection of his own.',
+    comingSoon: true,
+    previewItems: [],
     linkLabel: 'Collection link',
-    href: '/portfolio/allstreet-apparel',
+    href: '/brands/allstreet-apparel',
     external: false,
-    collectionLink: '/portfolio/allstreet-apparel',
-    albumSlugs: ['fashion-commercial', 'editorial-campaign'],
+    collectionLink: '/brands/allstreet-apparel',
+    albumSlugs: [],
     coverSrc: allStreetCover,
     coverAlt: 'AllStreet Apparel magazine cover.',
   },
@@ -212,7 +213,7 @@ export const portfolioCollections = [
     linkLabel: 'View full collection',
     href: '/portfolio/colombia',
     external: false,
-    collectionLink: '/portfolio/colombia',
+    collectionLink: '/brands/colombia',
     albumSlugs: ['personal-identity', 'private-lifestyle', 'editorial-campaign'],
     coverSrc: colombiaCover,
     coverAlt: 'Samuel Studio Colombia magazine cover.',
@@ -308,51 +309,65 @@ const privateLifestyleIds = [
   'brown-dress',
 ]
 
+export const portfolioSections = [
+  { id: 'fashion-editorial', title: 'Fashion & Editorial', description: 'Creative fashion stories, studio work, and campaigns made on location.' },
+  { id: 'people-occasions', title: 'People & Occasions', description: 'Personal branding, portraits, and photographs of the people and moments that matter.' },
+]
+
+function album({ slug, title, section, description, items = [] }) {
+  const uniqueItems = [...new Map(items.map((item) => [item.src, item])).values()]
+  return {
+    slug,
+    title,
+    section,
+    eyebrow: `Portfolio / ${title}`,
+    description,
+    body: description,
+    previewItems: uniqueItems.map((item, index) => ({
+      ...item,
+      title,
+      alt: `${title}, photograph ${index + 1} by Samuel Cary.`,
+    })),
+    sourceCollections: [],
+  }
+}
+
 export const portfolioAlbums = [
-  {
-    slug: 'editorial-campaign',
-    eyebrow: 'Album house / Editorial',
-    title: 'Editorial / Campaign',
-    description:
-      'High-concept campaigns, brand stories, and editorial sets with directed momentum.',
-    body:
-      'This album house brings together the studio work that feels the most narrative-forward: polished styling, controlled light, and imagery that can carry a launch or campaign rollout.',
-    previewItems: pickItems(galleryLookup, editorialCampaignIds),
-    sourceCollections: ['defiant-models', 'allstreet-apparel', 'colombia'],
-  },
-  {
-    slug: 'fashion-commercial',
-    eyebrow: 'Album house / Fashion',
-    title: 'Fashion / Commercial',
-    description:
-      'Styling, product energy, and commercial visuals with a sharper visual edge.',
-    body:
-      'These images are meant to sit comfortably in lookbooks, retail campaigns, and social rollout systems without losing their editorial tone.',
-    previewItems: pickItems(galleryLookup, fashionCommercialIds),
-    sourceCollections: ['defiant-models', 'allstreet-apparel'],
-  },
-  {
-    slug: 'personal-identity',
-    eyebrow: 'Album house / Portrait',
-    title: 'Personal Identity',
-    description:
-      'Portrait sessions centered on self-definition, presence, and emotional tone.',
-    body:
-      'This is where the studio leans into nuanced portraiture, making space for self-expression without losing the deliberate visual language that ties the work together.',
-    previewItems: pickItems(galleryLookup, personalIdentityIds),
-    sourceCollections: ['defiant-boudoir', 'colombia'],
-  },
-  {
-    slug: 'private-lifestyle',
-    eyebrow: 'Album house / Lifestyle',
-    title: 'Private & Lifestyle',
-    description:
-      'Intimate, low-pressure storytelling for quieter moments and personal archives.',
-    body:
-      'A softer, more observational archive that still carries the studio standard in tone, composition, and finish.',
-    previewItems: pickItems(galleryLookup, privateLifestyleIds),
-    sourceCollections: ['defiant-boudoir', 'colombia'],
-  },
+  album({
+    slug: 'editorial-campaign', title: 'Editorial & Creative Fashion', section: 'fashion-editorial',
+    description: 'Signature fashion work, creative collaborations, and magazine editorials, with room for character and experimentation.',
+    items: defiantModelsItems,
+  }),
+  album({
+    slug: 'fashion-commercial', title: 'Fashion on Location', section: 'fashion-editorial',
+    description: 'Fashion in real settings, from lifestyle stories to location campaigns.',
+    items: pickItems(galleryLookup, ['brown-dress', 'jeans', 'jeans-ripped', 'jeans-women', 'jet', 'jet-2']),
+  }),
+  album({
+    slug: 'studio-fashion', title: 'Studio Fashion', section: 'fashion-editorial',
+    description: 'Clean studio photographs with attention to clothing, shape, and the details of a collection.',
+    items: pickItems(galleryLookup, ['power-2', 'silver-dress', 'wild-pants']),
+  }),
+  album({
+    slug: 'commercial-lifestyle', title: 'Commercial Lifestyle', section: 'fashion-editorial',
+    description: 'People, products, and everyday settings photographed for brands and commercial projects.',
+    items: pickItems(galleryLookup, ['bridge-women', 'candid', 'car-women', 'casual', 'happy-women', 'rain', 'roses', 'collection']),
+  }),
+  album({
+    slug: 'beauty-portrait', title: 'Beauty & Portrait', section: 'fashion-editorial',
+    description: 'Beauty portraits exploring expression, light, makeup, and the details of a face.',
+    items: pickItems(galleryLookup, ['2021.08_YoungTiff SE1-717-Edit', '2021.08_YoungTiff SE1-1372-Edit', '2021.08_YoungTiff SE1-1493-Edit', '2021.08_YoungTiff SE1-1760-Edit', '2021.08_YoungTiff SE1-1821-Edit', 'A30A0125', 'A30A0259', 'A30A0357', 'untitled-2359']),
+  }),
+  album({
+    slug: 'personal-identity', title: 'Personal Branding & Headshots', section: 'people-occasions',
+    description: 'Professional portraits and photographs that introduce you and the work you do.',
+    items: pickItems(galleryLookup, personalIdentityIds),
+  }),
+  album({ slug: 'creative-portraits', title: 'Creative Portraits', section: 'people-occasions', description: 'Portraits for musicians, artists, and people with a particular idea to explore.' }),
+  album({ slug: 'private-lifestyle', title: 'Personal Portraits', section: 'people-occasions', description: 'Portraits for yourself, the people close to you, and personal milestones.' }),
+  album({ slug: 'boudoir-intimate', title: 'Boudoir & Intimate', section: 'people-occasions', description: 'Intimate portraits planned around your comfort, confidence, and expression.' }),
+  album({ slug: 'private-events', title: 'Private Events', section: 'people-occasions', description: 'Engagements, sweet sixteens, celebrations, and time with the people who matter.' }),
+  album({ slug: 'commercial-events', title: 'Corporate & Commercial Events', section: 'people-occasions', description: 'Conferences, company gatherings, and events that bring a business community together.' }),
 ]
 
 export const portfolioCollectionsBySlug = new Map(
