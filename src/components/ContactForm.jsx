@@ -1,12 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import emailjs from '@emailjs/browser'
+import { submitInquiry } from '../lib/submitInquiry.js'
 import { site } from '../data/site'
 import { bookingServiceOptions } from '../data/services'
-
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID?.trim() || 'service_p55qfka'
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID?.trim() || 'template_gxa8uvc'
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY?.trim() || 'IFJYlgeXzSgqsFRBS'
 
 const initialState = {
   name: '',
@@ -15,6 +11,7 @@ const initialState = {
   service: '',
   preferredDate: '',
   message: '',
+  website: '',
 }
 
 export function ContactForm() {
@@ -22,6 +19,7 @@ export function ContactForm() {
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState('idle')
   const [feedback, setFeedback] = useState('')
+  const [formStartedAt, setFormStartedAt] = useState(() => Date.now())
   const isSubmitting = status === 'sending'
 
   function validate(nextValues) {
@@ -36,17 +34,6 @@ export function ContactForm() {
     return nextErrors
   }
 
-  function formatPreferredDate(dateValue) {
-    if (!dateValue) return ''
-
-    const parsedDate = new Date(`${dateValue}T12:00:00`)
-    if (Number.isNaN(parsedDate.getTime())) return dateValue
-
-    return new Intl.DateTimeFormat('en-US', {
-      dateStyle: 'medium',
-    }).format(parsedDate)
-  }
-
   function onChange(event) {
     const { name, value } = event.target
     setValues((current) => ({ ...current, [name]: value }))
@@ -59,6 +46,7 @@ export function ContactForm() {
 
   async function onSubmit(event) {
     event.preventDefault()
+    if (isSubmitting) return
     const nextErrors = validate(values)
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length > 0) return
@@ -67,28 +55,12 @@ export function ContactForm() {
     setFeedback('')
 
     try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        name: values.name.trim(),
-        email: values.email.trim(),
-        phone: values.phone.trim(),
-        service: values.service.trim(),
-        preferredDate: formatPreferredDate(values.preferredDate.trim()),
-        message: values.message.trim(),
-        time: new Intl.DateTimeFormat('en-US', {
-          dateStyle: 'medium',
-          timeStyle: 'short',
-        }).format(new Date()),
-        reply_to: values.email.trim(),
-        to_email: site.email,
-      }, {
-        publicKey: EMAILJS_PUBLIC_KEY,
-      })
+      await submitInquiry({ ...values, formStartedAt })
 
       setStatus('success')
       setValues(initialState)
       setErrors({})
-    } catch (error) {
-      console.error('EmailJS booking submission failed', error)
+    } catch {
       setStatus('error')
       setFeedback('Something went wrong while sending your inquiry. Please try again or email studiodefiant@gmail.com directly.')
     }
@@ -110,6 +82,7 @@ export function ContactForm() {
               setStatus('idle')
               setErrors({})
               setFeedback('')
+              setFormStartedAt(Date.now())
             }}
             className="mt-8 inline-flex items-center justify-center rounded-full border border-gold/40 bg-gold/10 px-5 py-3 text-xs uppercase tracking-[0.3em] text-gold transition hover:border-gold/70"
           >
@@ -118,6 +91,12 @@ export function ContactForm() {
         </motion.div>
       ) : (
         <form id="booking-form" onSubmit={onSubmit}>
+          <div className="hidden" aria-hidden="true">
+            <label>
+              Website
+              <input name="website" value={values.website} onChange={onChange} tabIndex={-1} autoComplete="off" />
+            </label>
+          </div>
           <div className="grid gap-5 md:grid-cols-2">
             <Field label="Name" error={errors.name}>
               <input
@@ -126,6 +105,7 @@ export function ContactForm() {
                 onChange={onChange}
                 disabled={isSubmitting}
                 autoComplete="name"
+                maxLength={100}
                 className="input-field"
               />
             </Field>
@@ -137,6 +117,7 @@ export function ContactForm() {
                 onChange={onChange}
                 disabled={isSubmitting}
                 autoComplete="email"
+                maxLength={254}
                 className="input-field"
               />
             </Field>
@@ -147,6 +128,7 @@ export function ContactForm() {
                 onChange={onChange}
                 disabled={isSubmitting}
                 autoComplete="tel"
+                maxLength={60}
                 className="input-field"
               />
             </Field>
@@ -183,6 +165,7 @@ export function ContactForm() {
             <textarea
               name="message"
               rows={6}
+              maxLength={4000}
               value={values.message}
               onChange={onChange}
               disabled={isSubmitting}

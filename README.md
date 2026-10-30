@@ -20,17 +20,25 @@ Photography assets live in `public/photos/` and are referenced directly from the
 
 The site uses placeholder business details, prices, and contact links so it can be launched as a polished starter and then customized with real studio information.
 
-## EmailJS Setup
+## Inquiry Delivery
 
-The booking form uses EmailJS on the client side. You can override the built-in defaults by setting these Vite env vars:
+The booking form POSTs to `https://allstreetlabs.com/api/studio-inquiry`.
+The isolated Netlify function is maintained in `allstreetlabs/asl-site` and
+uses its existing server-side Brevo key. Never put that key in a Vite variable.
 
-- `VITE_EMAILJS_SERVICE_ID`
-- `VITE_EMAILJS_TEMPLATE_ID`
-- `VITE_EMAILJS_PUBLIC_KEY`
+Sender: `Samuel Studio <notifications@notify.ondefiant.com>` (temporary DEFIANT
+sender while Samuel Studio's Workspace domain is recovered).
+Recipient: `studiodefiant@gmail.com`. Reply-To: the visitor's validated address.
+No marketing-list signup or automatic customer email is triggered.
+The form preserves its values on failure and shows success only after the
+server confirms Brevo acceptance. Acceptance is not proof of inbox placement.
+Run `node --test tests/inquiry.test.mjs` for delivery-client tests.
 
-The template currently expects `name`, `email`, `phone`, `service`, `preferredDate`, `message`, and `time`.
+Deploy the backend endpoint before publishing this frontend. Disable it with
+`STUDIO_INQUIRIES_ENABLED=false` in the ASL Netlify site if needed. EmailJS is
+no longer used; the old template below is retained only as historical markup.
 
-Use this updated template markup in EmailJS:
+### Historical EmailJS Template (Unused)
 
 ```html
 <div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 14px; color: #111; line-height: 1.5;">
