@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { submitInquiry, inquiryEndpoint } from '../src/lib/submitInquiry.js'
+import { submitInquiry, inquiryEndpoint, inquiryIsAvailable } from '../src/lib/submitInquiry.js'
 
 test('sends inquiry to the server relay without browser credentials', async () => {
   await submitInquiry({ name: 'Test Client' }, async (url, options) => {
@@ -19,4 +19,10 @@ test('rejects provider failures, invalid responses, and transport errors', async
     async () => new Response('<html>Error</html>'),
     async () => { throw new Error('offline') },
   ]) await assert.rejects(submitInquiry({}, send))
+})
+
+test('offers direct email when delivery readiness fails', async () => {
+  assert.equal(await inquiryIsAvailable(async () => Response.json({ enabled: true })), true)
+  assert.equal(await inquiryIsAvailable(async () => Response.json({ enabled: false })), false)
+  assert.equal(await inquiryIsAvailable(async () => { throw new Error('offline') }), false)
 })

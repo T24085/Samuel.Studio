@@ -32,6 +32,14 @@ Recipient: `studiodefiant@gmail.com`. Reply-To: the visitor's validated address.
 No marketing-list signup or automatic customer email is triggered.
 The form preserves its values on failure and shows success only after the
 server confirms Brevo acceptance. Acceptance is not proof of inbox placement.
+The form checks sender readiness before allowing submission. If the relay or
+sender is unavailable, visitors see a direct studio email link instead.
+
+October 30, 2026 deployment: EmailJS removed; Brevo relay deployed. Initial
+synthetic test was rejected; live readiness reports `provider_authentication_failed`.
+The ASL Netlify `BREVO_API_KEY` needs a valid replacement through its secure
+environment-variable UI before form delivery can be verified. No successful
+test delivery or inbox placement has been confirmed. Chat changes remain separate.
 Run `node --test tests/inquiry.test.mjs` for delivery-client tests.
 
 Deploy the backend endpoint before publishing this frontend. Disable it with

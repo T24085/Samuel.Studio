@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { submitInquiry } from '../lib/submitInquiry.js'
+import { inquiryIsAvailable, submitInquiry } from '../lib/submitInquiry.js'
 import { site } from '../data/site'
 import { bookingServiceOptions } from '../data/services'
 
@@ -20,7 +20,14 @@ export function ContactForm() {
   const [status, setStatus] = useState('idle')
   const [feedback, setFeedback] = useState('')
   const [formStartedAt, setFormStartedAt] = useState(() => Date.now())
+  const [deliveryAvailable, setDeliveryAvailable] = useState(null)
   const isSubmitting = status === 'sending'
+
+  useEffect(() => {
+    let active = true
+    inquiryIsAvailable().then(available => { if (active) setDeliveryAvailable(available) })
+    return () => { active = false }
+  }, [])
 
   function validate(nextValues) {
     const nextErrors = {}
@@ -46,7 +53,7 @@ export function ContactForm() {
 
   async function onSubmit(event) {
     event.preventDefault()
-    if (isSubmitting) return
+    if (isSubmitting || deliveryAvailable !== true) return
     const nextErrors = validate(values)
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length > 0) return
@@ -68,7 +75,17 @@ export function ContactForm() {
 
   return (
     <div className="gold-frame scroll-mt-32 p-8">
-      {status === 'success' ? (
+      {deliveryAvailable === false ? (
+        <div role="status">
+          <h3 className="font-display text-3xl text-ivory">Let's Talk About Your Shoot</h3>
+          <p className="mt-4 text-sm leading-7 text-parchment/72">
+            The inquiry form is temporarily unavailable. Email me with what you have in mind and your preferred timing.
+          </p>
+          <a href={`mailto:${site.email}`} className="mt-5 inline-block break-all text-gold underline underline-offset-4">
+            {site.email}
+          </a>
+        </div>
+      ) : status === 'success' ? (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <p className="text-xs uppercase tracking-[0.36em] text-gold/80">Inquiry received</p>
           <h3 className="mt-4 font-display text-4xl text-ivory">Thank You. We Will Be in Touch Soon.</h3>
@@ -176,7 +193,7 @@ export function ContactForm() {
           <div className="mt-7 flex flex-wrap items-center gap-4">
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || deliveryAvailable !== true}
               className="inline-flex items-center justify-center rounded-full border border-gold/70 bg-gold/12 px-6 py-3 text-xs uppercase tracking-[0.3em] text-ivory transition hover:translate-y-[-1px] hover:border-gold hover:bg-gold/20 hover:text-gold-100 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isSubmitting ? 'Sending...' : 'Submit inquiry'}
