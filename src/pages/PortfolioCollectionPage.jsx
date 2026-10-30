@@ -150,7 +150,7 @@ export function PortfolioCollectionPage() {
                       <p className="mt-2 text-sm leading-7 text-parchment/72">{collection.previewItems.length}</p>
                     </div>
                     <div className="rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4">
-                      <p className="text-[0.62rem] uppercase tracking-[0.32em] text-gold/60">Album houses</p>
+                      <p className="text-[0.62rem] uppercase tracking-[0.32em] text-gold/60">Related Albums</p>
                       <p className="mt-2 text-sm leading-7 text-parchment/72">{collection.albumSlugs.length}</p>
                     </div>
                   </div>
@@ -188,18 +188,18 @@ export function PortfolioCollectionPage() {
                 </p>
                 <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl xl:text-[5rem]">
                   {isEditorialCollection
-                    ? 'A Cleaner Read on the Model Chapter.'
+                    ? 'Models & Creative Collaborations'
                     : isColombiaCollection
-                      ? 'A Portrait Essay From Colombia.'
-                      : 'A Tighter Look at the Collection.'}
+                      ? 'Portraits From Colombia'
+                      : 'Selected Photographs'}
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-8 text-parchment/72 md:text-base">
                 {isEditorialCollection
-                  ? 'Pulled from the full editorial folder and sequenced to keep silhouette, movement, and attitude intact.'
+                  ? 'Fashion, movement, and expression, photographed through an editorial eye.'
                   : isColombiaCollection
-                    ? 'Selected from the full Colombia archive, edited as one calm and coherent body of work.'
-                    : 'These are the top selections for the section, ready to become the full collection grid as the archive expands.'}
+                    ? 'People and places photographed in Colombia.'
+                    : collection.description}
               </p>
             </div>
           </section>
@@ -220,13 +220,12 @@ export function PortfolioCollectionPage() {
           <section className="studio-shell pb-24 lg:pb-28">
             <div className="grid gap-8 rounded-[2.5rem] border border-gold/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(17,17,17,0.92))] p-7 shadow-[0_28px_100px_rgba(0,0,0,0.34)] sm:p-10 lg:grid-cols-[1.08fr_0.92fr] lg:p-12">
               <div>
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Related album houses</p>
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">More Photography</p>
                 <h2 className="mt-4 max-w-3xl font-display text-4xl leading-[0.92] tracking-[-0.04em] text-ivory md:text-5xl xl:text-[4.5rem]">
-                  {collection.title} Connects Into the Deeper Archive.
+                  Explore More Work.
                 </h2>
                 <p className="mt-6 max-w-2xl text-sm leading-8 text-parchment/72 md:text-base">
-                  The album pages are where the larger image bodies will sit once the studio finishes curating the
-                  final collection sets.
+                  Browse the photography albums, or get in touch to discuss a shoot of your own.
                 </p>
               </div>
 

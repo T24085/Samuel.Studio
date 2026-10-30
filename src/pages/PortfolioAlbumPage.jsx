@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowUpRight, ExternalLink, Sparkles } from 'lucide-react'
+import { ArrowUpRight, ExternalLink } from 'lucide-react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { PortfolioBackdrop } from '../components/PortfolioBackdrop'
 import { Lightbox } from '../components/Lightbox'
@@ -122,7 +122,7 @@ export function PortfolioAlbumPage() {
                   }}
                 />
                 <div className="relative">
-                  <p className="text-[0.67rem] uppercase tracking-[0.38em] text-gold/72">Album house</p>
+                  <p className="text-[0.67rem] uppercase tracking-[0.38em] text-gold/72">Selected Work</p>
                   <p className="mt-5 max-w-sm font-display text-3xl leading-[0.92] tracking-[-0.04em] text-ivory">
                     {album.description}
                   </p>
@@ -132,10 +132,6 @@ export function PortfolioAlbumPage() {
                       <p className="text-[0.62rem] uppercase tracking-[0.32em] text-gold/60">Images</p>
                       <p className="mt-2 text-sm leading-7 text-parchment/72">{album.previewItems.length}</p>
                     </div>
-                    <div className="rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4">
-                      <p className="text-[0.62rem] uppercase tracking-[0.32em] text-gold/60">Source brands</p>
-                      <p className="mt-2 text-sm leading-7 text-parchment/72">{album.sourceCollections.length}</p>
-                    </div>
                   </div>
 
                   <div className="mt-8 flex flex-wrap gap-3">
@@ -143,7 +139,7 @@ export function PortfolioAlbumPage() {
                       to="/portfolio"
                       className="group inline-flex items-center justify-between gap-3 rounded-full border border-white/12 bg-white/[0.03] px-5 py-3 text-[0.68rem] uppercase tracking-[0.28em] text-parchment/82 transition duration-300 hover:border-gold/35 hover:bg-white/[0.05] hover:text-ivory"
                     >
-                      <span>Open portfolio map</span>
+                      <span>Explore More Work</span>
                       <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </Link>
                   </div>
@@ -155,15 +151,11 @@ export function PortfolioAlbumPage() {
           <section className="studio-shell pb-16 lg:pb-20">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/72">Full archive</p>
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/72">Photographs</p>
                 <h2 className="mt-4 font-display text-4xl leading-[0.92] tracking-[-0.05em] text-ivory md:text-5xl xl:text-[5rem]">
-                  The Album House in Full.
+                  {album.title}
                 </h2>
               </div>
-              <p className="max-w-xl text-sm leading-8 text-parchment/72 md:text-base">
-                This grid is where the larger set lives. It is intentionally dense, so the page reads like a real
-                archive instead of a teaser.
-              </p>
             </div>
           </section>
 
@@ -178,35 +170,19 @@ export function PortfolioAlbumPage() {
           <section className="studio-shell pb-24 lg:pb-28">
             <div className="grid gap-8 rounded-[2.5rem] border border-gold/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(17,17,17,0.92))] p-7 shadow-[0_28px_100px_rgba(0,0,0,0.34)] sm:p-10 lg:grid-cols-[1.08fr_0.92fr] lg:p-12">
               <div>
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Archive note</p>
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Plan a Shoot</p>
                 <h2 className="mt-4 max-w-3xl font-display text-4xl leading-[0.92] tracking-[-0.04em] text-ivory md:text-5xl xl:text-[4.5rem]">
-                  {album.title} Is Designed to Expand as the Collections Grow.
+                  Have Something in Mind?
                 </h2>
                 <p className="mt-6 max-w-2xl text-sm leading-8 text-parchment/72 md:text-base">
-                  Each album page can hold the real finished sets, supporting text, and any future sub-albums that need
-                  to sit under the same editorial umbrella.
+                  Tell me what you want to create, where you would like to shoot, and how you plan to use the photographs.
                 </p>
               </div>
 
               <div className="flex flex-col justify-end gap-4">
-                {album.sourceCollections.map((slug) => {
-                  const collection = portfolioCollections.find((entry) => entry.slug === slug)
-
-                  return (
-                    <Link
-                      key={slug}
-                      to={`/portfolio/${slug}`}
-                      className="group inline-flex items-center justify-between gap-4 rounded-full border border-white/12 bg-white/[0.03] px-6 py-4 text-xs uppercase tracking-[0.3em] text-parchment/82 transition duration-300 hover:border-gold/35 hover:bg-white/[0.05] hover:text-ivory"
-                    >
-                      <span>{collection?.title ?? slug}</span>
-                      <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </Link>
-                  )
-                })}
-                <div className="mt-2 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-gold/65">
-                  <Sparkles className="h-4 w-4" />
-                  <span>Album pages are set up to hold the final approved archives</span>
-                </div>
+                <Link to="/booking" className="inline-flex items-center justify-between gap-4 border border-gold/35 px-6 py-4 text-sm text-ivory transition hover:border-gold">
+                  Discuss a Shoot <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
               </div>
             </div>
           </section>
