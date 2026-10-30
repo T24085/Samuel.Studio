@@ -9,6 +9,7 @@ import { Hero } from '../components/Hero'
 import { SectionHeading } from '../components/SectionHeading'
 import { TestimonialCard } from '../components/TestimonialCard'
 import { CTASection } from '../components/CTASection'
+import { WebServicesSection } from '../components/WebServicesSection'
 import { MotionDeckSection } from '../components/AboutPosterSection'
 import { ExpandingGallery } from '../components/ExpandingGallery'
 import { InstagramSection } from '../components/InstagramSection'
@@ -416,6 +417,7 @@ export function HomePage() {
         </motion.div>
       </section>
 
+      <WebServicesSection compact />
       <CTASection />
 
       <Lightbox

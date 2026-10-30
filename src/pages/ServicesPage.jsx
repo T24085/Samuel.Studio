@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowUpRight, Check, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { SEO } from '../components/SEO'
+import { WebServicesSection } from '../components/WebServicesSection'
 import { services } from '../data/services'
 import { withBase } from '../utils/paths'
 
@@ -366,7 +367,9 @@ export function ServicesPage() {
             </div>
           </section>
 
-          <section className="studio-shell pb-24 lg:pb-28">
+          <WebServicesSection />
+
+          <section className="studio-shell pt-16 pb-24 lg:pt-20 lg:pb-28">
             <div className="grid gap-8 rounded-[2.4rem] border border-gold/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(17,17,17,0.92))] p-7 shadow-[0_28px_100px_rgba(0,0,0,0.34)] sm:p-10 lg:grid-cols-[1.08fr_0.92fr] lg:p-12">
               <div>
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-gold/70">Inquiry</p>
