@@ -22,9 +22,11 @@ The site uses placeholder business details, prices, and contact links so it can 
 
 ## Inquiry Delivery
 
-The booking form POSTs to `https://allstreetlabs.com/api/studio-inquiry`.
-The isolated Netlify function is maintained in `allstreetlabs/asl-site` and
-uses its existing server-side Brevo key. Never put that key in a Vite variable.
+The booking form POSTs to `https://pilot.ondefiant.com/api/studio-inquiry`.
+An isolated, loopback-only Node/systemd service on the fixed-IP DEFIANT host
+receives this exact path through Caddy and uses the existing protected Brevo
+key via systemd credentials. Never put that key in a Vite variable.
+Source and installation safeguards: `ops/inquiry-relay/`.
 
 Sender: `Samuel Studio <notifications@notify.ondefiant.com>` (temporary DEFIANT
 sender while Samuel Studio's Workspace domain is recovered).
@@ -35,19 +37,28 @@ server confirms Brevo acceptance. Acceptance is not proof of inbox placement.
 The form checks sender readiness before allowing submission. If the relay or
 sender is unavailable, visitors see a direct studio email link instead.
 
-October 30, 2026 deployment: EmailJS removed; Brevo relay deployed. Initial
-synthetic test was rejected; live readiness reports `provider_authentication_failed`.
-Brevo's dashboard shows the ASL API key is active, but API IP restrictions
-are enabled and the new Netlify outbound addresses were blocked at the test
-times. Do not rotate the key based on this HTTP 401 alone or disable account
-protections. A stable authorized-egress delivery path needs approval before
-form delivery can be verified. No successful test delivery or inbox placement
-has been confirmed. Chat changes remain separate.
+October 31, 2026: Sam activated the fixed-IP relay with the guarded installer.
+Public HTTPS readiness, allowed-origin preflight, invalid-origin/input
+rejection, and private DEFIANT health-route boundaries were verified. Existing
+API/worker invocation IDs remained unchanged; Caddy was reloaded, not restarted.
+No successful test delivery or inbox placement has yet been confirmed. Send
+a new synthetic delivery test only with Sam's approval. Chat changes remain
+separate and unpublished.
+
+The prior Netlify relay at `https://allstreetlabs.com/api/studio-inquiry`
+remains deployed but is no longer used by this form. Its rotating egress IPs
+were rejected by Brevo's IP restrictions despite an active key. Do not disable
+those protections. Retirement of that route is a separate approved task;
+existing AllStreet Labs forms were not changed.
 Run `node --test tests/inquiry.test.mjs` for delivery-client tests.
 
-Deploy the backend endpoint before publishing this frontend. Disable it with
-`STUDIO_INQUIRIES_ENABLED=false` in the ASL Netlify site if needed. EmailJS is
-no longer used; the old template below is retained only as historical markup.
+Relay receipt: `/var/lib/samuel-studio-inquiry/install-receipt.json` on DEFIANT.
+Its status records installation, not end-to-end delivery. Caddy preimage:
+`/var/backups/samuel-studio-inquiry/20261031T102058Z/Caddyfile.before`.
+To suspend this relay, an authorized operator can stop
+`samuel-studio-inquiry.service`; the form readiness check then offers direct
+email instead. The Netlify `STUDIO_INQUIRIES_ENABLED` switch does not control
+the new service. EmailJS is no longer used; the template below is historical.
 
 ### Historical EmailJS Template (Unused)
 

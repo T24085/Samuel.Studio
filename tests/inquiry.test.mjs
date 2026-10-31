@@ -2,6 +2,15 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { submitInquiry, inquiryEndpoint, inquiryIsAvailable } from '../src/lib/submitInquiry.js'
 
+test('uses the isolated fixed-IP relay for readiness and submission', async () => {
+  assert.equal(inquiryEndpoint, 'https://pilot.ondefiant.com/api/studio-inquiry')
+  assert.equal(await inquiryIsAvailable(async (url, options) => {
+    assert.equal(url, inquiryEndpoint)
+    assert.equal(options.credentials, 'omit')
+    return Response.json({ enabled: true })
+  }), true)
+})
+
 test('sends inquiry to the server relay without browser credentials', async () => {
   await submitInquiry({ name: 'Test Client' }, async (url, options) => {
     assert.equal(url, inquiryEndpoint)

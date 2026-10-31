@@ -1,4 +1,4 @@
-export const inquiryEndpoint = 'https://allstreetlabs.com/api/studio-inquiry'
+export const inquiryEndpoint = 'https://pilot.ondefiant.com/api/studio-inquiry'
 
 export async function inquiryIsAvailable(send = fetch) {
   try {
