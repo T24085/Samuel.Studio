@@ -1,182 +1,58 @@
-import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowRight, Camera } from 'lucide-react'
-import { galleryItems } from '../data/gallery'
-import { FanArcBackdrop, GoldFrame } from './DecorativeElements'
+import { ArrowRight } from 'lucide-react'
+import curatedPortfolio from '../data/curatedPortfolio.json'
 import { HeroSocialLinks } from './HeroSocialLinks'
 import { withBase } from '../utils/paths'
+import '../styles/hero.css'
+
+const heroImage = curatedPortfolio['studio-fashion'].find(item => item.id === 'intake-03-25')
 
 export function Hero() {
-  const heroImage = galleryItems.find((item) => item.id === 'women-6') ?? galleryItems[0]
   const reduceMotion = useReducedMotion()
-  const videoRef = useRef(null)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return undefined
-
-    const startPlayback = () => {
-      video.play().catch(() => {})
-    }
-
-    if (video.readyState >= 1) {
-      startPlayback()
-    } else {
-      video.addEventListener('loadedmetadata', startPlayback, { once: true })
-    }
-
-    return () => {
-      video.removeEventListener('loadedmetadata', startPlayback)
-      video.pause()
-    }
-  }, [])
 
   return (
-    <section className="home-snap-section relative min-h-[100svh] overflow-hidden bg-ink text-ivory">
-      <div className="absolute inset-0 z-0">
-        {reduceMotion ? (
-          <img
-            src={heroImage.src}
-            alt={heroImage.alt}
-            className="h-full w-full object-cover object-center"
-          />
-        ) : (
-          <video
-            ref={videoRef}
-            src={withBase('videos/hero-background.mp4')}
-            poster={heroImage.src}
-            muted
-            loop
-            playsInline
-            autoPlay
-            preload="auto"
-            aria-hidden="true"
-            className="h-full w-full object-cover object-center"
-          />
-        )}
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,24,22,0.72)_0%,rgba(9,24,22,0.48)_38%,rgba(9,24,22,0.66)_100%),linear-gradient(180deg,rgba(10,51,45,0.36)_0%,rgba(17,17,17,0.56)_100%)]" />
+    <section id="studio-hero" className="home-snap-section relative isolate mt-20 overflow-hidden bg-ink text-ivory lg:mt-[5.5rem]">
+      <img
+        src={withBase(heroImage.src)}
+        srcSet={`${withBase(heroImage.thumbnailSrc)} ${heroImage.thumbnailWidth}w, ${withBase(heroImage.src)} ${heroImage.width}w`}
+        sizes="100vw"
+        alt={heroImage.alt}
+        width={heroImage.width}
+        height={heroImage.height}
+        fetchPriority="high"
+        loading="eager"
+        className="absolute inset-0 h-full w-full object-cover object-[58%_top] lg:object-top"
+      />
+      <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
+
+      <div className="hero-socials absolute inset-x-0 top-4 z-10 sm:top-6">
+        <div className="studio-shell"><HeroSocialLinks /></div>
       </div>
-      <FanArcBackdrop className="left-0 top-0 opacity-65" />
-      <div className="studio-shell relative z-10 flex min-h-[100svh] flex-col justify-between gap-6 pt-28 pb-14 md:pb-18">
-        <HeroSocialLinks />
-        <div className="grid w-full gap-10 lg:grid-cols-[1.1fr_0.65fr] lg:items-end">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85, ease: 'easeOut' }}
-            className="max-w-3xl space-y-7"
-          >
-            <div className="space-y-5">
-              <h1 className="font-display text-5xl leading-[0.95] tracking-[-0.02em] text-ivory md:text-7xl lg:text-[5.8rem]">
-                The Real You, Through an Editorial Eye.
-              </h1>
-              <p className="max-w-2xl text-base leading-8 text-parchment/78 md:text-lg">
-                Editorial fashion, personal branding, and portraits by Samuel Cary.
-                {' '}
-                Thoughtful direction, a feel for light, and space for your own energy to come through. Photographs that feel like you, at your best.
-              </p>
-            </div>
-            <div className="grid gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
-              <Link
-                to="/portfolio"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#c6a15b] bg-transparent px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#c6a15b] shadow-[inset_0_0_0_1px_rgba(198,161,91,0.28)] transition hover:border-[#f7e8c8] hover:bg-[rgba(198,161,91,0.08)] hover:text-[#f7e8c8]"
-              >
-                View Portfolio <ArrowRight size={15} />
-              </Link>
-              <Link
-                to="/booking"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#c6a15b] bg-transparent px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#c6a15b] shadow-[inset_0_0_0_1px_rgba(198,161,91,0.28)] transition hover:border-[#f7e8c8] hover:bg-[rgba(198,161,91,0.08)] hover:text-[#f7e8c8]"
-              >
-                Book a Session
-              </Link>
-            </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.95, ease: 'easeOut', delay: 0.1 }}
-            className="relative"
-          >
-            <motion.div
-              className="relative"
-              animate={
-                reduceMotion
-                  ? undefined
-                  : {
-                      y: [0, -4, 0],
-                      rotate: [0, 0.4, 0],
-                    }
-              }
-              transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              {!reduceMotion ? (
-                <>
-                  <motion.div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -inset-5 rounded-[2.1rem] bg-[radial-gradient(circle_at_50%_50%,rgba(198,161,91,0.28),rgba(198,161,91,0.1)_28%,transparent_72%)] blur-2xl"
-                    animate={{
-                      opacity: [0.35, 0.78, 0.35],
-                      scale: [0.985, 1.02, 0.985],
-                    }}
-                    transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut' }}
-                  />
-                  <motion.div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -inset-1 rounded-[1.9rem] border border-gold/35 shadow-[0_0_0_1px_rgba(198,161,91,0.08),0_0_28px_rgba(198,161,91,0.16),0_0_80px_rgba(198,161,91,0.08)]"
-                    animate={{
-                      opacity: [0.48, 0.92, 0.48],
-                      boxShadow: [
-                        '0 0 0 1px rgba(198,161,91,0.08), 0 0 28px rgba(198,161,91,0.14), 0 0 80px rgba(198,161,91,0.08)',
-                        '0 0 0 1px rgba(198,161,91,0.16), 0 0 38px rgba(198,161,91,0.24), 0 0 120px rgba(198,161,91,0.14)',
-                        '0 0 0 1px rgba(198,161,91,0.08), 0 0 28px rgba(198,161,91,0.14), 0 0 80px rgba(198,161,91,0.08)',
-                      ],
-                    }}
-                    transition={{ duration: 5.8, repeat: Infinity, ease: 'easeInOut' }}
-                  />
-                </>
-              ) : null}
-
-              <GoldFrame
-                className="relative z-10 p-4 shadow-[0_18px_90px_rgba(0,0,0,0.44)]"
-                style={{
-                  borderColor: 'rgba(247, 205, 102, 0.94)',
-                  boxShadow:
-                    '0 18px 90px rgba(0,0,0,0.44), 0 0 0 1px rgba(247,205,102,0.28), 0 0 34px rgba(247,205,102,0.24), 0 0 96px rgba(198,161,91,0.12)',
-                }}
-              >
-                <div className="relative overflow-hidden rounded-[1.35rem]">
-                  <motion.img
-                    src={heroImage.src}
-                    alt={heroImage.alt}
-                    className="h-[34rem] w-full object-cover object-center md:h-[41rem]"
-                    animate={
-                      reduceMotion
-                        ? undefined
-                        : {
-                            scale: [1.03, 1.07, 1.03],
-                            x: [0, -8, 0],
-                            y: [0, -6, 0],
-                          }
-                    }
-                    transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/72 via-transparent to-transparent" />
-                  <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
-                    <div>
-                      <p className="text-[0.64rem] uppercase tracking-[0.32em] text-gold/75">Featured work</p>
-                      <p className="mt-2 font-display text-3xl text-ivory">Cinematic Studio Portrait</p>
-                    </div>
-                    <div className="rounded-full border border-gold/25 bg-ink/65 p-3 text-gold/80">
-                      <Camera size={18} />
-                    </div>
-                  </div>
-                </div>
-              </GoldFrame>
-            </motion.div>
-          </motion.div>
-        </div>
+      <div className="hero-content studio-shell relative z-10 flex min-h-[min(34rem,calc(100svh-15rem))] items-end pb-8 pt-36 sm:pb-12 lg:min-h-[min(44rem,calc(100svh-8rem))] lg:pt-32">
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, ease: 'easeOut' }}
+          className="hero-copy max-w-xl space-y-5 lg:max-w-[30rem]"
+        >
+          <h1 className="font-display text-4xl leading-[1.05] text-ivory drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] sm:text-5xl lg:text-6xl">
+            The Real You, Through an Editorial Eye.
+          </h1>
+          <p className="hero-description max-w-lg text-sm leading-6 text-ivory drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] sm:text-base sm:leading-7">
+            Editorial fashion, personal branding, and portraits by Samuel Cary.
+            <span className="hidden sm:inline"> Thoughtful direction, a feel for light, and space for your own energy to come through. Photographs that feel like you, at your best.</span>
+          </p>
+          <div className="flex flex-wrap gap-3 pt-1">
+            <Link to="/portfolio" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-ivory/65 bg-ink/70 px-5 py-3 text-sm text-ivory transition hover:bg-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold">
+              View Portfolio <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+            <Link to="/booking" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-ivory/65 bg-ink/50 px-5 py-3 text-sm text-ivory transition hover:bg-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold">
+              Book a Session
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,0 +1,38 @@
+@media (max-height: 850px) and (min-width: 640px) {
+  #studio-hero .hero-content {
+    min-height: calc(100svh - 15rem);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  #studio-hero h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+  }
+
+  #studio-hero .hero-description span {
+    display: none;
+  }
+}
+
+@media (max-height: 500px) and (min-width: 640px) {
+  #studio-hero .hero-content {
+    min-height: calc(100svh - 12rem);
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  #studio-hero .hero-copy {
+    max-width: 24rem;
+  }
+
+  #studio-hero h1 {
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+
+  #studio-hero .hero-socials,
+  #studio-hero .hero-description {
+    display: none;
+  }
+}
