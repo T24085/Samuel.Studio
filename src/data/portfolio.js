@@ -1,5 +1,6 @@
 import { portfolioGalleryItems } from './gallery'
 import { withBase } from '../utils/paths'
+import curatedPortfolio from './curatedPortfolio.json'
 
 const samStudioCover = new URL('../../SamStudio1.png', import.meta.url).href
 const allStreetCover = new URL('../../AllStreet1.png', import.meta.url).href
@@ -314,6 +315,14 @@ export const portfolioSections = [
   { id: 'people-occasions', title: 'People & Occasions', description: 'Personal branding, portraits, and photographs of the people and moments that matter.' },
 ]
 
+function curatedItems(slug) {
+  return (curatedPortfolio[slug] ?? []).map((item) => ({
+    ...item,
+    src: withBase(item.src),
+    thumbnailSrc: withBase(item.thumbnailSrc),
+  }))
+}
+
 function album({ slug, title, section, description, items = [] }) {
   const uniqueItems = [...new Map(items.map((item) => [item.src, item])).values()]
   return {
@@ -326,7 +335,8 @@ function album({ slug, title, section, description, items = [] }) {
     previewItems: uniqueItems.map((item, index) => ({
       ...item,
       title,
-      alt: `${title}, photograph ${index + 1} by Samuel Cary.`,
+      alt: item.alt || `${title}, photograph ${index + 1} by Samuel Cary.`,
+      categories: item.categories || [title],
     })),
     sourceCollections: [],
   }
@@ -336,38 +346,38 @@ export const portfolioAlbums = [
   album({
     slug: 'editorial-campaign', title: 'Editorial & Creative Fashion', section: 'fashion-editorial',
     description: 'Signature fashion work, creative collaborations, and magazine editorials, with room for character and experimentation.',
-    items: defiantModelsItems,
+    items: curatedItems('editorial-campaign'),
   }),
   album({
     slug: 'fashion-commercial', title: 'Fashion on Location', section: 'fashion-editorial',
     description: 'Fashion in real settings, from lifestyle stories to location campaigns.',
-    items: pickItems(galleryLookup, ['brown-dress', 'jeans', 'jeans-ripped', 'jeans-women', 'jet', 'jet-2']),
+    items: curatedItems('fashion-commercial'),
   }),
   album({
     slug: 'studio-fashion', title: 'Studio Fashion', section: 'fashion-editorial',
     description: 'Clean studio photographs with attention to clothing, shape, and the details of a collection.',
-    items: pickItems(galleryLookup, ['power-2', 'silver-dress', 'wild-pants']),
+    items: curatedItems('studio-fashion'),
   }),
   album({
     slug: 'commercial-lifestyle', title: 'Commercial Lifestyle', section: 'fashion-editorial',
     description: 'People, products, and everyday settings photographed for brands and commercial projects.',
-    items: pickItems(galleryLookup, ['bridge-women', 'candid', 'car-women', 'casual', 'happy-women', 'rain', 'roses', 'collection']),
+    items: curatedItems('commercial-lifestyle'),
   }),
   album({
     slug: 'beauty-portrait', title: 'Beauty & Portrait', section: 'fashion-editorial',
     description: 'Beauty portraits exploring expression, light, makeup, and the details of a face.',
-    items: pickItems(galleryLookup, ['2021.08_YoungTiff SE1-717-Edit', '2021.08_YoungTiff SE1-1372-Edit', '2021.08_YoungTiff SE1-1493-Edit', '2021.08_YoungTiff SE1-1760-Edit', '2021.08_YoungTiff SE1-1821-Edit', 'A30A0125', 'A30A0259', 'A30A0357', 'untitled-2359']),
+    items: curatedItems('beauty-portrait'),
   }),
   album({
     slug: 'personal-identity', title: 'Personal Branding & Headshots', section: 'people-occasions',
     description: 'Professional portraits and photographs that introduce you and the work you do.',
-    items: pickItems(galleryLookup, personalIdentityIds),
+    items: curatedItems('personal-identity'),
   }),
-  album({ slug: 'creative-portraits', title: 'Creative Portraits', section: 'people-occasions', description: 'Portraits for musicians, artists, and people with a particular idea to explore.' }),
-  album({ slug: 'private-lifestyle', title: 'Personal Portraits', section: 'people-occasions', description: 'Portraits for yourself, the people close to you, and personal milestones.' }),
-  album({ slug: 'boudoir-intimate', title: 'Boudoir & Intimate', section: 'people-occasions', description: 'Intimate portraits planned around your comfort, confidence, and expression.' }),
-  album({ slug: 'private-events', title: 'Private Events', section: 'people-occasions', description: 'Engagements, sweet sixteens, celebrations, and time with the people who matter.' }),
-  album({ slug: 'commercial-events', title: 'Corporate & Commercial Events', section: 'people-occasions', description: 'Conferences, company gatherings, and events that bring a business community together.' }),
+  album({ slug: 'creative-portraits', title: 'Creative Portraits', section: 'people-occasions', description: 'Portraits for musicians, artists, and people with a particular idea to explore.', items: curatedItems('creative-portraits') }),
+  album({ slug: 'private-lifestyle', title: 'Personal Portraits', section: 'people-occasions', description: 'Portraits for yourself, the people close to you, and personal milestones.', items: curatedItems('private-lifestyle') }),
+  album({ slug: 'boudoir-intimate', title: 'Boudoir & Intimate', section: 'people-occasions', description: 'Intimate portraits planned around your comfort, confidence, and expression.', items: curatedItems('boudoir-intimate') }),
+  album({ slug: 'private-events', title: 'Private Events', section: 'people-occasions', description: 'Engagements, sweet sixteens, celebrations, and time with the people who matter.', items: curatedItems('private-events') }),
+  album({ slug: 'commercial-events', title: 'Corporate & Commercial Events', section: 'people-occasions', description: 'Conferences, company gatherings, and events that bring a business community together.', items: curatedItems('commercial-events') }),
 ]
 
 export const portfolioCollectionsBySlug = new Map(

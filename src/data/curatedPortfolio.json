@@ -1,0 +1,1086 @@
+{
+  "editorial-campaign": [
+    {
+      "id": "intake-01-23",
+      "src": "photos/portfolio-intake/editorial-campaign/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/01-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Side-lit portrait in a black suit and bow tie against a dark background."
+    },
+    {
+      "id": "intake-01-01",
+      "src": "photos/portfolio-intake/editorial-campaign/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/02-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Full-length fashion portrait in flame-print trousers beneath a covered brick walkway."
+    },
+    {
+      "id": "intake-01-18",
+      "src": "photos/portfolio-intake/editorial-campaign/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/03-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Studio portrait seated backwards on a chair, with an embroidered white shirt and warm light."
+    },
+    {
+      "id": "intake-01-07",
+      "src": "photos/portfolio-intake/editorial-campaign/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/04-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Black-and-white fashion portrait with an arched pose and flowing hair between brick columns."
+    },
+    {
+      "id": "intake-01-11",
+      "src": "photos/portfolio-intake/editorial-campaign/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/05-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Overhead portrait with a turquoise dress spread around the subject and hair fanned outward."
+    },
+    {
+      "id": "intake-01-16",
+      "src": "photos/portfolio-intake/editorial-campaign/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/06-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Black-and-white portrait in a dark coat on a white spiral staircase."
+    },
+    {
+      "id": "intake-01-21",
+      "src": "photos/portfolio-intake/editorial-campaign/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/07-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Overhead portrait in grey tailoring surrounded by scattered flower petals."
+    },
+    {
+      "id": "intake-01-04",
+      "src": "photos/portfolio-intake/editorial-campaign/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/08-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Seated studio fashion portrait in loose denim and a dark top against a grey backdrop."
+    },
+    {
+      "id": "intake-01-09",
+      "src": "photos/portfolio-intake/editorial-campaign/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/09-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "An inverted pose over an upholstered chair in a wide studio composition."
+    },
+    {
+      "id": "intake-01-26",
+      "src": "photos/portfolio-intake/editorial-campaign/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/10-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Portrait looking over a newspaper against a wall covered with printed pages."
+    },
+    {
+      "id": "intake-01-28",
+      "src": "photos/portfolio-intake/editorial-campaign/11.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/11-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Overhead fashion portrait in red floral fabric with roses and scattered petals."
+    },
+    {
+      "id": "intake-01-19",
+      "src": "photos/portfolio-intake/editorial-campaign/12.webp",
+      "thumbnailSrc": "photos/portfolio-intake/editorial-campaign/12-thumb.webp",
+      "width": 1466,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Warmly lit close portrait in a loose white shirt, with a hand resting near the face."
+    }
+  ],
+  "fashion-commercial": [
+    {
+      "id": "intake-02-23",
+      "src": "photos/portfolio-intake/fashion-commercial/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/01-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Seated fashion portrait in a blue dress, with patterned sunlight across a wooden bench."
+    },
+    {
+      "id": "intake-02-04",
+      "src": "photos/portfolio-intake/fashion-commercial/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/02-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Full-length portrait in a pale draped gown against dark wooden doors."
+    },
+    {
+      "id": "intake-02-02",
+      "src": "photos/portfolio-intake/fashion-commercial/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/03-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Fashion portrait in a striped skirt and navy top beside a white garden trellis."
+    },
+    {
+      "id": "intake-02-11",
+      "src": "photos/portfolio-intake/fashion-commercial/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/04-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Portrait in a green outfit and dark collar, framed by strong patterned sunlight."
+    },
+    {
+      "id": "intake-02-13",
+      "src": "photos/portfolio-intake/fashion-commercial/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/05-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Black-and-white fashion portrait seated on a bench beneath a lattice structure."
+    },
+    {
+      "id": "intake-02-09",
+      "src": "photos/portfolio-intake/fashion-commercial/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/06-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Side-on fashion portrait in a pale gown beside a tall sunlit window."
+    },
+    {
+      "id": "intake-02-27",
+      "src": "photos/portfolio-intake/fashion-commercial/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/07-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Location portrait in a white textured jacket over a black lace top."
+    },
+    {
+      "id": "intake-02-18",
+      "src": "photos/portfolio-intake/fashion-commercial/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/08-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Full-length location portrait in a dark outfit with a green headscarf."
+    },
+    {
+      "id": "intake-02-19",
+      "src": "photos/portfolio-intake/fashion-commercial/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/09-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Full-length fashion portrait in a leopard-print jacket beside architectural columns."
+    },
+    {
+      "id": "intake-02-29",
+      "src": "photos/portfolio-intake/fashion-commercial/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/10-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Black-and-white full-length streetwear portrait in jeans and a graphic top."
+    },
+    {
+      "id": "intake-02-33",
+      "src": "photos/portfolio-intake/fashion-commercial/11.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/11-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Street fashion portrait in a red coat over a green sequined dress at dusk."
+    },
+    {
+      "id": "intake-02-35",
+      "src": "photos/portfolio-intake/fashion-commercial/12.webp",
+      "thumbnailSrc": "photos/portfolio-intake/fashion-commercial/12-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Close location portrait in a red coat with evening traffic lights behind."
+    }
+  ],
+  "studio-fashion": [
+    {
+      "id": "intake-03-12",
+      "src": "photos/portfolio-intake/studio-fashion/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/01-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Full-length studio fashion portrait in a colourful patterned tunic and matching boots."
+    },
+    {
+      "id": "intake-03-08",
+      "src": "photos/portfolio-intake/studio-fashion/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/02-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Full-length studio portrait in a white blouse, dark shorts, sunglasses and patterned boots."
+    },
+    {
+      "id": "intake-03-10",
+      "src": "photos/portfolio-intake/studio-fashion/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/03-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Studio fashion portrait pairing a red blouse with blue floral trousers."
+    },
+    {
+      "id": "intake-03-21",
+      "src": "photos/portfolio-intake/studio-fashion/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/04-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Over-the-shoulder studio portrait in a metallic gold dress against a grey backdrop."
+    },
+    {
+      "id": "intake-03-27",
+      "src": "photos/portfolio-intake/studio-fashion/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/05-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Studio fashion portrait in a tailored brown jacket and shorts."
+    },
+    {
+      "id": "intake-03-14",
+      "src": "photos/portfolio-intake/studio-fashion/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/06-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Studio fashion portrait with a blue floral dress held in motion."
+    },
+    {
+      "id": "intake-03-17",
+      "src": "photos/portfolio-intake/studio-fashion/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/07-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Playful studio pose in a red patterned dress, with one leg raised."
+    },
+    {
+      "id": "intake-03-25",
+      "src": "photos/portfolio-intake/studio-fashion/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/08-thumb.webp",
+      "width": 2200,
+      "height": 1650,
+      "thumbnailWidth": 960,
+      "alt": "Studio fashion portrait leaning across an upholstered chair in a gold dress."
+    },
+    {
+      "id": "intake-03-18",
+      "src": "photos/portfolio-intake/studio-fashion/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/09-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Black-and-white full-length studio portrait in a dark belted coat."
+    },
+    {
+      "id": "intake-03-31",
+      "src": "photos/portfolio-intake/studio-fashion/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/10-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Studio fashion portrait in a brown sleeveless dress with a small black handbag."
+    },
+    {
+      "id": "intake-03-35",
+      "src": "photos/portfolio-intake/studio-fashion/11.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/11-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Portrait in a dark satin suit with a hand raised toward the collar."
+    },
+    {
+      "id": "intake-03-37",
+      "src": "photos/portfolio-intake/studio-fashion/12.webp",
+      "thumbnailSrc": "photos/portfolio-intake/studio-fashion/12-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Smiling over-the-shoulder portrait in a black top with an open back and white skirt."
+    }
+  ],
+  "commercial-lifestyle": [
+    {
+      "id": "intake-04-07",
+      "src": "photos/portfolio-intake/commercial-lifestyle/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/01-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Two people walking together outside in coordinated navy and white outfits."
+    },
+    {
+      "id": "intake-04-09",
+      "src": "photos/portfolio-intake/commercial-lifestyle/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/02-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Two-person fashion portrait arranged around a curved interior staircase."
+    },
+    {
+      "id": "intake-04-06",
+      "src": "photos/portfolio-intake/commercial-lifestyle/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/03-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Full-length fashion portrait in a white blouse and navy trousers beneath a garden arch."
+    },
+    {
+      "id": "intake-04-03",
+      "src": "photos/portfolio-intake/commercial-lifestyle/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/04-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Two-person lifestyle fashion portrait around a kitchen counter."
+    },
+    {
+      "id": "intake-04-12",
+      "src": "photos/portfolio-intake/commercial-lifestyle/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/05-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Bright interior portrait in a white outfit seated on a chrome stool."
+    },
+    {
+      "id": "intake-04-13",
+      "src": "photos/portfolio-intake/commercial-lifestyle/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/06-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Relaxed smiling portrait in a white top beside a window."
+    },
+    {
+      "id": "intake-04-14",
+      "src": "photos/portfolio-intake/commercial-lifestyle/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/07-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Black-and-white full-length portrait in jeans and a white top by a tall window."
+    },
+    {
+      "id": "intake-04-18",
+      "src": "photos/portfolio-intake/commercial-lifestyle/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/08-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Relaxed seated portrait in jeans and a white top in a bright interior."
+    },
+    {
+      "id": "intake-04-24",
+      "src": "photos/portfolio-intake/commercial-lifestyle/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/09-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Close interior portrait with a magazine held near the face."
+    },
+    {
+      "id": "intake-04-26",
+      "src": "photos/portfolio-intake/commercial-lifestyle/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-lifestyle/10-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Seated lifestyle portrait in an oversized blue shirt on a brown upholstered chair."
+    }
+  ],
+  "beauty-portrait": [
+    {
+      "id": "intake-05-33",
+      "src": "photos/portfolio-intake/beauty-portrait/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/01-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Close beauty portrait with closed eyes, glossy lips, manicured hands and flower petals."
+    },
+    {
+      "id": "intake-05-19",
+      "src": "photos/portfolio-intake/beauty-portrait/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/02-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Warm studio portrait with softly draped pale clothing and gold jewellery."
+    },
+    {
+      "id": "intake-05-04",
+      "src": "photos/portfolio-intake/beauty-portrait/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/03-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Direct daylight portrait in a denim jacket with brick columns blurred behind."
+    },
+    {
+      "id": "intake-05-22",
+      "src": "photos/portfolio-intake/beauty-portrait/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/04-thumb.webp",
+      "width": 2200,
+      "height": 1650,
+      "thumbnailWidth": 960,
+      "alt": "Close studio portrait with long curled hair and a metallic gold outfit."
+    },
+    {
+      "id": "intake-05-30",
+      "src": "photos/portfolio-intake/beauty-portrait/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/05-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Daylight portrait with red hair and a white textured jacket."
+    },
+    {
+      "id": "intake-05-36",
+      "src": "photos/portfolio-intake/beauty-portrait/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/06-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Smiling studio portrait with dark hair captured in motion against a pale background."
+    },
+    {
+      "id": "intake-05-06",
+      "src": "photos/portfolio-intake/beauty-portrait/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/07-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Location portrait with raised arms, a denim jacket and hair caught in movement."
+    },
+    {
+      "id": "intake-05-27",
+      "src": "photos/portfolio-intake/beauty-portrait/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/08-thumb.webp",
+      "width": 2200,
+      "height": 1650,
+      "thumbnailWidth": 960,
+      "alt": "Direct studio portrait in a brown collared jacket against a dark background."
+    },
+    {
+      "id": "intake-05-13",
+      "src": "photos/portfolio-intake/beauty-portrait/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/09-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Smiling seated portrait in a patterned blouse on a light chair."
+    },
+    {
+      "id": "intake-05-21",
+      "src": "photos/portfolio-intake/beauty-portrait/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/10-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Close warm-toned portrait with one arm raised and a textured green top."
+    },
+    {
+      "id": "intake-05-35",
+      "src": "photos/portfolio-intake/beauty-portrait/11.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/11-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Black-and-white portrait with long hair and a slight smile."
+    },
+    {
+      "id": "intake-05-03",
+      "src": "photos/portfolio-intake/beauty-portrait/12.webp",
+      "thumbnailSrc": "photos/portfolio-intake/beauty-portrait/12-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Seated studio portrait in denim and a dark top, with folded arms."
+    }
+  ],
+  "personal-identity": [
+    {
+      "id": "intake-06-14",
+      "src": "photos/portfolio-intake/personal-identity/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/01-thumb.webp",
+      "width": 1760,
+      "height": 2200,
+      "thumbnailWidth": 768,
+      "alt": "Smiling professional headshot in a white medical coat against a dark background."
+    },
+    {
+      "id": "intake-06-31",
+      "src": "photos/portfolio-intake/personal-identity/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/02-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Smiling studio headshot in a blue jacket and light shirt."
+    },
+    {
+      "id": "intake-06-23",
+      "src": "photos/portfolio-intake/personal-identity/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/03-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Relaxed environmental portrait in a green top, seated in a bright shared interior."
+    },
+    {
+      "id": "intake-06-28",
+      "src": "photos/portfolio-intake/personal-identity/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/04-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Studio headshot in a dark suit jacket and pale shirt with directional lighting."
+    },
+    {
+      "id": "intake-06-38",
+      "src": "photos/portfolio-intake/personal-identity/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/05-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Smiling studio portrait in a tan jacket over a white top."
+    },
+    {
+      "id": "intake-06-01",
+      "src": "photos/portfolio-intake/personal-identity/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/06-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Environmental portrait leaning on an interior railing in a grey cardigan."
+    },
+    {
+      "id": "intake-06-27",
+      "src": "photos/portfolio-intake/personal-identity/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/07-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Studio headshot in a white medical coat over a blue shirt."
+    },
+    {
+      "id": "intake-06-16",
+      "src": "photos/portfolio-intake/personal-identity/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/08-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Standing environmental portrait in a black jacket against vertical wooden slats."
+    },
+    {
+      "id": "intake-06-33",
+      "src": "photos/portfolio-intake/personal-identity/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/09-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Smiling studio headshot in a dark suit jacket and patterned light shirt."
+    },
+    {
+      "id": "intake-06-24",
+      "src": "photos/portfolio-intake/personal-identity/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/10-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Outdoor portrait in a blue jacket, seated beside a railing with greenery behind."
+    },
+    {
+      "id": "intake-06-18",
+      "src": "photos/portfolio-intake/personal-identity/11.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/11-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Smiling environmental portrait in a patterned cardigan beside a leafy plant."
+    },
+    {
+      "id": "intake-06-39",
+      "src": "photos/portfolio-intake/personal-identity/12.webp",
+      "thumbnailSrc": "photos/portfolio-intake/personal-identity/12-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Studio portrait in dark clothing against a softly lit dark backdrop."
+    }
+  ],
+  "creative-portraits": [
+    {
+      "id": "intake-07-10",
+      "src": "photos/portfolio-intake/creative-portraits/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/01-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "A face reflected in a red car's side mirror with city lights blurred behind."
+    },
+    {
+      "id": "intake-07-07",
+      "src": "photos/portfolio-intake/creative-portraits/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/02-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Environmental portrait playing an acoustic guitar on a shaded woodland path."
+    },
+    {
+      "id": "intake-07-20",
+      "src": "photos/portfolio-intake/creative-portraits/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/03-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Full-length studio portrait in a brown leather jacket, jeans, boots and a dark hat."
+    },
+    {
+      "id": "intake-07-15",
+      "src": "photos/portfolio-intake/creative-portraits/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/04-thumb.webp",
+      "width": 2048,
+      "height": 1365,
+      "thumbnailWidth": 960,
+      "alt": "A dynamic leaning pose on an outdoor staircase lined with colourful graffiti."
+    },
+    {
+      "id": "intake-07-03",
+      "src": "photos/portfolio-intake/creative-portraits/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/05-thumb.webp",
+      "width": 2048,
+      "height": 1365,
+      "thumbnailWidth": 960,
+      "alt": "Black-and-white close portrait beside a motorcycle."
+    },
+    {
+      "id": "intake-07-11",
+      "src": "photos/portfolio-intake/creative-portraits/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/06-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Portrait from inside a sports car, framed by its window and red harness."
+    },
+    {
+      "id": "intake-07-09",
+      "src": "photos/portfolio-intake/creative-portraits/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/07-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Full-length portrait beside a red sports car with a city skyline behind."
+    },
+    {
+      "id": "intake-07-06",
+      "src": "photos/portfolio-intake/creative-portraits/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/08-thumb.webp",
+      "width": 1365,
+      "height": 2048,
+      "thumbnailWidth": 640,
+      "alt": "Portrait seated on a motorcycle in a colourful outdoor evening setting."
+    },
+    {
+      "id": "intake-07-16",
+      "src": "photos/portfolio-intake/creative-portraits/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/09-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Wide location portrait standing between two sports cars."
+    },
+    {
+      "id": "intake-07-19",
+      "src": "photos/portfolio-intake/creative-portraits/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/creative-portraits/10-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Location portrait leaning against the front of a purple sports car."
+    }
+  ],
+  "private-lifestyle": [
+    {
+      "id": "intake-08-15",
+      "src": "photos/portfolio-intake/private-lifestyle/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/01-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Smiling waterfront portrait with braids and softly blurred water behind."
+    },
+    {
+      "id": "intake-08-14",
+      "src": "photos/portfolio-intake/private-lifestyle/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/02-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Warm interior portrait in a dark collared shirt with a hand raised toward the collar."
+    },
+    {
+      "id": "intake-08-06",
+      "src": "photos/portfolio-intake/private-lifestyle/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/03-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Softly lit portrait in a loose white shirt beside a balcony window."
+    },
+    {
+      "id": "intake-08-13",
+      "src": "photos/portfolio-intake/private-lifestyle/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/04-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Smiling over-the-shoulder studio portrait in a dark sleeveless top."
+    },
+    {
+      "id": "intake-08-20",
+      "src": "photos/portfolio-intake/private-lifestyle/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/05-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Warm seasonal portrait seated with a small dog beside a lit Christmas tree."
+    },
+    {
+      "id": "intake-08-28",
+      "src": "photos/portfolio-intake/private-lifestyle/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/06-thumb.webp",
+      "width": 1650,
+      "height": 2200,
+      "thumbnailWidth": 720,
+      "alt": "Low-key studio portrait with a gentle smile and long loose hair."
+    },
+    {
+      "id": "intake-08-26",
+      "src": "photos/portfolio-intake/private-lifestyle/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/07-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Relaxed studio portrait in a dark beanie with both hands resting behind the neck."
+    },
+    {
+      "id": "intake-08-30",
+      "src": "photos/portfolio-intake/private-lifestyle/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/08-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Intimate studio portrait resting against folded arms wrapped in a textured knit."
+    },
+    {
+      "id": "intake-08-37",
+      "src": "photos/portfolio-intake/private-lifestyle/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/09-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "A joyful adult-and-child portrait against a dark backdrop with blue balloons."
+    },
+    {
+      "id": "intake-08-39",
+      "src": "photos/portfolio-intake/private-lifestyle/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/10-thumb.webp",
+      "width": 2200,
+      "height": 1466,
+      "thumbnailWidth": 960,
+      "alt": "Black-and-white photograph of two children reaching upward toward balloons."
+    },
+    {
+      "id": "intake-08-45",
+      "src": "photos/portfolio-intake/private-lifestyle/11.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/11-thumb.webp",
+      "width": 2048,
+      "height": 1365,
+      "thumbnailWidth": 960,
+      "alt": "An adult and child facing each other outdoors beside a decorated swing."
+    },
+    {
+      "id": "intake-08-57",
+      "src": "photos/portfolio-intake/private-lifestyle/12.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-lifestyle/12-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "An outdoor family portrait beside a lake."
+    }
+  ],
+  "boudoir-intimate": [
+    {
+      "id": "intake-09-03",
+      "src": "photos/portfolio-intake/boudoir-intimate/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/boudoir-intimate/01-thumb.webp",
+      "width": 2200,
+      "height": 1571,
+      "thumbnailWidth": 960,
+      "alt": "Reclining portrait in a dotted dress and lingerie, rendered in cool monochrome."
+    },
+    {
+      "id": "intake-09-01",
+      "src": "photos/portfolio-intake/boudoir-intimate/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/boudoir-intimate/02-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Low-key standing lingerie portrait with wet-look hair and a draped dark shirt."
+    }
+  ],
+  "private-events": [
+    {
+      "id": "intake-10-07",
+      "src": "photos/portfolio-intake/private-events/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/01-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Black-and-white engagement portrait sharing a kiss with a bouquet in the foreground."
+    },
+    {
+      "id": "intake-10-04",
+      "src": "photos/portfolio-intake/private-events/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/02-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "A newly engaged couple standing beneath a heart-shaped red flower arch by a pool."
+    },
+    {
+      "id": "intake-10-02",
+      "src": "photos/portfolio-intake/private-events/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/03-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "A close embrace during an outdoor proposal with red flowers behind."
+    },
+    {
+      "id": "intake-10-10",
+      "src": "photos/portfolio-intake/private-events/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/04-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "An engagement ring held toward the camera with the couple softly blurred behind."
+    },
+    {
+      "id": "intake-10-12",
+      "src": "photos/portfolio-intake/private-events/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/05-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Birthday party details with a cake, colourful decorations and illuminated lettering."
+    },
+    {
+      "id": "intake-10-16",
+      "src": "photos/portfolio-intake/private-events/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/06-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Black-and-white candid of an adult holding a child at a birthday celebration."
+    },
+    {
+      "id": "intake-10-18",
+      "src": "photos/portfolio-intake/private-events/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/07-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "A small child stepping forward at an indoor party with blue balloons behind."
+    },
+    {
+      "id": "intake-10-23",
+      "src": "photos/portfolio-intake/private-events/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/08-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "A laughing guest photographed candidly at an indoor celebration."
+    },
+    {
+      "id": "intake-10-25",
+      "src": "photos/portfolio-intake/private-events/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/09-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Guests raising their glasses together around a celebration table."
+    },
+    {
+      "id": "intake-10-26",
+      "src": "photos/portfolio-intake/private-events/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/10-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "An adult lifting a small child into the air at an indoor gathering."
+    },
+    {
+      "id": "intake-10-30",
+      "src": "photos/portfolio-intake/private-events/11.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/11-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "Black-and-white candid of two adults and a child sharing a joyful moment."
+    },
+    {
+      "id": "intake-10-33",
+      "src": "photos/portfolio-intake/private-events/12.webp",
+      "thumbnailSrc": "photos/portfolio-intake/private-events/12-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "A four-person group portrait at an indoor celebration."
+    }
+  ],
+  "commercial-events": [
+    {
+      "id": "intake-11-21",
+      "src": "photos/portfolio-intake/commercial-events/01.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/01-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Black-and-white event photograph of three people leading an activity with a microphone."
+    },
+    {
+      "id": "intake-11-07",
+      "src": "photos/portfolio-intake/commercial-events/02.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/02-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Wide black-and-white photograph of a seated audience at a charity golf event."
+    },
+    {
+      "id": "intake-11-02",
+      "src": "photos/portfolio-intake/commercial-events/03.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/03-thumb.webp",
+      "width": 1467,
+      "height": 2200,
+      "thumbnailWidth": 640,
+      "alt": "An outdoor event representative beside a branded drinks display."
+    },
+    {
+      "id": "intake-11-09",
+      "src": "photos/portfolio-intake/commercial-events/04.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/04-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Black-and-white candid conversation between attendees on a golf course."
+    },
+    {
+      "id": "intake-11-14",
+      "src": "photos/portfolio-intake/commercial-events/05.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/05-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "Smiling event participant in a blue and white sports jersey."
+    },
+    {
+      "id": "intake-11-16",
+      "src": "photos/portfolio-intake/commercial-events/06.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/06-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "A DJ working behind a mixing desk at an outdoor event."
+    },
+    {
+      "id": "intake-11-23",
+      "src": "photos/portfolio-intake/commercial-events/07.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/07-thumb.webp",
+      "width": 2200,
+      "height": 1467,
+      "thumbnailWidth": 960,
+      "alt": "A speaker addressing an audience beside a podium and event banners."
+    },
+    {
+      "id": "intake-11-27",
+      "src": "photos/portfolio-intake/commercial-events/08.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/08-thumb.webp",
+      "width": 1365,
+      "height": 2048,
+      "thumbnailWidth": 640,
+      "alt": "A speaker presenting beside a laptop in a bright green meeting room."
+    },
+    {
+      "id": "intake-11-28",
+      "src": "photos/portfolio-intake/commercial-events/09.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/09-thumb.webp",
+      "width": 2048,
+      "height": 1365,
+      "thumbnailWidth": 960,
+      "alt": "Audience-view photograph of a business presentation in a small meeting room."
+    },
+    {
+      "id": "intake-11-30",
+      "src": "photos/portfolio-intake/commercial-events/10.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/10-thumb.webp",
+      "width": 2048,
+      "height": 1365,
+      "thumbnailWidth": 960,
+      "alt": "A workshop participant writing on a whiteboard."
+    },
+    {
+      "id": "intake-11-31",
+      "src": "photos/portfolio-intake/commercial-events/11.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/11-thumb.webp",
+      "width": 2048,
+      "height": 1365,
+      "thumbnailWidth": 960,
+      "alt": "Behind-the-scenes photograph of a camera operator recording an interview against a green screen."
+    },
+    {
+      "id": "intake-11-35",
+      "src": "photos/portfolio-intake/commercial-events/12.webp",
+      "thumbnailSrc": "photos/portfolio-intake/commercial-events/12-thumb.webp",
+      "width": 1365,
+      "height": 2048,
+      "thumbnailWidth": 640,
+      "alt": "Two attendees posing together in front of a branded event backdrop."
+    }
+  ]
+}

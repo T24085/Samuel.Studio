@@ -35,7 +35,16 @@ export function WorkPortfolioPage() {
               >
                 {cover ? (
                   <div className="aspect-[4/3] overflow-hidden bg-black">
-                    <img src={cover.src} alt={cover.alt} loading="lazy" className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.02]" />
+                    <img
+                      src={cover.thumbnailSrc || cover.src}
+                      srcSet={cover.thumbnailSrc ? `${cover.thumbnailSrc} ${cover.thumbnailWidth}w, ${cover.src} ${cover.width}w` : undefined}
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      width={cover.width}
+                      height={cover.height}
+                      alt={cover.alt}
+                      loading="lazy"
+                      className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.02]"
+                    />
                   </div>
                 ) : null}
                 <div className="p-6">

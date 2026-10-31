@@ -1,0 +1,1187 @@
+{
+  "status": "Local preview; first-pass selection approved for site inclusion, not deployment",
+  "date": "2026-10-31",
+  "images": [
+    {
+      "album": "editorial-campaign",
+      "order": 1,
+      "reviewID": "01-23",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "A30A0388-17.jpg",
+      "sourceSHA256": "005f45dd34981439189f4ea1cd2b95e4c5aae03d31302eac5806bc1a817a0b08",
+      "webFile": "photos/portfolio-intake/editorial-campaign/01.webp",
+      "webSHA256": "bbcb82d11fcb13cce49ae63941e8818501eb6992e13783739684d2d89060544f"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 2,
+      "reviewID": "01-01",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "2021.08_YoungTiff SE1-1144-Edit-Edit.jpg",
+      "sourceSHA256": "d514a3b11aa1e04890637d77e68d930371c6f0558906018452ffdceab5945b69",
+      "webFile": "photos/portfolio-intake/editorial-campaign/02.webp",
+      "webSHA256": "db7c0252946d695be770f581e7f3b3d2338fce85ed31f5fde487f6fa4bfcdfd2"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 3,
+      "reviewID": "01-18",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "20240324-untitled-280.jpg",
+      "sourceSHA256": "865cb50b4170e7bcdbd334da94f9996b281cd386ff2a91e9624c94a4db85c60a",
+      "webFile": "photos/portfolio-intake/editorial-campaign/03.webp",
+      "webSHA256": "98bb893542af8296148b99b47a901e350929fe027131b9a50fe89698e84cd254"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 4,
+      "reviewID": "01-07",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "2021.08_YoungTiff SE1-607-Edit-Edit.jpg",
+      "sourceSHA256": "49dd9dcaa93151a1d2c59f0f77c6bd1bdd2582722103a76a45e019e10cc8a200",
+      "webFile": "photos/portfolio-intake/editorial-campaign/04.webp",
+      "webSHA256": "a8e9e9a7ca2effb23f41d7f7e03df091f3357839aa4939bb66ede5dbff97f2b5"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 5,
+      "reviewID": "01-11",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "20211105-untitled-1373.jpg",
+      "sourceSHA256": "9b43491e591ca2be74bc7257386da228362232b955a260650b840187975e4f7f",
+      "webFile": "photos/portfolio-intake/editorial-campaign/05.webp",
+      "webSHA256": "90f1af3f4ee2767ecf640bacf219019059436a320aa7981fdfa50392e56dc15a"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 6,
+      "reviewID": "01-16",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "20230914-A30A5376.jpg",
+      "sourceSHA256": "aaa2418a3a2d9becf5aef63a3ecfb2c88ff10157cc8ed4dc04e30031cd4bc07d",
+      "webFile": "photos/portfolio-intake/editorial-campaign/06.webp",
+      "webSHA256": "9dd8a6081007ab2266be51095dfc46ac9f262aafea9f5ab0a9e46d591ad945ba"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 7,
+      "reviewID": "01-21",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "20240324-untitled-910.jpg",
+      "sourceSHA256": "21eb8c88fa61a7ed64b430a00afc685cfa96066c3ab8123d94161c6a3a0ce3e5",
+      "webFile": "photos/portfolio-intake/editorial-campaign/07.webp",
+      "webSHA256": "81d008153edf4683e36ca36db3f3c24fb2cb45857641da37ffdc5d7c51541a2d"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 8,
+      "reviewID": "01-04",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "2021.08_YoungTiff SE1-198-Edit.JPG",
+      "sourceSHA256": "6447d1b1dfc2da80fcd6b3cc22d446da02d80f51273e95f5e7bfdd561c534a17",
+      "webFile": "photos/portfolio-intake/editorial-campaign/08.webp",
+      "webSHA256": "d5eab6028d7792f2edbea4403397b44a85aad977ac7e074abad3f73e5b99ed9e"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 9,
+      "reviewID": "01-09",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "20211105-untitled-1188.jpg",
+      "sourceSHA256": "aeb8a76969a97da4ac74cbe641876713ec119995db8084ab6fee0332314ccae6",
+      "webFile": "photos/portfolio-intake/editorial-campaign/09.webp",
+      "webSHA256": "697170e45835b57297e51165d16a3aa0d70c104e57e5e71e1fd9326882d23255"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 10,
+      "reviewID": "01-26",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "untitled-159.jpg",
+      "sourceSHA256": "615b8a3c5f5dcca317da1d6755598b466255121df5a2c3c1d7ca8ba817c62328",
+      "webFile": "photos/portfolio-intake/editorial-campaign/10.webp",
+      "webSHA256": "0f5ae78faaafbf7e5f5a990eee84d1d617bdc0ca8af3c17c0b8cd7a0260c7948"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 11,
+      "reviewID": "01-28",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "untitled-410-2.jpg",
+      "sourceSHA256": "7247792f04776effe4b8076b780ec7431684e3ab4b6c4549365b7a04b7ea6e00",
+      "webFile": "photos/portfolio-intake/editorial-campaign/11.webp",
+      "webSHA256": "dcf7e7dd916c64ce818e5bc052c33e6f89dca3eefb5f5632a2475fc2ec4dbdf0"
+    },
+    {
+      "album": "editorial-campaign",
+      "order": 12,
+      "reviewID": "01-19",
+      "sourceAlbum": "01 Fashion and Editorial\\01 Editorial and Creative Fashion",
+      "sourceFilename": "20240324-untitled-34.jpg",
+      "sourceSHA256": "7344cc4dfc9eccd310c6c7e35c771577a8a22fb1b5d13c601c3e5276b942f79e",
+      "webFile": "photos/portfolio-intake/editorial-campaign/12.webp",
+      "webSHA256": "761851d97b3b5a6f08f39869c03e37285fa9553dab63b807e6b7606675957c57"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 1,
+      "reviewID": "02-23",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "A30A7801-1.jpg",
+      "sourceSHA256": "5631b12c51c93bbec3cc7180a817b9245667d0b0fd1a7256dd0c8bf675947328",
+      "webFile": "photos/portfolio-intake/fashion-commercial/01.webp",
+      "webSHA256": "4dcf396966bba41a13c0387063dab388668545463ae10639a26e4c020dc43976"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 2,
+      "reviewID": "02-04",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "20230412-A30A4130.jpg",
+      "sourceSHA256": "84fc34b99efc0d7d16c0423a41cefaf5f2df8a2e87ac907d09f15f8ec3ad0c01",
+      "webFile": "photos/portfolio-intake/fashion-commercial/02.webp",
+      "webSHA256": "545bc581d512e365bf97185e7f2cb7ccdb5d540157a19b918e742d05c6bb05e7"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 3,
+      "reviewID": "02-02",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "20230412-A30A3336.jpg",
+      "sourceSHA256": "7d63303d3c3c3367fc4f3753330ee91c1dce3907a991638952b757138f664333",
+      "webFile": "photos/portfolio-intake/fashion-commercial/03.webp",
+      "webSHA256": "54f1b8063d2f93284d6180a528aab2fb1dacd1a66add4d15eaf84cbba7df29f2"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 4,
+      "reviewID": "02-11",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "A30A7040-1.jpg",
+      "sourceSHA256": "45f8a5fcad2897061a252ede6c2a9cce3a81c091f97f8abb6a8a4c9da2fc628b",
+      "webFile": "photos/portfolio-intake/fashion-commercial/04.webp",
+      "webSHA256": "788c8b3c7a10c665672b481fe58ddc43c564c1b1d48084ee461040700f2beab5"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 5,
+      "reviewID": "02-13",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "A30A7300-1.jpg",
+      "sourceSHA256": "bea7f69c153680ae1463bac11efa68af8bc01ac6b0d8cc69fb5985f075deecb1",
+      "webFile": "photos/portfolio-intake/fashion-commercial/05.webp",
+      "webSHA256": "47091c9aaf70a27e7fe4a134e3008958e528e47fd910979328e1403941db7ca2"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 6,
+      "reviewID": "02-09",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "20230412-A30A4263.jpg",
+      "sourceSHA256": "1bfcd67720c7369800d41f6270c911c45ec9ee4da3d7a9347cd54f2c94d2728a",
+      "webFile": "photos/portfolio-intake/fashion-commercial/06.webp",
+      "webSHA256": "c799e6137025ac154ce6f381ab3acae2ceedff1a1843ff557df10308dffde07f"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 7,
+      "reviewID": "02-27",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "untitled-2196.jpg",
+      "sourceSHA256": "cf9d5b540fd055e0559b4707c6f493f79a775c3dc673c32c9787151db163aa59",
+      "webFile": "photos/portfolio-intake/fashion-commercial/07.webp",
+      "webSHA256": "3427324ee851f1cf789c64067afee1627526989897cdde3621c802db7acc41f4"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 8,
+      "reviewID": "02-18",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "A30A7473-1.jpg",
+      "sourceSHA256": "8012422038e7796655e4d82338a404c7686bb142552ce51a42ba94708a60faef",
+      "webFile": "photos/portfolio-intake/fashion-commercial/08.webp",
+      "webSHA256": "118070d288d2f0958f9ffe44f278b4a813717dcac17129d85897649e01012dd7"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 9,
+      "reviewID": "02-19",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "A30A7632-1.jpg",
+      "sourceSHA256": "555319c399d1b797f113240aabafc9718ecb08c6717e48a5ee7132e59bd75651",
+      "webFile": "photos/portfolio-intake/fashion-commercial/09.webp",
+      "webSHA256": "df3e375cd0d8c5948e3430331ccb1371a145a99c2d1d8d7e1135c948e5310dc5"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 10,
+      "reviewID": "02-29",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "untitled-229.jpg",
+      "sourceSHA256": "27b2691afb74d68e2a7bcd01bfeea3bf65b30f786a4257ca261443150fdf63d9",
+      "webFile": "photos/portfolio-intake/fashion-commercial/10.webp",
+      "webSHA256": "8a6f260611bb06069074ed4c89299820b9edf92d70cbbaa0f6afffb2843a6b42"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 11,
+      "reviewID": "02-33",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "untitled-343.jpg",
+      "sourceSHA256": "6a31bfb7f72bbea21b75a7c879d4c452c841e17bfe6e1c2ba4803e33dac85ee0",
+      "webFile": "photos/portfolio-intake/fashion-commercial/11.webp",
+      "webSHA256": "482d37b444b7102aa5755d30cc1f654aff41cb404493a1784e1d21eeec436aeb"
+    },
+    {
+      "album": "fashion-commercial",
+      "order": 12,
+      "reviewID": "02-35",
+      "sourceAlbum": "01 Fashion and Editorial\\02 Fashion on Location",
+      "sourceFilename": "untitled-401.jpg",
+      "sourceSHA256": "5bb34dfc0f4d8cdbaa9483bbc15d169ded8dd156ca3a3a02fde2ba3043f15f0f",
+      "webFile": "photos/portfolio-intake/fashion-commercial/12.webp",
+      "webSHA256": "71770d05716900e4bfb5471a9e50e0f7fb9ab9d812886662f3b636eed27e02d4"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 1,
+      "reviewID": "03-12",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "20230314-A30A1695.jpg",
+      "sourceSHA256": "69c4fb694779b6d2b7ef455731c4e72ab9a9672aaed1040f827925d09e7a23c2",
+      "webFile": "photos/portfolio-intake/studio-fashion/01.webp",
+      "webSHA256": "2945d213efb32fc4fc4b8ea56dc53532a51c84c09c291f5a8f1aa6738ab6cdf1"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 2,
+      "reviewID": "03-08",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "20230314-A30A1475.jpg",
+      "sourceSHA256": "c751f5ebbec55082ad1c913c74db7a44be4ca7f55d8c7a28a5710675eec24d4e",
+      "webFile": "photos/portfolio-intake/studio-fashion/02.webp",
+      "webSHA256": "02978d8ef5ea1a03473100746e68de124a3301a0a961db3adfc8c18d09c20ab0"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 3,
+      "reviewID": "03-10",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "20230314-A30A1606.jpg",
+      "sourceSHA256": "d9f8164b970179b4476a95757592cbbd28397a49d61744528b9f3ab50d374da8",
+      "webFile": "photos/portfolio-intake/studio-fashion/03.webp",
+      "webSHA256": "ead94f4d8af9dc637c298c80f39bc20f80900b8334e41a47f7fe0a57d70f2820"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 4,
+      "reviewID": "03-21",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "A30A0172.jpg",
+      "sourceSHA256": "9ee96c4791681a3a220ffce0f700525076254e194cd52a1f20266a6882dc064c",
+      "webFile": "photos/portfolio-intake/studio-fashion/04.webp",
+      "webSHA256": "1cd80e5c240383a7782f126287079a21e75345b3fb3f63ed267205842bc3369c"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 5,
+      "reviewID": "03-27",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "A30A9422.jpg",
+      "sourceSHA256": "d121153ed2eb2400375b63f5d33152b65da8284aef9efdbae0575f6310d68652",
+      "webFile": "photos/portfolio-intake/studio-fashion/05.webp",
+      "webSHA256": "b4f435700f24bc0a618b5a338e26889b3b38d612ee9a238f3323390318b5bd34"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 6,
+      "reviewID": "03-14",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "20230314-A30A1832.jpg",
+      "sourceSHA256": "c6f50448278e1723caddecc8ff5db6cd975f2cf038e643f1ddb0411896ca7d14",
+      "webFile": "photos/portfolio-intake/studio-fashion/06.webp",
+      "webSHA256": "e1273fd1abce89c98eeee30f44305957c992231ccab977c549e403149937e162"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 7,
+      "reviewID": "03-17",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "20230914-A30A4817.jpg",
+      "sourceSHA256": "4f609577169bb7b1f6f410341f9a51b96af936aa65a54736801774b5c8a428d2",
+      "webFile": "photos/portfolio-intake/studio-fashion/07.webp",
+      "webSHA256": "5039e13624866fac2a9a327989df50ff6550095ce69d7489513926068fd52b49"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 8,
+      "reviewID": "03-25",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "A30A0395.jpg",
+      "sourceSHA256": "fd7955cdd152e09a8623201db251fe7e059c594f0dabcc42a4a11aced29e41be",
+      "webFile": "photos/portfolio-intake/studio-fashion/08.webp",
+      "webSHA256": "b7c1d0d75b528ad7055ee6cdc8f7f2f4cd2f4d6af64a192389dbf0f05bdbf7bc"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 9,
+      "reviewID": "03-18",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "20230914-A30A4959.jpg",
+      "sourceSHA256": "dafb5b09a3879821da034dcc1292677d383c9f27af9c9dd2d9f0771e76d7ee28",
+      "webFile": "photos/portfolio-intake/studio-fashion/09.webp",
+      "webSHA256": "34b52e587457bdba186e8b9e316222160744e2cdd0f94772d7f4131ba5cdcc31"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 10,
+      "reviewID": "03-31",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "A30A9672.jpg",
+      "sourceSHA256": "4e752857f3c4ce19142bc834cf89e813d28e38b32d1cbb90ab198eeee2283cda",
+      "webFile": "photos/portfolio-intake/studio-fashion/10.webp",
+      "webSHA256": "4e1b609d6e7fa1eb58d10c2dd7b024f582e7a420de36310304377d6e5e715cd5"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 11,
+      "reviewID": "03-35",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "A30A9952.jpg",
+      "sourceSHA256": "5aa07346611fe39495001a5d6001116ca041365ef993c84e10defaf13619373e",
+      "webFile": "photos/portfolio-intake/studio-fashion/11.webp",
+      "webSHA256": "347f26dd2554bd0497755ffb789c69f324e913f94719cf58d6be487434a84dc8"
+    },
+    {
+      "album": "studio-fashion",
+      "order": 12,
+      "reviewID": "03-37",
+      "sourceAlbum": "01 Fashion and Editorial\\03 Studio Fashion",
+      "sourceFilename": "untitled-789.jpg",
+      "sourceSHA256": "a2afd5ce37949193f299c5dcd1d53c7bef340100685294d857e69288e2ccfcd6",
+      "webFile": "photos/portfolio-intake/studio-fashion/12.webp",
+      "webSHA256": "c47df6ab43a7484e6fba33b136519e83b24b0e20cb2bb9ae551cf5111bd53eba"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 1,
+      "reviewID": "04-07",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20230412-A30A3404.jpg",
+      "sourceSHA256": "47c6ff1425c121d5fba1de821c4e7d59de18448d2559b94a11b8e6f939a5ceec",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/01.webp",
+      "webSHA256": "88ad7a83abd0da0378c6a30aa0411c2db6034a4151298a0cbfdd2416e8b110e0"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 2,
+      "reviewID": "04-09",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20230412-A30A4495.jpg",
+      "sourceSHA256": "29571f68a08a6500e702d15824df67d2b7e3e504dd0ef60af47ca06ada734ddb",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/02.webp",
+      "webSHA256": "7aa6a0456c0c85f2eef69a423563803f2ac62d8ffbe907e7c10f68405a627a7b"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 3,
+      "reviewID": "04-06",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20230412-A30A3305.jpg",
+      "sourceSHA256": "5f9ff7148c773a311838d83b42d9f1f8e8e85bc69c038dd02438a53b63a09cf3",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/03.webp",
+      "webSHA256": "7dcc1ef9cd0d87990d75d9e3864218a939508162fb998a07ba7ec8b5d76d2f54"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 4,
+      "reviewID": "04-03",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20230412-A30A2695.jpg",
+      "sourceSHA256": "40b0727b8ab62e9f490733e84d18b5a2686a88f14baa49598ff9ab73b64db6f7",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/04.webp",
+      "webSHA256": "53db23018612c11418b4ef10a024484808a2133b8e1cdac5faa498a0fcdc4a61"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 5,
+      "reviewID": "04-12",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20231014-A30A7648.jpg",
+      "sourceSHA256": "318de10d3a6e26ca234fee750af99d34ddd2d17dfae2ad2b24754cd57f8ff4f3",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/05.webp",
+      "webSHA256": "812154d79fda442f9d0f9b944874facb6a0a05fa6177f7c9e205ce8bf90dc618"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 6,
+      "reviewID": "04-13",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20231014-A30A7700.jpg",
+      "sourceSHA256": "a6adaf82c6890437ab78332c2ce5d7982bc6f016a17ed5e51e639a256ae9f39c",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/06.webp",
+      "webSHA256": "a3527c102028102b3576f56f67776ddc86a5127debc3fbae2c0ef5a5ede86fde"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 7,
+      "reviewID": "04-14",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20231014-A30A7733-3.jpg",
+      "sourceSHA256": "413ebcd0148f08e8bda68087406073510d03b26b11f8c4255012e20fa36f7edf",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/07.webp",
+      "webSHA256": "f5095fc41b91033811d289d523056cffa91c3f00eae3c2201c95899cf3778cf9"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 8,
+      "reviewID": "04-18",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20231014-A30A7988.jpg",
+      "sourceSHA256": "acc1aa8190c01aa0e2fd5a9e0338ace9052514640b1b604789326f3f0fb1f693",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/08.webp",
+      "webSHA256": "635460994b4a049a18b954cf97cc9249b5724d0c3636cc382048a14471fa3d6d"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 9,
+      "reviewID": "04-24",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20231014-A30A8316.jpg",
+      "sourceSHA256": "e6209b98c73a291368dd4ee180ad621c6ef130f06c6006abf7b652764ca9e0f8",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/09.webp",
+      "webSHA256": "8d3a2f121f50396a637f17abe559f00393d0881396f48c0609178881e699ff4e"
+    },
+    {
+      "album": "commercial-lifestyle",
+      "order": 10,
+      "reviewID": "04-26",
+      "sourceAlbum": "01 Fashion and Editorial\\04 Commercial Lifestyle",
+      "sourceFilename": "20231014-A30A8469.jpg",
+      "sourceSHA256": "9b5a14eadb02d293ac950b4577e91cf64dc764725b8c5389ff0ef6e1d92599bd",
+      "webFile": "photos/portfolio-intake/commercial-lifestyle/10.webp",
+      "webSHA256": "87e5549de4d950b301cde5c0bd354044c2dea8bed26e4782e1d58f4cbb265b2b"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 1,
+      "reviewID": "05-33",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "untitled-387.jpg",
+      "sourceSHA256": "5884664c928845a04c9496b8920e6f1fcad08c05aa66be5cfab4d72872674215",
+      "webFile": "photos/portfolio-intake/beauty-portrait/01.webp",
+      "webSHA256": "7ab97bf32a293b24bd3b534b40b81b295831fdbd73912baf5e5410eefe3a1e39"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 2,
+      "reviewID": "05-19",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "20240324-untitled-586.jpg",
+      "sourceSHA256": "c57a5cf319000d2079b8331282897845a0e124eda75acc3bf850a9286e860631",
+      "webFile": "photos/portfolio-intake/beauty-portrait/02.webp",
+      "webSHA256": "c9618f9dd4eb1f10ca7e0b9a4d099d19794fa1820da1151fc452dbd5db03e29f"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 3,
+      "reviewID": "05-04",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "2021.08_YoungTiff SE1-1372-Edit.jpg",
+      "sourceSHA256": "b33eab967e581ab5f6238ea995f9fc56c3cc6c49a7c420d906b358e1c90a73cf",
+      "webFile": "photos/portfolio-intake/beauty-portrait/03.webp",
+      "webSHA256": "92b5937ce1762ccc4dc7f892ca4742daacee7d1dd129f2c2edeab4597833eee5"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 4,
+      "reviewID": "05-22",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "A30A0125.jpg",
+      "sourceSHA256": "19c59c7f26a24beac1261a0a32f12a7bff37044f0c9589627de67d01fa6125f4",
+      "webFile": "photos/portfolio-intake/beauty-portrait/04.webp",
+      "webSHA256": "3a4c68d8c12e88fa8423fd9efe80f492ea8e896bcba7db043bc7a7966feedabb"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 5,
+      "reviewID": "05-30",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "untitled-2359.jpg",
+      "sourceSHA256": "8127c48264479500da8159deaedca0ecf2b1c0253448abd0faa4daa292b1ffde",
+      "webFile": "photos/portfolio-intake/beauty-portrait/05.webp",
+      "webSHA256": "2e89b56779e1953c42c226432c04512349becc30bbceb5ee7ff8ed5a8af18080"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 6,
+      "reviewID": "05-36",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "untitled-743-2.jpg",
+      "sourceSHA256": "bc353865cb0958a1af2879d0acfc054ba2f8c5c2439baef4a873568e318759e0",
+      "webFile": "photos/portfolio-intake/beauty-portrait/06.webp",
+      "webSHA256": "74389e620031f14aee208ceff557ae528bf64255203abf198bf74b0759fda6e0"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 7,
+      "reviewID": "05-06",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "2021.08_YoungTiff SE1-1760-Edit.jpg",
+      "sourceSHA256": "751aa15187f2df290374524ef33b3c88e402f2525f4b64735e2df05eed8b54d8",
+      "webFile": "photos/portfolio-intake/beauty-portrait/07.webp",
+      "webSHA256": "33d34600d79527424de82d4b45bd2f320ecda673d6bebc457da983c34746290a"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 8,
+      "reviewID": "05-27",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "A30A9576.jpg",
+      "sourceSHA256": "c646a645510120f7e7e9d9c544057d46100a19b03f7f80db9d43d9657d6672cb",
+      "webFile": "photos/portfolio-intake/beauty-portrait/08.webp",
+      "webSHA256": "cd918a1002f529d3e651f02557d0b36d3a0df857d60612235f07e40d244da25a"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 9,
+      "reviewID": "05-13",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "20211105-untitled-1158.jpg",
+      "sourceSHA256": "127d77d11e78ffdf7482ed9096336c0fa1f04cba283322088b7fc32765efd2b9",
+      "webFile": "photos/portfolio-intake/beauty-portrait/09.webp",
+      "webSHA256": "11e441fffd2df0ce718c0fa6297708693afe8b3a86bbad2d7bbf1da3ca557c91"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 10,
+      "reviewID": "05-21",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "20240324-untitled-882.jpg",
+      "sourceSHA256": "295133370177472a682565b1dace5e57b12a92d8bd41ed0b260e511beb1d33ca",
+      "webFile": "photos/portfolio-intake/beauty-portrait/10.webp",
+      "webSHA256": "c7655c56d3a82a9aec66ec1274968a187c64fa25e51dcd2dd95815127dd96823"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 11,
+      "reviewID": "05-35",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "untitled-571-2.jpg",
+      "sourceSHA256": "57662f3a1f0c94d81d0c0e563091dec817eaadbb868c266aef3121da0b7f9fdf",
+      "webFile": "photos/portfolio-intake/beauty-portrait/11.webp",
+      "webSHA256": "87b19c75b9e324b963a933a5f86ef490a37d6c428536dbe633836cb339d095aa"
+    },
+    {
+      "album": "beauty-portrait",
+      "order": 12,
+      "reviewID": "05-03",
+      "sourceAlbum": "01 Fashion and Editorial\\05 Beauty and Portrait",
+      "sourceFilename": "2021.08_YoungTiff SE1-1301.jpg",
+      "sourceSHA256": "25fd5a6058dcd2bfe88caaefca9a4fe06df9dc1062fab9df894db0afc3152424",
+      "webFile": "photos/portfolio-intake/beauty-portrait/12.webp",
+      "webSHA256": "980af7a034d407faa0330305bf9d57fac842d3429d877421c9b5c256c80e3d67"
+    },
+    {
+      "album": "personal-identity",
+      "order": 1,
+      "reviewID": "06-14",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "A30A1564.jpg",
+      "sourceSHA256": "2e90cc137bc88407910803ea23ea3aad302df967ecef2c993326afce6da87574",
+      "webFile": "photos/portfolio-intake/personal-identity/01.webp",
+      "webSHA256": "42a43971712558f06470281d095577e0bef5b8fae6594e8061439d84a62a5493"
+    },
+    {
+      "album": "personal-identity",
+      "order": 2,
+      "reviewID": "06-31",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "untitled-180.jpg",
+      "sourceSHA256": "40003091d2b7c482115205c4010bee8d221c2a04a411882cd89162653d884440",
+      "webFile": "photos/portfolio-intake/personal-identity/02.webp",
+      "webSHA256": "c4672fbb644834770d141d45a2fc102e9a867d762d4969b25f59afd85720750b"
+    },
+    {
+      "album": "personal-identity",
+      "order": 3,
+      "reviewID": "06-23",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "A30A6961-28.jpg",
+      "sourceSHA256": "18650ec59236a8b5879ff1759060bd56f8364d9cc339c408c5bec21d4027e107",
+      "webFile": "photos/portfolio-intake/personal-identity/03.webp",
+      "webSHA256": "fc7591d941f652e9f5a8ed6ff2681cf31aaa1d641417ddd1b85bf468e212093b"
+    },
+    {
+      "album": "personal-identity",
+      "order": 4,
+      "reviewID": "06-28",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "untitled-123.jpg",
+      "sourceSHA256": "46aa9747fb9063c963cb8991e8035b2d37d8f731c676ba4e0b51b15315a84495",
+      "webFile": "photos/portfolio-intake/personal-identity/04.webp",
+      "webSHA256": "074f94b77677cf648aaefdfd80092f72a149406376d7fc85262735bf0865d7a2"
+    },
+    {
+      "album": "personal-identity",
+      "order": 5,
+      "reviewID": "06-38",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "untitled-8.jpg",
+      "sourceSHA256": "3832a1a64430742d68a743308b381cceddd0daca0b2a92b757f80974295d6b9a",
+      "webFile": "photos/portfolio-intake/personal-identity/05.webp",
+      "webSHA256": "ddef0454a2f6cac5ae6374db8a29ac884df2dc407cc0bcabd03a3108dc2088b4"
+    },
+    {
+      "album": "personal-identity",
+      "order": 6,
+      "reviewID": "06-01",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "20260501-A30A8392.jpg",
+      "sourceSHA256": "b739d8fd3c645d04aa5566ea535434f5dc8a05f4aee133f3c2796277396aebe5",
+      "webFile": "photos/portfolio-intake/personal-identity/06.webp",
+      "webSHA256": "61f1ccc5cf321ade6a9a4c634e3019de1d28d7b4fcce30085a26b1137f2f14b1"
+    },
+    {
+      "album": "personal-identity",
+      "order": 7,
+      "reviewID": "06-27",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "untitled-11.jpg",
+      "sourceSHA256": "2c6ebfff7573f6199f92a78bfe43b54b34dbac4c56ed2e3fd866de45938600a7",
+      "webFile": "photos/portfolio-intake/personal-identity/07.webp",
+      "webSHA256": "639f7898f7a562d94ff7ee5b763789cae87f26197049c0f0c7b48cc08f516fa8"
+    },
+    {
+      "album": "personal-identity",
+      "order": 8,
+      "reviewID": "06-16",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "A30A6853-4.jpg",
+      "sourceSHA256": "729c5bf4fb4574e73b43428133ba281b0f85217e7c6d934d01e1e8fdbc0262f7",
+      "webFile": "photos/portfolio-intake/personal-identity/08.webp",
+      "webSHA256": "230134a8d2f4337b1481ecd0adb9c1ed94999a8faa6a5c1bc23346a484cb2517"
+    },
+    {
+      "album": "personal-identity",
+      "order": 9,
+      "reviewID": "06-33",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "untitled-242.jpg",
+      "sourceSHA256": "30985e95ff1678ba482e4275ac20676b68998b8c3ce96ff577259e9947a74f58",
+      "webFile": "photos/portfolio-intake/personal-identity/09.webp",
+      "webSHA256": "070651cb540d5123d9a966bb078d9811eccfbbb3e9abd44cce24e788e4753c2c"
+    },
+    {
+      "album": "personal-identity",
+      "order": 10,
+      "reviewID": "06-24",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "Smita40th-780.jpg",
+      "sourceSHA256": "bb5a7442619655506983f9764451ba023e556196c4a1e317bf8c71e264078580",
+      "webFile": "photos/portfolio-intake/personal-identity/10.webp",
+      "webSHA256": "612a0942e34e1f52449a1b1f8ddaa99c9fa03f62b4eac7c361ea49100813afd3"
+    },
+    {
+      "album": "personal-identity",
+      "order": 11,
+      "reviewID": "06-18",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "A30A6878-11.jpg",
+      "sourceSHA256": "55dd13e1a8bb21f1b70fd059f28828541689ae8331e41d392ba98cb7a6ef9e45",
+      "webFile": "photos/portfolio-intake/personal-identity/11.webp",
+      "webSHA256": "44331ac8efc21f64317a9456458d3681f55187c52e7cb8990771b275d30efba6"
+    },
+    {
+      "album": "personal-identity",
+      "order": 12,
+      "reviewID": "06-39",
+      "sourceAlbum": "02 People and Occasions\\01 Personal Branding and Headshots",
+      "sourceFilename": "untitled-9.jpg",
+      "sourceSHA256": "d29336a8207089b51306a5c228c29cf2465727e5e8ce33bddb98dfd2889d566b",
+      "webFile": "photos/portfolio-intake/personal-identity/12.webp",
+      "webSHA256": "5f9169d256982eab581cbff2aa4a0b11fffe336ed27ba45bc27540acf31bf552"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 1,
+      "reviewID": "07-10",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "HaleyChorn_GST-1571-Edit.jpg",
+      "sourceSHA256": "50b17bbdda1c0d6156e97d5ed12350f32e7e325852b5ef25067d336a2793e583",
+      "webFile": "photos/portfolio-intake/creative-portraits/01.webp",
+      "webSHA256": "0fcb9deb4f06e3cdc6f9109adceb5e983b035b7ef628f85d3ec2909257830aa6"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 2,
+      "reviewID": "07-07",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "A30A0684-1.jpg",
+      "sourceSHA256": "336073fcb06848c0ad3253a26bf3df7d97b5adbc831a0a61bb5ee3a51004f36d",
+      "webFile": "photos/portfolio-intake/creative-portraits/02.webp",
+      "webSHA256": "2983976bab57a8608f5b805a14a2bbcea16dd1435fbf186406b1d1baa4f819f8"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 3,
+      "reviewID": "07-20",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "untitled-334-Edit.jpg",
+      "sourceSHA256": "4c8ad557812473f7786c62b3a892bca4f0bc80ccaac8e56a83e68b3b00ad6887",
+      "webFile": "photos/portfolio-intake/creative-portraits/03.webp",
+      "webSHA256": "da87e697d1279f7995c470a73bd0dc800f89bb6bfba0930400e1d6c3fbd370f5"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 4,
+      "reviewID": "07-15",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "IMG_3410-Edit.jpg",
+      "sourceSHA256": "56e20f6b6af0afac290c1741a68fa657db56f85d3b4f54442a6682b4965d62f0",
+      "webFile": "photos/portfolio-intake/creative-portraits/04.webp",
+      "webSHA256": "b352dc6835f3431b43d66684f710b116a455d7bc8915e7381f2fe4994d6c4b73"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 5,
+      "reviewID": "07-03",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "A30A0123.jpg",
+      "sourceSHA256": "3ea694b9e61c1f687f9e89e8b8a4685eab40470a5776efc2f42ff6bb9b0336d4",
+      "webFile": "photos/portfolio-intake/creative-portraits/05.webp",
+      "webSHA256": "7739ad32ceb0b0114846ce271c4e026789688f16f7890b12892d206e3e0f3361"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 6,
+      "reviewID": "07-11",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "HaleyChorn_GST-394-Edit.jpg",
+      "sourceSHA256": "0d16052a989d9c8798eb1bc5fbe502ad178e40d1efea9531569b1365c91c2afc",
+      "webFile": "photos/portfolio-intake/creative-portraits/06.webp",
+      "webSHA256": "cba949ff2fa2bdebd5740dc911c069aa033e43e05aa40f91308b79f9e8024ae5"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 7,
+      "reviewID": "07-09",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "HaleyChorn_GST-1150-Edit.jpg",
+      "sourceSHA256": "492113bda5bfc8a288935196a9d50614b2580cf74b1762a1fc16331ed60aa472",
+      "webFile": "photos/portfolio-intake/creative-portraits/07.webp",
+      "webSHA256": "e364c254ecfa6271616f35261db4f9ee101cc6afb6025fe533549cfb03b17d50"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 8,
+      "reviewID": "07-06",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "A30A0191-2.jpg",
+      "sourceSHA256": "5ff226df62d9d4e8d875ed308f5fb531ff27a9b1ffe76e82f6055544965759f0",
+      "webFile": "photos/portfolio-intake/creative-portraits/08.webp",
+      "webSHA256": "13b6f74c99668937c777c49af93dded575481771746e593d3f660c855a2f4812"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 9,
+      "reviewID": "07-16",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "untitled-110-Edit.jpg",
+      "sourceSHA256": "e1e4740a1a48a59a6da19b2ca6b5cd2ef2307d29579b1c432a8ebc3d207b56fa",
+      "webFile": "photos/portfolio-intake/creative-portraits/09.webp",
+      "webSHA256": "afa1ca397e3c2c3d397cf6f166fb2e24d50cf8c8548dba5f1abce9c7ddc2d921"
+    },
+    {
+      "album": "creative-portraits",
+      "order": 10,
+      "reviewID": "07-19",
+      "sourceAlbum": "02 People and Occasions\\02 Creative Portraits",
+      "sourceFilename": "untitled-325-Edit.jpg",
+      "sourceSHA256": "b4703fb7a70a18b72d513150182562c028738232cb29bdb7d1173a8ec93be435",
+      "webFile": "photos/portfolio-intake/creative-portraits/10.webp",
+      "webSHA256": "922a5e4f040e57121fdcb6771b3dfa3d2287c8817d01718ae249e41af0a644f5"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 1,
+      "reviewID": "08-15",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "A30A3049.jpg",
+      "sourceSHA256": "e0fc69f7130182e802f15af60590a21ea40690bc6bb8fd53c77ca6378528cdc7",
+      "webFile": "photos/portfolio-intake/private-lifestyle/01.webp",
+      "webSHA256": "e307c272a0c003b578bd97504bedef0674437cd3b08a48b06b52b5fab058cfdd"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 2,
+      "reviewID": "08-14",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "A30A2047.jpg",
+      "sourceSHA256": "c430cd68604482a32bf1a6feccc56722057cba1352982e4d3d6bb51b7e3aa4b8",
+      "webFile": "photos/portfolio-intake/private-lifestyle/02.webp",
+      "webSHA256": "4a590a0228d33ffb42ab856903aa27e8f3cdf40b43e521904fd9cae66a0a946d"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 3,
+      "reviewID": "08-06",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "20221217-A30A9394.jpg",
+      "sourceSHA256": "d431b2975d1d0c7dc1c9f6ddb3c401b4d65da02c1dee3231cedd231b84fe76da",
+      "webFile": "photos/portfolio-intake/private-lifestyle/03.webp",
+      "webSHA256": "72d8985eaa0e482a328456531b7b4f3c61ce2b25d22571d429d020f1972d5633"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 4,
+      "reviewID": "08-13",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "A30A1073.jpg",
+      "sourceSHA256": "f7a8c483ce1f0c129300668b64fa51ec161e793ca7103aa7330c43f28d3beb68",
+      "webFile": "photos/portfolio-intake/private-lifestyle/04.webp",
+      "webSHA256": "12a05d40c6ada39b409de5ffda94c7cb36d7b5676a115b5968539639946adb87"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 5,
+      "reviewID": "08-20",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "A30A3307.jpg",
+      "sourceSHA256": "ad5fad44f376d2fb1d38a9262637e3d7bc4a27de8187fb203d3d8f88ccca5035",
+      "webFile": "photos/portfolio-intake/private-lifestyle/05.webp",
+      "webSHA256": "fd8fca5ffe11d39c01d505b670ce342f27ab8c30f5e4a7fe5f931f30a1296576"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 6,
+      "reviewID": "08-28",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "A30A5348.jpg",
+      "sourceSHA256": "9d14ff5be2b881786f84aa9319900551d7e723341770acc7456f14fcf54d6797",
+      "webFile": "photos/portfolio-intake/private-lifestyle/06.webp",
+      "webSHA256": "a257dc95a92c5b2e6f779af65e7371dc2e993e19fed51edf4e9de39f23892c47"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 7,
+      "reviewID": "08-26",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "A30A5256.jpg",
+      "sourceSHA256": "8c86be868429e1692f57af9a7f596440062a3c80e835eca760759b263252100a",
+      "webFile": "photos/portfolio-intake/private-lifestyle/07.webp",
+      "webSHA256": "2cda10965ba2341eb7d12647cc7f07511c311c8a311ad1f31276fe964b67cb46"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 8,
+      "reviewID": "08-30",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "A30A5636.jpg",
+      "sourceSHA256": "bbb1d5578e47a2d8f6f42b14bf0a2d846d7b83c0f3856d57e2f46a25d76519e1",
+      "webFile": "photos/portfolio-intake/private-lifestyle/08.webp",
+      "webSHA256": "cabb0acb38488f4744e5531eac6597bf1b1b93f5027cc72d741a33e4e7f20714"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 9,
+      "reviewID": "08-37",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "A30A6118.jpg",
+      "sourceSHA256": "b35e808af1bbf89e4a5efd1a1b367ac20e8e5c29664e4e3d5879cfcec6100e05",
+      "webFile": "photos/portfolio-intake/private-lifestyle/09.webp",
+      "webSHA256": "d4bcbdf4fba224e3364bc240777a07f59e33ff77d678fae4961fcf891c04c3bb"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 10,
+      "reviewID": "08-39",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "A30A6167.jpg",
+      "sourceSHA256": "7780cab16177ce79a5ea805095de4653726b6a801fba79af7dac91a080bd8326",
+      "webFile": "photos/portfolio-intake/private-lifestyle/10.webp",
+      "webSHA256": "3e163f5bc70d4a168ae386ae508ed79ff9d03b75dd960bd52caf5269bc353177"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 11,
+      "reviewID": "08-45",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "IMG_3826-2.jpg",
+      "sourceSHA256": "c77880cb03028af5bb3434202b3441b6ecc613041c068969049589a76945e2f0",
+      "webFile": "photos/portfolio-intake/private-lifestyle/11.webp",
+      "webSHA256": "7ed926fb06972edca11673df21b0eae1643dfe88cea238fe11ff5c9d43493914"
+    },
+    {
+      "album": "private-lifestyle",
+      "order": 12,
+      "reviewID": "08-57",
+      "sourceAlbum": "02 People and Occasions\\03 Personal Portraits",
+      "sourceFilename": "Smita40th-877.jpg",
+      "sourceSHA256": "e1bdf6717376f4a200020d2c5267ca50038fa1ade35885bbf6fb5bf1da80a8e6",
+      "webFile": "photos/portfolio-intake/private-lifestyle/12.webp",
+      "webSHA256": "90d55ff96024399cbcaa37c928a482c3ce7bcd7fbb0fd400eb6a3d8dcd6607ab"
+    },
+    {
+      "album": "boudoir-intimate",
+      "order": 1,
+      "reviewID": "09-03",
+      "sourceAlbum": "02 People and Occasions\\04 Boudoir and Intimate",
+      "sourceFilename": "A30A6365.jpg",
+      "sourceSHA256": "ce83499a05632b3a16b51a3c6263d4cae41483fd55621ac23140a0aa022b5fee",
+      "webFile": "photos/portfolio-intake/boudoir-intimate/01.webp",
+      "webSHA256": "d129f06f4c167a56754cb248d588b64d344b6d2405955073e33c0c73b60a6d63"
+    },
+    {
+      "album": "boudoir-intimate",
+      "order": 2,
+      "reviewID": "09-01",
+      "sourceAlbum": "02 People and Occasions\\04 Boudoir and Intimate",
+      "sourceFilename": "A30A1854.jpg",
+      "sourceSHA256": "17547ce8ce5187a3a24e83504bd5a0257664dd84a52788a2280a68d57fd22282",
+      "webFile": "photos/portfolio-intake/boudoir-intimate/02.webp",
+      "webSHA256": "4b2c8b399574c26606f8e15cae16c5e74e67c1c6d674e896ca2bc7a563cacf85"
+    },
+    {
+      "album": "private-events",
+      "order": 1,
+      "reviewID": "10-07",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "20250518-A30A5703-2.jpg",
+      "sourceSHA256": "f9ab89ba5d58b2d070d614fbe76d2f2fddb9bd54b98ad211e838abc69e9812c1",
+      "webFile": "photos/portfolio-intake/private-events/01.webp",
+      "webSHA256": "a621c5557a6bb1b7c48eaa76c59bb54205523db9dd2acfbb8422fcbdd23ce0e0"
+    },
+    {
+      "album": "private-events",
+      "order": 2,
+      "reviewID": "10-04",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "20250518-A30A5529.jpg",
+      "sourceSHA256": "3dbe05dfbfc849ae1c603ee09c7402f8320be34537c739f5c959c1239bcfe289",
+      "webFile": "photos/portfolio-intake/private-events/02.webp",
+      "webSHA256": "b3c5bffa370729959ff2c400a9d31be1f0e8d3ebbec0ba2652d8bbeb7b827fda"
+    },
+    {
+      "album": "private-events",
+      "order": 3,
+      "reviewID": "10-02",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "20250518-A30A5483.jpg",
+      "sourceSHA256": "d1e3a4abf9cdb65e1f04d2ce6eb06e1f3e7a4d3a4add06ceabe028033e50c81d",
+      "webFile": "photos/portfolio-intake/private-events/03.webp",
+      "webSHA256": "373ee1084932c378ca1f29b10e63801d7b2915027f5482801cd54e78bb16c4c1"
+    },
+    {
+      "album": "private-events",
+      "order": 4,
+      "reviewID": "10-10",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "20250518-A30A5753.jpg",
+      "sourceSHA256": "8ae64d21719ac7abe85851898cad5626fe8417125ad8aa4f90732106d1d7ecc1",
+      "webFile": "photos/portfolio-intake/private-events/04.webp",
+      "webSHA256": "61c0ee88bbb4a1b132ca15d8d1fcd1f05335dbba6989cc6bda776a4bc90a2495"
+    },
+    {
+      "album": "private-events",
+      "order": 5,
+      "reviewID": "10-12",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "A30A4106.jpg",
+      "sourceSHA256": "1f20478fb972030a7be994a1e49e0e42b5a1e86e0f3c5c7fcce2d4b0ba4ace5f",
+      "webFile": "photos/portfolio-intake/private-events/05.webp",
+      "webSHA256": "0744ff828698d3ccabaf9b7eaf5b2aa4bde953b7b023a2e34905fe137d6441f6"
+    },
+    {
+      "album": "private-events",
+      "order": 6,
+      "reviewID": "10-16",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "A30A4365-2.jpg",
+      "sourceSHA256": "592eb5f43a3335b705c11e7a0ddbd614f5569356069939ec8ccff922cb5d1293",
+      "webFile": "photos/portfolio-intake/private-events/06.webp",
+      "webSHA256": "d2deb63d2b5875f1cc192f6212ae7f351bfe73e335a35cf2a7e0a209998d5d3f"
+    },
+    {
+      "album": "private-events",
+      "order": 7,
+      "reviewID": "10-18",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "A30A4729.jpg",
+      "sourceSHA256": "3f5b251bb562ea43e9b6ff9004944eda21e22080d7063f80d5338bf2af10a139",
+      "webFile": "photos/portfolio-intake/private-events/07.webp",
+      "webSHA256": "201262adfbb5b6c11f1c0be320260de055b0521081f66c95900c7b2491312c37"
+    },
+    {
+      "album": "private-events",
+      "order": 8,
+      "reviewID": "10-23",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "Smita40th-1203.jpg",
+      "sourceSHA256": "19c05663a293e5f7f795f30cad1e9be45f51832df62ad5a427b1818d469942f0",
+      "webFile": "photos/portfolio-intake/private-events/08.webp",
+      "webSHA256": "940f50af6d55a12ae9afab965a7945f45306080cd45758e285af503c14bfe559"
+    },
+    {
+      "album": "private-events",
+      "order": 9,
+      "reviewID": "10-25",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "Smita40th-1884.jpg",
+      "sourceSHA256": "41245b498670be8e9e5e96e2a1c25bcc77a06d877045a340f53c8993e154e1ba",
+      "webFile": "photos/portfolio-intake/private-events/09.webp",
+      "webSHA256": "10c14acb863cdafec91efc72d8d8119c99a5c62e27fbcc8b66e9fa6ddbd36629"
+    },
+    {
+      "album": "private-events",
+      "order": 10,
+      "reviewID": "10-26",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "Smita40th-1935.jpg",
+      "sourceSHA256": "f4038f3af1233b4bb27b668dde4495a2914596c29d73d86e9b21eb74a1e91975",
+      "webFile": "photos/portfolio-intake/private-events/10.webp",
+      "webSHA256": "038b7ab6e175c723176479520c4013d3c05e742605d9f173ba3bef7e5429ab88"
+    },
+    {
+      "album": "private-events",
+      "order": 11,
+      "reviewID": "10-30",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "Smita40th-349.jpg",
+      "sourceSHA256": "ab88eae9eab69f83bf40a9422009f2f66677656bbc5975513565262441a97f6a",
+      "webFile": "photos/portfolio-intake/private-events/11.webp",
+      "webSHA256": "3851cb3b38df0b0f24f8b9e34058fe3640cfa6dc8075e86e1579f21f9261a4e1"
+    },
+    {
+      "album": "private-events",
+      "order": 12,
+      "reviewID": "10-33",
+      "sourceAlbum": "02 People and Occasions\\05 Private Events",
+      "sourceFilename": "Smita40th-84.jpg",
+      "sourceSHA256": "f53a2fe1dcacbeb985f470b83d5ff090045ab93a96f66fa4934dcfc3843099f3",
+      "webFile": "photos/portfolio-intake/private-events/12.webp",
+      "webSHA256": "dd8656ce73e3a77fc1f9f2ce8d19e65c4db81023446bacf45de0231b6a103686"
+    },
+    {
+      "album": "commercial-events",
+      "order": 1,
+      "reviewID": "11-21",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "211025_JamiesHope-732.jpg",
+      "sourceSHA256": "db20813f39ff63129d9c3a6afffc53b5ada2088aefc0601c899106d01fb46096",
+      "webFile": "photos/portfolio-intake/commercial-events/01.webp",
+      "webSHA256": "2dfacae58a6a46b3291360db14bbeba578f656cac094c8651b059ea68cdaf88f"
+    },
+    {
+      "album": "commercial-events",
+      "order": 2,
+      "reviewID": "11-07",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "211025_JamiesHope-39.jpg",
+      "sourceSHA256": "7d714254d4ce2fa0475a0133a5e036e463a7c7f427cd7701d30d0d8a581f4123",
+      "webFile": "photos/portfolio-intake/commercial-events/02.webp",
+      "webSHA256": "7a5dc1190d8efc7da8c393d8a74dacc53039db370f65dfc361fc3dccbe72d830"
+    },
+    {
+      "album": "commercial-events",
+      "order": 3,
+      "reviewID": "11-02",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "211025_JamiesHope-219.jpg",
+      "sourceSHA256": "950d1c3899810bb9079f512e955a917d696e3266c3acd9b1c59a54633f36e8f2",
+      "webFile": "photos/portfolio-intake/commercial-events/03.webp",
+      "webSHA256": "6b585f4c2511d023e362f5e4a71b8b619e3bc9b8c8cf70838bd51eb93f53e695"
+    },
+    {
+      "album": "commercial-events",
+      "order": 4,
+      "reviewID": "11-09",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "211025_JamiesHope-431.jpg",
+      "sourceSHA256": "f2ce926b0c5e0048dd713786f6bc5d880b8709899e4960eef1c171c36713de3a",
+      "webFile": "photos/portfolio-intake/commercial-events/04.webp",
+      "webSHA256": "6bab1f2c3704f93f22442d801d4c52b0ea3b8d528112080172580f0b0f095bcf"
+    },
+    {
+      "album": "commercial-events",
+      "order": 5,
+      "reviewID": "11-14",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "211025_JamiesHope-571-Edit.jpg",
+      "sourceSHA256": "77a215b694818de2c23b6c9b9c137694fd05f84222d91a49a64afa638b1ab985",
+      "webFile": "photos/portfolio-intake/commercial-events/05.webp",
+      "webSHA256": "314ba7d5d6848157c5c6188391bccc43c1cc08b353ce2198bfac93413bdc9f6d"
+    },
+    {
+      "album": "commercial-events",
+      "order": 6,
+      "reviewID": "11-16",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "211025_JamiesHope-603.jpg",
+      "sourceSHA256": "0ebc37c2468dacb4eb81e6495aed234bed97337f4096873b966c85ac1ae38307",
+      "webFile": "photos/portfolio-intake/commercial-events/06.webp",
+      "webSHA256": "bb61dc7482967718b7be3222f6eacbc705c9ba0d1361d762bd88f5d4e1bd9d79"
+    },
+    {
+      "album": "commercial-events",
+      "order": 7,
+      "reviewID": "11-23",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "211025_JamiesHope-9.jpg",
+      "sourceSHA256": "840c42f93047d7cfa04d44b13aabb75157c72c871ac8a3cad352f08311d43ae6",
+      "webFile": "photos/portfolio-intake/commercial-events/07.webp",
+      "webSHA256": "040d748a710d4d7479e6e0f294a6a676d7aa87b66aa9d802d762b2aa0985fff7"
+    },
+    {
+      "album": "commercial-events",
+      "order": 8,
+      "reviewID": "11-27",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "IMG_7845.jpg",
+      "sourceSHA256": "d003766a1f3a2dd0c6a695c94a0323125035eba3d81a0f73d186046e8ff754dd",
+      "webFile": "photos/portfolio-intake/commercial-events/08.webp",
+      "webSHA256": "7b0b26213fec87e62e36c875b68f1ea30fc33bd3c3a3f6fe06b5c4d8d6d775cf"
+    },
+    {
+      "album": "commercial-events",
+      "order": 9,
+      "reviewID": "11-28",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "IMG_7853.jpg",
+      "sourceSHA256": "c84d6bee597a244d0a4248c23918b9f07792bc8bfdc1d55f5fd9c347e469ffc3",
+      "webFile": "photos/portfolio-intake/commercial-events/09.webp",
+      "webSHA256": "2f72fcfa3c5c2faa37758692d28d47800451b9b9c00750ea268f2c2ce157d238"
+    },
+    {
+      "album": "commercial-events",
+      "order": 10,
+      "reviewID": "11-30",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "IMG_7868.jpg",
+      "sourceSHA256": "ddfa76892d944e4e54bada501bd803d80c8250d661af1c453fc847245f2cf93c",
+      "webFile": "photos/portfolio-intake/commercial-events/10.webp",
+      "webSHA256": "14c08cf30b1fae489fd7a8a79269ff2104d33d93a8e31217e4bcf2e74114d667"
+    },
+    {
+      "album": "commercial-events",
+      "order": 11,
+      "reviewID": "11-31",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "IMG_7957.jpg",
+      "sourceSHA256": "033474fd53d25e288841706051b5cc8b51eeefa1493a235259f53bc27080f144",
+      "webFile": "photos/portfolio-intake/commercial-events/11.webp",
+      "webSHA256": "d6ed44524ac4f896bc4cc5907a43424314ed434a09bc9b82ac678cdc99708b03"
+    },
+    {
+      "album": "commercial-events",
+      "order": 12,
+      "reviewID": "11-35",
+      "sourceAlbum": "02 People and Occasions\\06 Corporate and Commercial Events",
+      "sourceFilename": "IMG_8128.jpg",
+      "sourceSHA256": "748250516f139dbbd5058f2909074d9308f96a92f4f7a16b35e5bc8c62d96e07",
+      "webFile": "photos/portfolio-intake/commercial-events/12.webp",
+      "webSHA256": "cbf46abcfafeec83c797a15e195721dd3b78ef6998dc7e72c35cc3ef8e203247"
+    }
+  ],
+  "processing": "EXIF orientation; embedded ICC to sRGB when supplied; contain resize, no crop; WebP 2200px/quality86 and 960px/quality80. No source files changed. GPS/EXIF metadata not carried into exports."
+}

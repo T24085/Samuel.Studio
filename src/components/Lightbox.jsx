@@ -29,7 +29,7 @@ export function Lightbox({ item, items, index, onClose, onNext, onPrev }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-ink/90 px-4 py-6 backdrop-blur-xl"
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-ink/90 px-4 py-4 backdrop-blur-xl sm:py-6"
           onClick={onClose}
           role="presentation"
         >
@@ -39,7 +39,7 @@ export function Lightbox({ item, items, index, onClose, onNext, onPrev }) {
             exit={{ scale: 0.96, y: 20 }}
             transition={{ duration: 0.3 }}
             onClick={(event) => event.stopPropagation()}
-            className="relative w-full max-w-6xl overflow-hidden rounded-[2rem] border border-gold/20 bg-charcoal shadow-luxury"
+            className="relative max-h-[calc(100dvh-2rem)] w-full max-w-6xl overflow-y-auto rounded-lg border border-gold/20 bg-charcoal shadow-luxury sm:max-h-[calc(100dvh-3rem)]"
             role="dialog"
             aria-modal="true"
             aria-label={item.title}
@@ -72,20 +72,20 @@ export function Lightbox({ item, items, index, onClose, onNext, onPrev }) {
             </button>
 
             <div className="grid gap-0 lg:grid-cols-[1.5fr_0.7fr]">
-              <div className="relative flex min-h-[56vh] items-center justify-center bg-black">
+              <div className="relative flex h-[48dvh] min-h-0 items-center justify-center bg-black lg:h-[min(82dvh,850px)]">
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="max-h-[82vh] w-full object-contain"
+                  className="h-full w-full object-contain"
                 />
               </div>
-              <div className="relative flex flex-col justify-between border-t border-gold/10 p-6 lg:border-l lg:border-t-0 lg:p-8">
-                <div className="space-y-6">
+              <div className="relative flex min-w-0 flex-col justify-between border-t border-gold/10 p-4 sm:p-6 lg:border-l lg:border-t-0 lg:p-8">
+                <div className="space-y-4">
                   <div className="text-xs uppercase tracking-[0.38em] text-gold/75">
                     {String(index + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}
                   </div>
                   <div>
-                    <h3 className="font-display text-4xl text-ivory">{item.title}</h3>
+                    <h3 className="font-display text-2xl leading-tight text-ivory sm:text-3xl">{item.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-parchment/72">{item.alt}</p>
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -99,9 +99,6 @@ export function Lightbox({ item, items, index, onClose, onNext, onPrev }) {
                     ))}
                   </div>
                 </div>
-                <p className="mt-8 text-[0.72rem] uppercase tracking-[0.28em] text-parchment/45">
-                  Use arrow keys to navigate
-                </p>
               </div>
             </div>
           </motion.div>

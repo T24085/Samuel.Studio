@@ -19,7 +19,11 @@ function AlbumTile({ item, index, onOpen }) {
       aria-label={`Open ${item.title}`}
     >
       <img
-        src={item.src}
+        src={item.thumbnailSrc || item.src}
+        srcSet={item.thumbnailSrc ? `${item.thumbnailSrc} ${item.thumbnailWidth}w, ${item.src} ${item.width}w` : undefined}
+        sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+        width={item.width}
+        height={item.height}
         alt={item.alt}
         loading="lazy"
         decoding="async"
