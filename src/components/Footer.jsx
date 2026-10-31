@@ -60,6 +60,9 @@ export function Footer() {
                 {link.label}
               </Link>
             ))}
+            <Link to="/refer" className="text-sm text-parchment/72 transition hover:text-ivory">
+              Referral Partners
+            </Link>
           </div>
         </motion.div>
         <motion.div

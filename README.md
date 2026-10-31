@@ -30,19 +30,31 @@ Source and installation safeguards: `ops/inquiry-relay/`.
 
 Sender: `Samuel Studio <notifications@notify.ondefiant.com>` (temporary DEFIANT
 sender while Samuel Studio's Workspace domain is recovered).
-Recipient: `studiodefiant@gmail.com`. Reply-To: the visitor's validated address.
+Intended recipient: `ops@ondefiant.com` (alias of `ops@allstreetlabs.com`).
+Reply-To: the visitor's validated address.
 No marketing-list signup or automatic customer email is triggered.
 The form preserves its values on failure and shows success only after the
 server confirms Brevo acceptance. Acceptance is not proof of inbox placement.
 The form checks sender readiness before allowing submission. If the relay or
 sender is unavailable, visitors see a direct studio email link instead.
 
+Ops cutover, October 31: the frontend additionally requires the live readiness
+marker `routingVersion: studio-ops-v1`. Until Sam activates the protected
+recipient update, the form offers direct email to `ops@ondefiant.com` instead
+of continuing to send to Gmail. Guarded update sources and receipt instructions:
+`ops/inquiry-relay-updates/2026-10-31-ops-recipient/`. The original install
+package is unchanged. This restarts only the studio relay; its in-memory rate
+counters reset. A new Ops delivery/inbox test has not yet been performed.
+
 October 31, 2026: Sam activated the fixed-IP relay with the guarded installer.
 Public HTTPS readiness, allowed-origin preflight, invalid-origin/input
 rejection, and private DEFIANT health-route boundaries were verified. Existing
 API/worker invocation IDs remained unchanged; Caddy was reloaded, not restarted.
-No successful test delivery or inbox placement has yet been confirmed. Send
-a new synthetic delivery test only with Sam's approval. Chat changes remain
+One separately approved synthetic delivery test returned HTTP 202 with
+`ok: true`; Sam confirmed it arrived in the recipient's Inbox on October 31,
+2026 in `studiodefiant@gmail.com`. This verifies the prior destination's
+end-to-end delivery, not the new Ops alias or guaranteed future
+inbox placement. Further test emails require approval. Chat changes remain
 separate and unpublished.
 
 The prior Netlify relay at `https://allstreetlabs.com/api/studio-inquiry`

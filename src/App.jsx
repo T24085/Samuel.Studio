@@ -11,6 +11,7 @@ import { ServicesPage } from './pages/ServicesPage'
 import { ServiceDetailPage } from './pages/ServiceDetailPage'
 import { AboutPage } from './pages/AboutPage'
 import { BookingPage } from './pages/BookingPage'
+import { ReferralPage } from './pages/ReferralPage'
 
 function ScrollToTop() {
   const location = useLocation()
@@ -42,6 +43,8 @@ export default function App() {
             <Route path="about" element={<AboutPage />} />
             <Route path="booking" element={<BookingPage />} />
             <Route path="contact" element={<BookingPage />} />
+            <Route path="refer" element={<ReferralPage />} />
+            <Route path="referrals" element={<Navigate to="/refer" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

@@ -7,14 +7,14 @@ export const site = {
   location: 'By appointment',
   hours: 'Mon-Sat, 10am-6pm',
   turnaround: 'Allow 2-3 weeks for your final gallery. Many shoots are ready sooner; we agree on timing when planning your session.',
-  email: 'studiodefiant@gmail.com',
+  email: 'ops@ondefiant.com',
   phone: '832-310-9880',
   website: 'https://www.samuel.studio',
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ssp.capture/', external: true },
     { label: 'TikTok', href: 'https://www.tiktok.com/@samuelcary.art', external: true },
     { label: 'Facebook', href: 'https://www.facebook.com/share/1Dma2oLKVa/?mibextid=wwXIfr', external: true },
-    { label: 'Email', href: 'mailto:studiodefiant@gmail.com', external: false },
+    { label: 'Email', href: 'mailto:ops@ondefiant.com', external: false },
   ],
   websiteLinks: [
     { label: 'Website', href: '/', external: false },

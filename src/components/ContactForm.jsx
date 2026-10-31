@@ -12,6 +12,7 @@ const initialState = {
   preferredDate: '',
   message: '',
   website: '',
+  referredBy: '',
 }
 
 export function ContactForm() {
@@ -37,7 +38,9 @@ export function ContactForm() {
     if (!nextValues.phone.trim()) nextErrors.phone = 'Please add a phone number.'
     if (!nextValues.service.trim()) nextErrors.service = 'Please select a service.'
     if (!nextValues.preferredDate.trim()) nextErrors.preferredDate = 'Please select a preferred date.'
-    if (!nextValues.message.trim()) nextErrors.message = 'Please tell us a little about the session.'
+    if (!nextValues.message.trim()) nextErrors.message = 'Please tell us a little about what you have in mind.'
+    else if (nextValues.message.length > 3600) nextErrors.message = 'Please keep your message under 3,600 characters.'
+    if (nextValues.referredBy.length > 200) nextErrors.referredBy = 'Please keep referral details under 200 characters.'
     return nextErrors
   }
 
@@ -69,7 +72,7 @@ export function ContactForm() {
       setErrors({})
     } catch {
       setStatus('error')
-      setFeedback('Something went wrong while sending your inquiry. Please try again or email studiodefiant@gmail.com directly.')
+      setFeedback(`Something went wrong while sending your inquiry. Please try again or email ${site.email} directly.`)
     }
   }
 
@@ -77,7 +80,7 @@ export function ContactForm() {
     <div className="gold-frame scroll-mt-32 p-8">
       {deliveryAvailable === false ? (
         <div role="status">
-          <h3 className="font-display text-3xl text-ivory">Let's Talk About Your Shoot</h3>
+          <h3 className="font-display text-3xl text-ivory">Let's Talk About Your Plans</h3>
           <p className="mt-4 text-sm leading-7 text-parchment/72">
             The inquiry form is temporarily unavailable. Email me with what you have in mind and your preferred timing.
           </p>
@@ -152,6 +155,7 @@ export function ContactForm() {
             <Field label="Service" error={errors.service}>
               <select
                 name="service"
+                aria-label="Service"
                 value={values.service}
                 onChange={onChange}
                 disabled={isSubmitting}
@@ -167,7 +171,7 @@ export function ContactForm() {
                 ))}
               </select>
             </Field>
-            <Field label="Preferred Date" error={errors.preferredDate}>
+            <Field label={values.service === 'Websites & Applications' ? 'Preferred Start Date' : 'Preferred Date'} error={errors.preferredDate}>
               <input
                 name="preferredDate"
                 type="date"
@@ -178,16 +182,28 @@ export function ContactForm() {
               />
             </Field>
           </div>
+          <Field label="Referred by (optional)" error={errors.referredBy} className="mt-5">
+            <input
+              name="referredBy"
+              value={values.referredBy}
+              onChange={onChange}
+              disabled={isSubmitting}
+              maxLength={200}
+              autoComplete="off"
+              className="input-field"
+              placeholder="Their name and email or phone, or a referral code"
+            />
+          </Field>
           <Field label="Message" error={errors.message} className="mt-5">
             <textarea
               name="message"
               rows={6}
-              maxLength={4000}
+              maxLength={3600}
               value={values.message}
               onChange={onChange}
               disabled={isSubmitting}
               className="input-field resize-none"
-              placeholder="Tell us about your vision, wardrobe, timeline, and any details you want to preserve."
+              placeholder="Tell me about the shoot, event, or project, the location, timing, and what you have in mind."
             />
           </Field>
           <div className="mt-7 flex flex-wrap items-center gap-4">

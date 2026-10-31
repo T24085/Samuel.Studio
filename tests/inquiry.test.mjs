@@ -7,7 +7,7 @@ test('uses the isolated fixed-IP relay for readiness and submission', async () =
   assert.equal(await inquiryIsAvailable(async (url, options) => {
     assert.equal(url, inquiryEndpoint)
     assert.equal(options.credentials, 'omit')
-    return Response.json({ enabled: true })
+    return Response.json({ enabled: true, routingVersion: 'studio-ops-v1' })
   }), true)
 })
 
@@ -31,7 +31,8 @@ test('rejects provider failures, invalid responses, and transport errors', async
 })
 
 test('offers direct email when delivery readiness fails', async () => {
-  assert.equal(await inquiryIsAvailable(async () => Response.json({ enabled: true })), true)
+  assert.equal(await inquiryIsAvailable(async () => Response.json({ enabled: true, routingVersion: 'studio-ops-v1' })), true)
+  assert.equal(await inquiryIsAvailable(async () => Response.json({ enabled: true })), false)
   assert.equal(await inquiryIsAvailable(async () => Response.json({ enabled: false })), false)
   assert.equal(await inquiryIsAvailable(async () => { throw new Error('offline') }), false)
 })

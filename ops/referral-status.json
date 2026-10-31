@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-31",
+  "status": "Approved for publication; protected relay activation requires attended sudo",
+  "verification": "24 Node tests, successful Vite build, browser checks at 1440x1000, 390x844 and 320x740. Submissions intercepted; no emails sent.",
+  "publicPath": "/refer",
+  "partnerRequests": "Email composition to ops@ondefiant.com; visitor must send the email",
+  "clientInquiries": "Frontend requires studio-ops-v1 readiness. Offers direct mail to ops@ondefiant.com until the protected relay recipient update is active.",
+  "attribution": "Optional client-supplied name/contact or code in message; manually verified, not proof of commission eligibility",
+  "serviceRouting": "Additional event, website/application and unsure choices mapped to existing canonical service lines with explicit inquiry-type text",
+  "crm": "No HQ API or inbox-sweep automation configured. Agent may enter approved records later under the appropriate delegation.",
+  "notImplemented": ["Partner accounts", "Automatic referral code issuance", "Commission ledger or payouts", "PDF kit", "Automatic information emails", "Other hub affiliate programmes"],
+  "offer": "20% of eligible service fees on the first paid project from each client referred; terms and attribution confirmed directly"
+}

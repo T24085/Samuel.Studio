@@ -236,7 +236,12 @@ export const services = [
   },
 ]
 
-export const bookingServiceOptions = services.map((service) => ({
+export const bookingServiceOptions = [...services.map((service) => ({
   value: service.title,
   label: service.title,
-}))
+})),
+  { value: 'Private Events', label: 'Private Events', routingService: 'Private Portraits' },
+  { value: 'Corporate & Commercial Events', label: 'Corporate & Commercial Events', routingService: 'Visual Story Projects' },
+  { value: 'Websites & Applications', label: 'Websites & Applications', routingService: 'Visual Story Projects' },
+  { value: 'Other / Not Sure', label: 'Something Else / Not Sure', routingService: 'Visual Story Projects' },
+]
