@@ -1,0 +1,37 @@
+[Unit]
+Description=Samuel Studio isolated inquiry mail relay
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=/opt/samuel-studio-inquiry
+ExecStart=/opt/defiant-node/current/bin/node --max-old-space-size=48 /opt/samuel-studio-inquiry/server.mjs
+LoadCredential=brevo-key:/etc/defiant/credentials/brevo.key
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=20
+MemoryMax=128M
+CPUQuota=20%
+TasksMax=32
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+RestrictNamespaces=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+
+[Install]
+WantedBy=multi-user.target

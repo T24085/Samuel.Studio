@@ -1,0 +1,8 @@
+    # Samuel Studio mail relay; private DEFIANT app remains unchanged.
+    handle /api/studio-inquiry {
+        reverse_proxy 127.0.0.1:8790 {
+            header_up X-Forwarded-For {http.request.remote.host}
+            header_up -Forwarded
+            header_up -X-Real-IP
+        }
+    }
