@@ -1,0 +1,10 @@
+[
+  { "album": "editorial-campaign", "id": "intake-01-18", "title": "Editorial Fashion", "categories": ["Fashion", "Editorial"] },
+  { "album": "fashion-commercial", "id": "intake-02-23", "title": "Fashion on Location", "categories": ["Fashion", "On Location"] },
+  { "album": "beauty-portrait", "id": "intake-05-33", "title": "Beauty", "categories": ["Beauty", "Portraits"] },
+  { "album": "personal-identity", "id": "intake-06-31", "title": "Professional Headshots", "categories": ["Personal Branding"] },
+  { "album": "editorial-campaign", "id": "intake-01-23", "title": "Editorial Portraits", "categories": ["Portraits", "Editorial"] },
+  { "album": "creative-portraits", "id": "intake-07-10", "title": "Creative Portraits", "categories": ["Creative Portraits"] },
+  { "album": "private-lifestyle", "id": "intake-08-15", "title": "Personal Portraits", "categories": ["Personal Portraits"] },
+  { "album": "private-events", "id": "intake-10-07", "title": "Engagements", "categories": ["Private Events"] }
+]

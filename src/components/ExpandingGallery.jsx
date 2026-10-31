@@ -1,30 +1,7 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { withBase } from '../utils/paths'
-
-const featuredOrder = [
-  '2021.08_YoungTiff SE1-717-Edit',
-  '2021.08_YoungTiff SE1-1372-Edit',
-  '2021.08_YoungTiff SE1-1493-Edit',
-  '2021.08_YoungTiff SE1-1760-Edit',
-  '2021.08_YoungTiff SE1-1821-Edit',
-  'A30A0125',
-  'A30A0259',
-  'A30A0357',
-  'untitled-2359',
-]
-
-function buildShowcaseItems(items) {
-  const lookup = new Map(items.map((item) => [item.id, item]))
-  const ordered = featuredOrder.map((id) => lookup.get(id)).filter(Boolean)
-
-  if (ordered.length >= 4) {
-    return ordered
-  }
-
-  return items.slice(0, 5)
-}
 
 function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen }) {
   const title = item.title
@@ -35,7 +12,7 @@ function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen })
       onMouseEnter={() => onActivate(index)}
       onFocus={() => onActivate(index)}
       onClick={() => {
-        if (active) {
+        if (active || window.matchMedia('(max-width: 1023px)').matches) {
           onOpen(item.id)
           return
         }
@@ -67,7 +44,9 @@ function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen })
         ].join(' ')}
       >
         <img
-          src={item.src}
+          src={item.thumbnailSrc || item.src}
+          width={item.width}
+          height={item.height}
           alt={item.alt}
           loading="lazy"
           decoding="async"
@@ -78,7 +57,7 @@ function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen })
             'h-full w-full transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
             active
               ? 'object-contain object-center scale-[1] drop-shadow-[0_18px_38px_rgba(0,0,0,0.2)]'
-              : 'absolute inset-0 object-cover object-center scale-[1.01] group-hover:scale-[1.04]',
+              : 'object-contain object-center lg:absolute lg:inset-0 lg:object-cover lg:scale-[1.01] lg:group-hover:scale-[1.04]',
           ].join(' ')}
         />
       </div>
@@ -109,13 +88,13 @@ function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen })
         className={[
           'absolute inset-x-0 bottom-0 p-4 sm:p-5 lg:p-6',
           'transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]',
-          active ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 lg:translate-y-6',
+          active ? 'translate-y-0 opacity-100' : 'translate-y-0 opacity-100 lg:translate-y-6 lg:opacity-0',
         ].join(' ')}
       >
         <div className="flex items-end justify-between gap-4">
           <div className="max-w-md">
             <p className="text-[0.58rem] uppercase tracking-[0.36em] text-parchment/58">Samuel Studio</p>
-            <h3 className="mt-2 font-display text-[2rem] leading-none text-ivory sm:text-[2.4rem]">
+            <h3 className="mt-2 font-display text-xl leading-tight text-ivory sm:text-2xl">
               {title}
             </h3>
           </div>
@@ -126,16 +105,6 @@ function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen })
           </span>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {item.categories.map((category) => (
-            <span
-              key={category}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-[0.58rem] uppercase tracking-[0.26em] text-parchment/68"
-            >
-              {category}
-            </span>
-          ))}
-        </div>
       </div>
     </motion.button>
   )
@@ -143,19 +112,11 @@ function GalleryCard({ item, index, active, reducedMotion, onActivate, onOpen })
 
 export function ExpandingGallery({ items, onSelect, fullBleed = false }) {
   const reducedMotion = useReducedMotion()
-  const [activeIndex, setActiveIndex] = useState(4)
-
-  const cards = useMemo(
-    () =>
-      buildShowcaseItems(items).map((item) => ({
-        ...item,
-        title: item.categories.join(' / '),
-      })),
-    [items],
-  )
+  const [activeIndex, setActiveIndex] = useState(0)
+  const cards = items
 
   useEffect(() => {
-    setActiveIndex(Math.min(4, Math.max(cards.length - 1, 0)))
+    setActiveIndex(current => Math.min(current, Math.max(cards.length - 1, 0)))
   }, [cards.length])
 
   if (!cards.length) return null

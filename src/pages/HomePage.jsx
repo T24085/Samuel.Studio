@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { Brush, Compass, Gem, HeartHandshake } from 'lucide-react'
-import { galleryItems, portfolioGalleryItems } from '../data/gallery'
+import { galleryItems } from '../data/gallery'
+import { homeFeaturedItems } from '../data/homeFeatured'
 import { testimonials } from '../data/testimonials'
 import { site } from '../data/site'
 import { SEO } from '../components/SEO'
@@ -83,23 +84,23 @@ export function HomePage() {
   const testimonialTextY = useTransform(testimonialScrollProgress, [0, 0.5, 1], [20, 0, -14])
   const testimonialTextOpacity = useTransform(testimonialScrollProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.88])
   const contourShiftY = useTransform(testimonialScrollProgress, [0, 1], [-22, 16])
-  const activeItem = activeIndex !== null ? portfolioGalleryItems[activeIndex] : null
+  const activeItem = activeIndex !== null ? homeFeaturedItems[activeIndex] : null
   const clearIntentImage = galleryItems.find((item) => item.title === 'Clear Intent')
   const confidenceImage = galleryItems.find((item) => item.title === 'Confidence')
 
   const openById = (id) => {
-    const index = portfolioGalleryItems.findIndex((item) => item.id === id)
+    const index = homeFeaturedItems.findIndex((item) => item.id === id)
     if (index >= 0) setActiveIndex(index)
   }
 
   const close = () => setActiveIndex(null)
   const next = () => {
-    if (!portfolioGalleryItems.length) return
-    setActiveIndex((current) => ((current ?? 0) + 1) % portfolioGalleryItems.length)
+    if (!homeFeaturedItems.length) return
+    setActiveIndex((current) => ((current ?? 0) + 1) % homeFeaturedItems.length)
   }
   const prev = () => {
-    if (!portfolioGalleryItems.length) return
-    setActiveIndex((current) => ((current ?? 0) - 1 + portfolioGalleryItems.length) % portfolioGalleryItems.length)
+    if (!homeFeaturedItems.length) return
+    setActiveIndex((current) => ((current ?? 0) - 1 + homeFeaturedItems.length) % homeFeaturedItems.length)
   }
 
   useEffect(() => {
@@ -151,7 +152,7 @@ export function HomePage() {
 
       <Hero />
 
-      <section className="home-snap-section relative isolate overflow-x-clip bg-[#050505] pt-20 pb-14 text-ivory sm:pt-24 lg:pt-28">
+      <section id="selected-photographs" className="home-snap-section relative isolate overflow-x-clip bg-[#050505] pt-20 pb-14 text-ivory sm:pt-24 lg:pt-28">
         <div className="studio-shell">
           <div className="mx-auto max-w-7xl">
             <SectionHeading
@@ -163,7 +164,7 @@ export function HomePage() {
           </div>
         </div>
         <div className="mt-8">
-          <ExpandingGallery items={portfolioGalleryItems} onSelect={openById} fullBleed />
+          <ExpandingGallery items={homeFeaturedItems} onSelect={openById} fullBleed />
         </div>
       </section>
 
@@ -422,7 +423,7 @@ export function HomePage() {
 
       <Lightbox
         item={activeItem}
-        items={portfolioGalleryItems}
+        items={homeFeaturedItems}
         index={activeIndex ?? 0}
         onClose={close}
         onNext={next}
