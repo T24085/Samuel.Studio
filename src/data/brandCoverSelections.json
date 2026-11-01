@@ -1,0 +1,55 @@
+{
+  "defiant-models": {
+    "imageID": "brand-02-22",
+    "customImage": { "id": "brand-02-22", "src": "photos/brand-covers/defiant-models.webp", "alt": "Location fashion portrait in a metallic blue dress beside a concrete column." },
+    "masthead": ["DEFIANT MODELS"],
+    "kicker": "FASHION / BEAUTY / EXPRESSION",
+    "headline": ["Faces", "in focus."],
+    "footer": "Photography by Samuel Cary",
+    "theme": "dark",
+    "imagePosition": "50% 0%",
+    "previewIDs": ["brand-02-22", "intake-01-07", "intake-05-33", "intake-03-35", "intake-02-23", "intake-05-27"]
+  },
+  "defiant-boudoir": {
+    "imageID": "intake-09-01",
+    "masthead": ["DEFIANT", "BOUDOIR"],
+    "logo": "photos/brand-covers/defiant-boudoir-signature.webp",
+    "kicker": "INTIMATE PORTRAITS",
+    "headline": ["At your", "own pace."],
+    "footer": "Light, trust, and expression",
+    "theme": "dark",
+    "imagePosition": "50% 0%",
+    "previewIDs": ["intake-09-01", "intake-09-03"]
+  },
+  "samuel-studio": {
+    "imageID": "intake-01-18",
+    "masthead": ["Samuel Studio"],
+    "logo": "photos/brand-covers/samuel-studio-signature.webp",
+    "kicker": "PHOTOGRAPHS / SAMUEL CARY",
+    "headline": ["An", "editorial", "eye."],
+    "footer": "Fashion / Portraits / Personal brands",
+    "theme": "dark",
+    "imagePosition": "50% 0%",
+    "previewIDs": ["intake-01-18", "intake-01-23", "intake-01-19", "intake-03-25", "intake-05-33", "intake-01-11"]
+  },
+  "allstreet-apparel": {
+    "imageID": null,
+    "conceptImage": "photos/brand-covers/allstreet-concept.png",
+    "masthead": ["ALLSTREET"],
+    "kicker": "APPAREL / CONCEPT",
+    "headline": ["First", "collection", "in development."],
+    "footer": "AI concept / Not the final collection",
+    "theme": "concept",
+    "previewIDs": []
+  },
+  "colombia": {
+    "imageID": "intake-04-14",
+    "masthead": ["COLOMBIA"],
+    "kicker": "SAMUEL STUDIO / PORTRAITS",
+    "headline": ["Window light.", "Real moments."],
+    "footer": "Photography by Samuel Cary",
+    "theme": "light",
+    "imagePosition": "50% 28%",
+    "previewIDs": ["intake-04-14", "intake-04-13", "intake-04-18", "intake-04-24", "intake-04-26"]
+  }
+}

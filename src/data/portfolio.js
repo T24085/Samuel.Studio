@@ -1,11 +1,22 @@
 import { portfolioGalleryItems } from './gallery'
 import { withBase } from '../utils/paths'
 import curatedPortfolio from './curatedPortfolio.json'
+import brandCoverSelections from './brandCoverSelections.json'
 
-const samStudioCover = new URL('../../SamStudio1.png', import.meta.url).href
-const allStreetCover = new URL('../../AllStreet1.png', import.meta.url).href
-const colombiaCover = new URL('../../Colombia1.png', import.meta.url).href
-const defiantModelsCover = withBase('portfolio-assets/cover-defiant-models.png')
+const brandPhotoLookup = new Map(Object.values(curatedPortfolio).flat().map(item => [item.id, item]))
+for (const design of Object.values(brandCoverSelections)) {
+  if (design.customImage) brandPhotoLookup.set(design.customImage.id, design.customImage)
+}
+function brandImage(id) {
+  const image = brandPhotoLookup.get(id)
+  if (!image) throw new Error(`Missing brand photograph: ${id}`)
+  return { ...image, src: withBase(image.src), title: image.alt, categories: ['Selected Work'] }
+}
+const brandPreview = slug => brandCoverSelections[slug].previewIDs.map(brandImage)
+const samStudioCover = brandImage(brandCoverSelections['samuel-studio'].imageID).src
+const allStreetCover = withBase(brandCoverSelections['allstreet-apparel'].conceptImage)
+const colombiaCover = brandImage(brandCoverSelections.colombia.imageID).src
+const defiantModelsCover = brandImage(brandCoverSelections['defiant-models'].imageID).src
 
 function makeLookup(items) {
   return new Map(items.map((item) => [item.id, item]))
@@ -125,17 +136,18 @@ export const portfolioCollections = [
     eyebrow: 'Within the Studio / Editorial',
     title: 'Defiant Models',
     description:
-      'Model-led editorial with a sharper commercial line.',
+      'Fashion, beauty, and model portfolios with an editorial eye.',
     body:
-      'Model portfolios and creative collaborations, with attention to expression, styling, and the range each person brings to a shoot.',
-    previewItems: defiantModelsItems,
-    linkLabel: 'Visit Defiant Models',
-    href: 'https://defiantmodels.com/',
-    external: true,
+      'Defiant Models brings together model portfolios and creative collaborations photographed by Sam. The focus is expression, styling, and the range each person brings to a shoot, with space for their own energy to come through.',
+    previewItems: brandPreview('defiant-models'),
+    linkLabel: 'Explore the DEFIANT platform',
+    href: 'https://ondefiant.com/',
+    external: false,
+    platformStatus: 'DEFIANT platform link coming soon.',
     collectionLink: '/brands/defiant-models',
     albumSlugs: ['editorial-campaign', 'fashion-commercial'],
     coverSrc: defiantModelsCover,
-    coverAlt: 'Defiant Models magazine cover.',
+    coverAlt: 'Defiant Models cover: a location fashion portrait in a metallic blue dress.',
   },
   {
     slug: 'defiant-boudoir',
@@ -144,15 +156,15 @@ export const portfolioCollections = [
     description:
       'Intimate portraits shaped around confidence, expression, and your own comfort.',
     body:
-      'We plan the look and boundaries together, then take time to find the light, movement, and expressions that feel right for you.',
-    previewItems: pickItems(galleryLookup, defiantBoudoirIds),
+      'Defiant Boudoir is the intimate portrait side of Sam\'s work. We plan the look and boundaries together, then take time to find the light, movement, and expressions that feel right for you. Careful selection and retouching are part of every finished set.',
+    previewItems: brandPreview('defiant-boudoir'),
     linkLabel: 'Visit Defiant Boudoir',
     href: 'https://defiantboudoir.com/',
     external: true,
     collectionLink: '/brands/defiant-boudoir',
-    albumSlugs: ['personal-identity', 'private-lifestyle'],
-    coverSrc: withBase('portfolio-assets/cover-defiant-boudoir.png'),
-    coverAlt: 'Defiant Boudoir magazine cover.',
+    albumSlugs: ['boudoir-intimate'],
+    coverSrc: brandImage(brandCoverSelections['defiant-boudoir'].imageID).src,
+    coverAlt: 'Defiant Boudoir cover: low-key portrait in black lingerie and a draped shirt.',
   },
   {
     slug: 'samuel-studio',
@@ -161,28 +173,15 @@ export const portfolioCollections = [
     description:
       'Fashion, personal branding, and portraits by Samuel Cary.',
     body:
-      'Editorial experience meets a personal approach to photography, with projects built around the people and ideas in front of the camera.',
-    previewItems: pickItems(galleryLookup, [
-      'collection',
-      'group',
-      'modern-black-white',
-      'artist',
-      'confidence',
-      'blue-dress',
-      'women',
-      'women-6',
-      'silver-dress',
-      'man',
-      'flower',
-      'wild-pants',
-    ]),
+      'Samuel Studio is Sam\'s home for photography and creative projects. Shoots begin with what the images are for, where we will work, and the look you want to create. On set, gentle direction helps you settle into your own rhythm; careful curation and retouching bring the final photographs together.',
+    previewItems: brandPreview('samuel-studio'),
     linkLabel: 'Visit Samuel Studio',
     href: '/brands/samuel-studio',
     external: false,
     collectionLink: '/brands/samuel-studio',
     albumSlugs: ['editorial-campaign', 'fashion-commercial', 'personal-identity'],
     coverSrc: samStudioCover,
-    coverAlt: 'Samuel Studio magazine cover.',
+    coverAlt: 'Samuel Studio cover: warm editorial portrait in an embroidered white shirt with roses.',
   },
   {
     slug: 'allstreet-apparel',
@@ -200,26 +199,26 @@ export const portfolioCollections = [
     collectionLink: '/brands/allstreet-apparel',
     albumSlugs: [],
     coverSrc: allStreetCover,
-    coverAlt: 'AllStreet Apparel magazine cover.',
+    coverAlt: 'AI-generated streetwear mood concept featuring two fictional adults; not an AllStreet collection photograph.',
   },
   {
     slug: 'colombia',
     eyebrow: 'Within the Studio / Colombia',
-    title: 'Colombia at the Core',
+    title: 'Samuel Studio Colombia',
     description:
-      'A portrait essay shaped by place, character, and a quieter kind of authority.',
+      'Portraits and creative work photographed in Colombia.',
     body:
-      'This chapter gathers the Colombia archive as a single visual chapter: grounded faces, restrained light, and images that breathe instead of compete.',
-    previewItems: pickItems(galleryLookup, colombiaIds),
+      'Samuel Studio Colombia brings together Sam\'s photography made in Colombia. This first selection is from a relaxed, window-lit portrait session, with simple settings and personal styling. More work can be added as the collection grows.',
+    previewItems: brandPreview('colombia'),
     linkLabel: 'View full collection',
-    href: '/portfolio/colombia',
+    href: '/brands/colombia',
     external: false,
     collectionLink: '/brands/colombia',
-    albumSlugs: ['personal-identity', 'private-lifestyle', 'editorial-campaign'],
+    albumSlugs: [],
     coverSrc: colombiaCover,
-    coverAlt: 'Samuel Studio Colombia magazine cover.',
+    coverAlt: 'Samuel Studio Colombia cover: black-and-white window-light portrait in jeans and a white top.',
   },
-]
+].map(collection => ({ ...collection, coverDesign: brandCoverSelections[collection.slug] }))
 
 export const portfolioMagazineIssues = portfolioCollections.map((collection, index) => ({
   ...collection,

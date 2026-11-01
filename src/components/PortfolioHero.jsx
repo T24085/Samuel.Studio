@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { portfolioCollections } from '../data/portfolio'
+import { BrandCover } from './BrandCover'
 
 const coverPositions = {
   'defiant-models': {
@@ -44,8 +45,6 @@ function MagazineCover({ collection, activeSlug, onSelect, reduceMotion }) {
   const position = coverPositions[collection.slug]
   const isActive = activeSlug === collection.slug
   const hasSelection = activeSlug !== null
-  const allStreet = collection.slug === 'allstreet-apparel'
-  const colombia = collection.slug === 'colombia'
   const lift = isActive ? -18 : hasSelection ? 8 : 0
   const shift = isActive ? 82 : hasSelection ? 10 : 0
   const scale = isActive ? 1.1 : hasSelection ? 0.96 : 1
@@ -97,17 +96,7 @@ function MagazineCover({ collection, activeSlug, onSelect, reduceMotion }) {
         rotate: isActive ? 0 : position.rotate * 0.3,
       }}
     >
-      <img
-        src={collection.coverSrc}
-        alt={collection.coverAlt}
-        loading={collection.slug === 'defiant-models' ? 'eager' : 'lazy'}
-        decoding="async"
-        className={[
-          'h-full w-full object-contain p-2',
-          allStreet ? 'object-center' : '',
-          colombia ? 'object-center' : '',
-        ].join(' ')}
-      />
+      <BrandCover collection={collection} loading={collection.slug === 'defiant-models' ? 'eager' : 'lazy'} />
     </motion.button>
   )
 }
@@ -121,17 +110,12 @@ function MobileCover({ collection, index, onSelect }) {
         onSelect?.(collection.slug)
       }}
       className="aspect-[3/4] w-full overflow-hidden rounded-sm border border-white/10 shadow-[0_24px_60px_rgba(0,0,0,0.6)]"
+      aria-label={collection.title}
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: index * 0.08, ease: 'easeOut' }}
     >
-      <img
-        src={collection.coverSrc}
-        alt={collection.coverAlt}
-        loading="eager"
-        decoding="async"
-        className="h-full w-full object-contain p-2"
-      />
+      <BrandCover collection={collection} loading="eager" />
     </motion.button>
   )
 }
@@ -148,9 +132,9 @@ export function PortfolioHero({ activeSlug = null, onMagazineSelect }) {
       <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,rgba(245,240,230,0.8)_1px,transparent_0)] [background-size:20px_20px]" />
 
       <div className="relative z-10 mx-auto min-h-[100svh] max-w-[1700px] px-6 pb-16 pt-28 sm:px-8 md:px-10 lg:px-12 lg:pt-24">
-        <div className="relative min-h-[calc(100svh-7rem)]">
+        <div className="relative lg:min-h-[calc(100svh-7rem)]">
           <motion.div
-            className="relative z-10 max-w-4xl lg:max-w-[50rem]"
+            className="relative z-10 max-w-4xl lg:max-w-[39%]"
             initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 }}
             animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: 'easeOut' }}
@@ -159,7 +143,7 @@ export function PortfolioHero({ activeSlug = null, onMagazineSelect }) {
               Brands / Creative Projects
             </p>
 
-            <h1 className="max-w-3xl font-display text-[clamp(4.25rem,7vw,8.5rem)] font-medium uppercase leading-[0.86] tracking-[-0.05em] text-white max-[359px]:text-[3.5rem]">
+            <h1 className="max-w-3xl font-display text-5xl font-medium uppercase leading-[0.94] text-white sm:text-6xl lg:text-[3.25rem] xl:text-[4.1rem]">
               Different Ideas.
               <br />
               <span className="text-[#c9a14a]">A Shared Eye.</span>
@@ -171,19 +155,12 @@ export function PortfolioHero({ activeSlug = null, onMagazineSelect }) {
 
             <div className="mt-9 flex flex-wrap items-center gap-8">
               <a
-                href="#portfolio-gallery"
-                className="border border-[#c9a14a] px-7 py-4 text-xs font-medium uppercase tracking-[0.28em] text-[#c9a14a] transition hover:bg-[#c9a14a] hover:text-black"
+                href="/portfolio"
+                className="inline-flex items-center gap-3 border border-[#c9a14a] px-7 py-4 text-xs font-medium uppercase text-[#c9a14a] transition hover:bg-[#c9a14a] hover:text-black"
               >
-                Explore the Brands
+                View Photography <ArrowUpRight size={16} aria-hidden="true" />
               </a>
 
-              <div className="flex items-center gap-4 text-sm uppercase tracking-[0.25em] text-white/55">
-                <span className="text-[#c9a14a]">01</span>
-                <span className="h-px w-14 bg-gradient-to-r from-[#c9a14a] to-white/20 sm:w-20" />
-                <span>05</span>
-                <ChevronLeft className="h-4 w-4 text-white/70 sm:h-5 sm:w-5" />
-                <ChevronRight className="h-4 w-4 text-white/70 sm:h-5 sm:w-5" />
-              </div>
             </div>
           </motion.div>
 

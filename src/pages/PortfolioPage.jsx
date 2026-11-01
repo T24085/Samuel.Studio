@@ -7,6 +7,8 @@ import { PortfolioBackdrop } from '../components/PortfolioBackdrop'
 import { PortfolioHero } from '../components/PortfolioHero'
 import { SEO } from '../components/SEO'
 import { portfolioCollections } from '../data/portfolio'
+import { BrandCover } from '../components/BrandCover'
+import { BrandConceptFigure } from '../components/BrandConceptFigure'
 
 const tileRatios = [0.82, 1.05, 0.92, 1.18]
 
@@ -23,10 +25,6 @@ function ImageTile({ item, index }) {
         decoding="async"
         className="h-full w-full object-contain p-3 transition duration-700 group-hover:scale-[1.01] sm:p-4"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.42))] opacity-70 transition duration-500 group-hover:opacity-50" />
-      <div className="absolute inset-x-0 bottom-0 px-3 py-3">
-        <p className="text-[0.58rem] uppercase tracking-[0.28em] text-ivory/74">{item.title}</p>
-      </div>
     </div>
   )
 }
@@ -44,6 +42,9 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
       onClick={onClose}
     >
       <motion.section
+        role="dialog"
+        aria-modal="true"
+        aria-label={collection.title}
         className="relative h-[100dvh] w-full overflow-y-auto bg-[linear-gradient(180deg,rgba(15,14,12,0.98),rgba(5,5,5,0.98))] lg:overflow-hidden"
         initial={reduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.98, y: 18 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -54,23 +55,20 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
         <button
           type="button"
           onClick={onClose}
-          className="fixed right-4 top-4 z-[130] inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/70 px-4 py-2 text-[0.62rem] uppercase tracking-[0.28em] text-ivory/86 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-md transition hover:border-gold/40 hover:text-ivory sm:right-6 sm:top-6 lg:right-8 lg:top-8"
+          className="fixed right-3 top-3 z-[130] inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/80 text-ivory transition hover:border-gold/40 sm:right-6 sm:top-6 lg:right-8 lg:top-8"
+          aria-label="Close brand preview"
+          title="Close brand preview"
         >
           <X className="h-4 w-4" />
-          Back to selection
         </button>
 
         <div className="grid h-full min-h-full gap-0 lg:grid-cols-[0.78fr_1.22fr] lg:overflow-hidden">
           <motion.div
-            className="relative min-h-[40svh] overflow-hidden border-b border-white/10 bg-[#080706] lg:min-h-0 lg:h-full lg:border-b-0 lg:border-r"
+            className="relative min-h-[60svh] overflow-hidden border-b border-white/10 bg-[#080706] lg:min-h-0 lg:h-full lg:border-b-0 lg:border-r"
           >
-            <img
-              src={collection.coverSrc}
-              alt={collection.coverAlt}
-              className="absolute inset-0 h-full w-full object-contain object-center"
-              loading="eager"
-              decoding="async"
-            />
+            <div className="absolute inset-0 flex items-center justify-center px-6 pb-6 pt-16 lg:p-8">
+              <div className="brand-panel-cover"><BrandCover collection={collection} loading="eager" /></div>
+            </div>
             <div
               aria-hidden="true"
               className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.04),rgba(0,0,0,0.1)_65%,rgba(0,0,0,0.18))] opacity-90"
@@ -83,7 +81,7 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
                   'radial-gradient(circle at 18% 18%, rgba(198,161,91,0.12), transparent 28%), radial-gradient(circle at 78% 20%, rgba(255,255,255,0.1), transparent 18%)',
               }}
             />
-            <div className="absolute inset-x-0 top-0 flex items-center justify-between px-6 py-5 sm:px-8 sm:py-6">
+            <div className="sr-only">
               <div className="flex items-center gap-3 text-[0.64rem] uppercase tracking-[0.34em] text-ivory/86">
                 <span>{collection.eyebrow}</span>
                 <span className="text-white/20">/</span>
@@ -93,7 +91,7 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
                 Cover
               </span>
             </div>
-            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+            <div className="sr-only">
               <div className="max-w-xl">
                 <p className="text-[0.62rem] uppercase tracking-[0.34em] text-parchment/72">
                   Magazine cover / {collection.title}
@@ -118,6 +116,7 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
               </h2>
               <p className="mt-4 max-w-xl text-[1rem] leading-7 text-parchment/74">{collection.description}</p>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-parchment/66">{collection.body}</p>
+              {collection.platformStatus ? <p className="mt-4 text-sm text-gold/80">{collection.platformStatus}</p> : null}
 
               <div className="mt-5 flex flex-wrap gap-3">
                 <Link
@@ -140,22 +139,16 @@ function FullscreenMagazinePanel({ collection, onClose, reduceMotion }) {
                 ) : null}
               </div>
 
-              <div className="mt-5 flex flex-wrap gap-2">
-                {collection.albumSlugs.map((slug) => (
-                  <span
-                    key={slug}
-                    className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-[0.6rem] uppercase tracking-[0.28em] text-parchment/72"
-                  >
-                    {slug}
-                  </span>
-                ))}
-              </div>
-
-              <div className="mt-5 grid grid-cols-2 gap-3 pb-8 sm:grid-cols-4 lg:pb-10">
+              <section aria-label={collection.comingSoon ? 'Brand concept' : 'Sample photographs'} className="mt-6 pb-8 lg:pb-10">
+                <h3 className="text-sm font-semibold text-ivory">{collection.comingSoon ? 'The direction' : 'Sample photographs'}</h3>
+                {collection.comingSoon ? <BrandConceptFigure collection={collection} /> : (
+                <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {preview.map((item, previewIndex) => (
                   <ImageTile key={item.id} item={item} index={previewIndex} />
                 ))}
-              </div>
+                </div>
+                )}
+              </section>
             </div>
           </div>
         </div>

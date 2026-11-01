@@ -5,6 +5,7 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { PortfolioBackdrop } from '../components/PortfolioBackdrop'
 import { Lightbox } from '../components/Lightbox'
 import { SEO } from '../components/SEO'
+import { BrandConceptFigure } from '../components/BrandConceptFigure'
 import { portfolioAlbums, portfolioCollectionsBySlug } from '../data/portfolio'
 
 const tileRatios = [0.84, 1.08, 0.92, 1.18, 0.96, 1.12]
@@ -25,10 +26,6 @@ function CollectionTile({ item, index, onOpen }) {
         decoding="async"
         className="h-full w-full object-contain p-3 transition duration-700 group-hover:scale-[1.01] sm:p-4"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.42))] opacity-70 transition duration-500 group-hover:opacity-45" />
-      <div className="absolute inset-x-0 bottom-0 px-3 py-3">
-        <p className="text-[0.58rem] uppercase tracking-[0.28em] text-ivory/74">{item.title}</p>
-      </div>
     </button>
   )
 }
@@ -49,13 +46,18 @@ export function PortfolioCollectionPage() {
     return (
       <>
         <SEO title={collection.title} description={collection.description} path={collection.collectionLink} />
-        <section className="studio-shell min-h-[70svh] pb-24 pt-32 text-ivory">
+        <main className="studio-shell min-h-[70svh] pb-24 pt-32 text-ivory">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+          <div>
           <p className="text-xs uppercase tracking-[0.3em] text-gold">Coming Soon</p>
           <h1 className="mt-6 font-display text-5xl sm:text-6xl">{collection.title}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-parchment/80">{collection.body}</p>
           <p className="mt-4 text-base text-parchment/80">The first collection is in development.</p>
           <Link to="/brands" className="mt-8 inline-block border-b border-gold pb-2 text-gold">Back to Brands</Link>
-        </section>
+          </div>
+          <BrandConceptFigure collection={collection} />
+          </div>
+        </main>
       </>
     )
   }
@@ -174,6 +176,7 @@ export function PortfolioCollectionPage() {
                         <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </a>
                     ) : null}
+                  {collection.platformStatus ? <p className="text-sm text-gold/80">{collection.platformStatus}</p> : null}
                   </div>
                 </div>
               </aside>
