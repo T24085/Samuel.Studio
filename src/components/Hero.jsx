@@ -26,7 +26,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
 
-      <div className="hero-socials absolute inset-x-0 top-4 z-10 sm:top-6">
+      <div className="hero-socials pointer-events-none absolute inset-x-0 top-4 z-20 [&_a]:pointer-events-auto sm:top-6">
         <div className="studio-shell"><HeroSocialLinks /></div>
       </div>
 

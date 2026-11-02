@@ -1,3 +1,9 @@
+@media (max-width: 639px) {
+  #studio-hero .hero-content {
+    padding-top: 11rem;
+  }
+}
+
 @media (max-height: 850px) and (min-width: 640px) {
   #studio-hero .hero-content {
     min-height: calc(100svh - 15rem);

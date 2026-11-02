@@ -33,7 +33,7 @@ export function HeroSocialLinks() {
       initial={reduceMotion ? false : { opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.55, ease: 'easeOut', delay: 0.15 }}
-      className="flex w-full shrink-0 items-center justify-end gap-2"
+      className="flex w-full shrink-0 flex-col items-end justify-end gap-2 sm:flex-row sm:items-center"
     >
       {site.socials.filter((social) => socialIcons[social.label]).map((social) => {
         const Icon = socialIcons[social.label]

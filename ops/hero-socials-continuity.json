@@ -1,0 +1,15 @@
+{
+  "date":"2026-11-01",
+  "status":"Sam approved publication on 2026-11-01; awaiting deployment verification",
+  "rootCause":"Hero socials and later hero-content shared z-index 10. The later full-size content layer painted above the social links and intercepted taps. Reproduced using elementFromPoint at the center of all three live links on 390px and 1440px viewports.",
+  "fix":"Raise the hero-socials wrapper to z-index 20; wrapper pointer-events none, descendant anchors pointer-events auto. Preserve 44px targets, native links, security attributes, URLs and other hero controls.",
+  "destinations":{
+    "Instagram":"https://www.instagram.com/ssp.capture/",
+    "TikTok":"https://www.tiktok.com/@samuelcary.art",
+    "Facebook":"https://www.facebook.com/share/1Dma2oLKVa/?mibextid=wwXIfr"
+  },
+  "destinationEvidence":"Hero Instagram matches working footer Instagram. Existing URLs unchanged. Native touch/click popup destinations verified with intercepted responses, not account authentication or platform app-handoff testing; account ownership/availability not independently confirmed.",
+  "layout":"Sam requested a vertical-version image to review on his phone. Local preview now stacks icons vertically at the right below 640px and retains horizontal layout on larger screens. Mobile hero content reserves enough top space to prevent the final icon overlapping the headline. Phone image saved as hero-socials-vertical-390.png. All three links still activate, desktop row unchanged, and small-screen spacing verified at 320/390/768/1440 widths. This is not approval to publish.",
+  "verification":"Seven focused tests and production build passed (existing chunk-size warning). Actual touch/click activation for all three links, correct popup URLs, 44px targets, footer URL match, unaffected hero CTAs and no overflow/page errors verified at 320,390,768,1440 widths. No forms, follows, messages or account changes.",
+  "publication":"Sam explicitly approved pushing the vertical-phone/horizontal-desktop social layout and link tap fix on 2026-11-01. Publish only Hero.jsx, HeroSocialLinks.jsx, hero.css, focused social tests and this record. Earlier preview-only wording is historical. Pending Nova, other Ops notes, personal hub and deferred Runway album remain excluded."
+}
