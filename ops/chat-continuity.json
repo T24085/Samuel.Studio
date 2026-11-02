@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-31",
+  "status": "Sam approved publication on 2026-11-02; awaiting deployment verification",
+  "publicationApproval": "Publish only the existing Nova frontend changes, context-aware fallback, focused tests and this continuity record. Other pending Ops notes, personal hub links and Runway album to-do remain excluded.",
+  "scope": "Conversation-aware Nova fallback and stronger model instructions in Samuel Studio frontend. No shared assistant backend, model deployment, transcript destination or credentials changed.",
+  "requestFlow": "Frontend sends full role/content conversation and model-candidate list to the unchanged configured assistant endpoint. One frontend request per turn, bounded at 15 seconds instead of looping over model candidates with up to 60 seconds each. Backend replies flagged usedFallback are replaced with local conversation-aware fallback; transport failures also use local fallback. Ordinary model replies still depend on backend respecting systemPrompt and are not overwritten.",
+  "improvements": [
+    "Dating-profile requests no longer get founder-oriented fallback or repeat the already-known intended use",
+    "Fallback retains purpose, timing, location and style across turns",
+    "Relative dates, long answers and requests for location suggestions advance intake",
+    "Events get event acknowledgement; web projects get development-site handoff",
+    "A transcript logging failure cannot append a second assistant reply",
+    "Book jacket is not mistaken for an instruction to book"
+  ],
+  "verification": "45 focused Node tests and production build passed. Six-turn browser checks passed on 1440x1000 and 390x844: dating-purpose acknowledgement, retained six-week timing, request for location suggestions advances intake, natural/relaxed styling reaches handoff, HTTP 503 triggers only one frontend attempt and context-aware pricing response, ordinary model reply preserved. Seven mocked transcript failures per viewport produce no duplicate assistant replies. System prompt and full conversation included. Every POST intercepted; zero real transcripts, emails or customer inquiries sent. UI close and document overflow checks passed.",
+  "limitations": "Fallback is deterministic keyword-based intake, not unrestricted natural-language understanding. Live model backend behaviour and server-side transcript routing were not tested or changed. No automatic booking, availability or pricing promises.",
+  "next": "Verify the deployed frontend with the same fully intercepted synthetic tests. Actual backend model compliance and server-side transcript delivery remain separate checks requiring approved external testing."
+}

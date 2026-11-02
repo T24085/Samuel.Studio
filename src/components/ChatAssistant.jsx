@@ -9,9 +9,10 @@ import {
   ollamaModelCandidates,
 } from '../data/assistant'
 import { site, siteKey } from '../data/site'
+import { buildFallbackReply as conversationFallback } from '../lib/chatFallback'
 
 const storageKey = 'samuel-studio-chat-assistant'
-const requestTimeoutMs = 60000
+const requestTimeoutMs = 15000
 
 function createId() {
   if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
@@ -89,75 +90,11 @@ function saveChatState(state) {
   window.localStorage.setItem(storageKey, JSON.stringify(state))
 }
 
-function buildFallbackReply(userText) {
-  const query = userText.toLowerCase()
-
-  if (query.includes('price') || query.includes('pricing') || query.includes('cost')) {
-    return [
-      'Pricing depends on the session type, location, and deliverables, so I would rather scope it correctly than guess.',
-      'What kind of session are you planning, and when do you want to shoot?',
-    ].join(' ')
-  }
-
-  if (
-    query.includes('campaign') ||
-    query.includes('editorial') ||
-    query.includes('lookbook') ||
-    query.includes('launch') ||
-    query.includes('brand')
-  ) {
-    return [
-      'Editorial & Campaign Work is the best fit for launch visuals, lookbooks, and brand-led image sets.',
-      'What is the launch date, and what do you want the images to do?',
-    ].join(' ')
-  }
-
-  if (
-    query.includes('personal brand') ||
-    query.includes('founder') ||
-    query.includes('speaker') ||
-    query.includes('linkedin') ||
-    query.includes('profile') ||
-    query.includes('headshot')
-  ) {
-    return [
-      'Personal Identity is the best fit for founder portraits, speaker images, and polished profile work.',
-      'What is the audience, and where will these images be used?',
-    ].join(' ')
-  }
-
-  if (query.includes('story') || query.includes('artist') || query.includes('narrative') || query.includes('creative')) {
-    return [
-      'Visual Story Projects are ideal when the images need to feel sequenced and intentional.',
-      'What is the story, and what kind of mood should I note?',
-    ].join(' ')
-  }
-
-  if (
-    query.includes('family') ||
-    query.includes('couple') ||
-    query.includes('portrait') ||
-    query.includes('milestone') ||
-    query.includes('private')
-  ) {
-    return [
-      'Private Portraits are the right fit for individuals, couples, families, and milestone sessions.',
-      'What date and location should I put on the brief?',
-    ].join(' ')
-  }
-
-  if (query.includes('booking') || query.includes('contact') || query.includes('email')) {
-    return `Use the booking page or email ${site.email}. What kind of session are you planning?`
-  }
-
-  return 'Tell me what kind of session you need, what the images are for, and when you want to shoot.'
-}
-
 function requestAssistantReply(payload) {
   let lastError = null
 
   return Promise.resolve().then(async () => {
-    for (const model of ollamaModelCandidates) {
+    for (const model of ollamaModelCandidates.slice(0, 1)) {
       const controller = new AbortController()
       const timeoutId = window.setTimeout(() => controller.abort(), requestTimeoutMs)
 
@@ -191,7 +128,7 @@ function requestAssistantReply(payload) {
 
         if (content) {
           return {
-            content,
+            content: data.usedFallback ? conversationFallback(payload.messages, site.email) : content,
             model: data.model?.trim() || model,
             usedFallback: Boolean(data.usedFallback),
           }
@@ -204,7 +141,7 @@ function requestAssistantReply(payload) {
     }
 
     return {
-      content: buildFallbackReply(payload.userText),
+      content: conversationFallback(payload.messages, site.email),
       model: 'fallback',
       usedFallback: true,
       error: lastError instanceof Error ? lastError.message : 'Assistant request failed.',
@@ -403,12 +340,14 @@ export function ChatAssistant() {
         model: reply.model,
         clientProfile,
         messages: updatedMessages,
+      }).catch(() => {
+        // A logging outage must not append a second assistant reply.
       })
     } catch (requestError) {
       const assistantMessage = {
         id: createId(),
         role: 'assistant',
-        content: buildFallbackReply(text),
+        content: conversationFallback(nextMessages, site.email),
         createdAt: Date.now(),
         source: 'fallback',
         model: 'fallback',
