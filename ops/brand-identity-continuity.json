@@ -1,0 +1,30 @@
+{
+  "status": "Sam approved publication on 2026-11-01; awaiting deployment verification",
+  "date": "2026-11-01",
+  "relatedSites": {"colombia":{"url":"https://colombia.samuel.studio/","confirmedBySam":"Current Colombia site; Sam notes it redirects slightly.","readOnlyCheck":"Normal TLS curl redirect-following check returned HTTP 200, final URL https://colombia.samuel.studio/. No HTTP-level redirect observed in this check; client-side or path-specific behavior not inspected. No DNS, hosting, link or Colombia repo changes made."}},
+  "scope": "Samuel Studio shared header/footer logo only; pending Nova, Ops and personal hub work unchanged.",
+  "identity": {
+    "brand": "Samuel Studio",
+    "descriptor": "Photography & Creative Direction",
+    "latestLogoRefinement": "Sam found the near-full-width semibold descriptor too attention-grabbing and asked to preserve Taylor's reflected-light effect. Switched to official Montserrat regular 400, retaining warm-silver #B7B1A3 and centered container-relative sizing (approximately 92.3% of signature width). No horizontal stretching, extra tracking or blur; lighter stroke reduces density. Font is self-hosted under the existing SIL OFL license. Added a subtle 13-second highlight cycle clipped by the original signature alpha mask; original gold image remains unchanged underneath. No floating/skew/distortion, descriptor stays still, unsupported-mask fallback is the original static image, reduced-motion disables the overlay. 43 focused tests and production build passed. 320/390/1440 layout checks passed; desktop/mobile animation pixel checks found 1072/1068 changed signature pixels, zero changes outside letter edges after a two-pixel antialiasing allowance; descriptor screenshots unchanged between animation phases. Preview only, not published. Supersedes historical semibold/static notes below.",
+    "descriptorColorRefinement": "Sam approved a softer warm-silver descriptor (#B7B1A3), with a restrained lighter silver hover (#D1CBBC). Supersedes the muted-gold color in the historical descriptorStyle note. Signature remains original gold. Width, geometric typography and centered alignment unchanged; no blur, transparency or metallic effect. Eight focused tests and desktop/mobile checks passed. Local preview only; not published.",
+    "descriptorStyle": "Sam rejected the initial plain gray all-caps body-text treatment and preferred lettering like the PHOTOGRAPHY line in his original logo. Upright geometric Montserrat semibold, muted gold, centered. Sam then selected option 1: nearly full-width centered descriptor. Type is sized relative to the fixed logo container, not stretched or viewport-scaled; measured text width approximately 94.1% of signature width, with even margins, at 320/390/1440 widths. No clipping, menu overlap or tall header. No italic/script added. This is an inspired typographic match, not a claim to have identified the original font. Self-hosted official Google Fonts TTF plus SIL OFL license under public/fonts; no new external font request. Eight focused tests and production build passed. Local preview refreshed for Sam, not published.",
+    "rationale": "Sam approved replacing the font-based site lettering with his actual designed gold signature. Photography remains the explicit primary offer; creative direction covers the visual planning and direction of a project. No claim of unrelated services added by this descriptor.",
+    "asset": "public/photos/brand-covers/samuel-studio-signature.webp",
+    "source": "Samuel.Colombia/Samuel.Studio, Columbia/samuel-studio-maximalist/assets/Samuel.StudioLogo.png",
+    "sourceSHA256": "4f911cfb8aa95540e54717810fae0470db992522eb69c903caec3beda7a17a7f",
+    "handling": "Reuses the already published transparent lossless signature derivative. No AI logo recreation, recoloring or source-file edits. Main navigation and footer share the same Logo component. About-page decorative lettering left unchanged."
+  },
+  "instagram": {
+    "confirmedBySam": "SSP stands for Samuel Studio Photography",
+    "currentHandle": "ssp.capture",
+    "observedBySam": "Account seems to appear sooner as SSP is typed into Instagram search over time.",
+    "interpretation": "Observation does not establish a universal ranking or an algorithmic guarantee. Instagram's 2021 explanation, reported by Social Media Today, describes text matching, individual activity and popularity as signals; current precise weighting is not verified.",
+    "recommendation": "Keep current handle for now; consider making Samuel Studio Photography explicit in the display name. Reserve capture/capturing for supporting photography copy instead of broadening the new service descriptor. Any eventual handle change needs a deliberate naming/link audit and separate Sam approval.",
+    "accountChangesMade": false,
+    "websiteSocialLinkChanged": false,
+    "research": "https://www.socialmediatoday.com/news/instagram-outlines-how-its-search-algorithms-work-and-how-you-can-optimize/605596/"
+  },
+  "verification": "42 focused tests passed; production build passed with existing chunk-size warning. Responsive header/footer checks cover 320,390,768,844 landscape,1024,1280,1440,1920 widths: signature decoded, descriptor fits, logo/home links accessible, menu remains clear and operates, no horizontal overflow or page errors. Desktop/mobile screenshots reviewed.",
+  "publication": "Sam explicitly approved pushing the original-signature main logo, regular-weight warm-silver descriptor and masked shimmer live on 2026-11-01. Stage only Logo.jsx, logo.css, the regular Montserrat font/license, logo tests and this identity record. Previous preview/static/semibold notes are historical. Pending Nova changes, Ops-routing notes, personal hub title links and the deferred Runway to-do remain excluded."
+}
