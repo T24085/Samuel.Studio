@@ -63,6 +63,13 @@ export function Footer() {
             <Link to="/refer" className="text-sm text-parchment/72 transition hover:text-ivory">
               Referral Partners
             </Link>
+            <a
+              href={site.personalWebsite}
+              className="inline-flex w-fit items-center gap-2 text-sm text-parchment/72 transition hover:text-ivory"
+            >
+              Samuel Cary
+              <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
           </div>
         </motion.div>
         <motion.div

@@ -1,9 +1,10 @@
-import { useEffect, useId, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 import { SEO } from '../components/SEO'
 import { site } from '../data/site'
-import samPortrait from '../../Sam.png'
+import samPortrait from '../../sam-cary.webp'
 
 export const aboutMarqueeItems = [
   'Portraits',
@@ -62,78 +63,6 @@ const publicationFeatures = [
     caption: 'Published fashion editorial with cover-story presentation.',
   },
 ]
-
-function SignatureWord({ className = '' }) {
-  const reduceMotion = useReducedMotion()
-  const gradientId = useId().replace(/:/g, '')
-  const maskId = useId().replace(/:/g, '')
-
-  if (reduceMotion) {
-    return (
-      <div aria-hidden="true" className={`signature-fallback logo-script ${className}`}>
-        Samuel Studio
-      </div>
-    )
-  }
-
-  return (
-    <div aria-hidden="true" className={`signature-mark ${className}`}>
-      <svg viewBox="0 0 1600 320" className="h-full w-full overflow-visible">
-        <defs>
-          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#fdf5db" />
-            <stop offset="18%" stopColor="#c6a15b" />
-            <stop offset="36%" stopColor="#f7e8c8" />
-            <stop offset="56%" stopColor="#a88443" />
-            <stop offset="74%" stopColor="#f5f0e6" />
-            <stop offset="100%" stopColor="#c6a15b" />
-          </linearGradient>
-          <mask id={maskId}>
-            <motion.rect
-              x="0"
-              y="0"
-              height="100%"
-              fill="white"
-              className="signature-mask-wipe"
-              initial={{ width: 0 }}
-              whileInView={{ width: 1600 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 1.9, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
-            />
-          </mask>
-        </defs>
-        <motion.text
-          x="50%"
-          y="58%"
-          textAnchor="middle"
-          style={{ fontFamily: 'var(--font-script)', fontSize: '156px' }}
-          className="signature-outline"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 0.44, y: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
-          transition={{ duration: 0.85, ease: 'easeOut' }}
-        >
-          Samuel Studio
-        </motion.text>
-        <motion.text
-          x="50%"
-          y="58%"
-          textAnchor="middle"
-          style={{ fontFamily: 'var(--font-script)', fontSize: '156px' }}
-          fill={`url(#${gradientId})`}
-          mask={`url(#${maskId})`}
-          className="signature-fill"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.35 }}
-          transition={{ duration: 0.4, delay: 0.4 }}
-        >
-          Samuel Studio
-        </motion.text>
-      </svg>
-    </div>
-  )
-}
 
 function SplitRailLink({ label, href, active = false }) {
   return (
@@ -266,10 +195,6 @@ export function AboutPage() {
               transition={reduceMotion ? { duration: 0 } : { duration: 0.85, ease: 'easeOut', delay: 0.08 }}
               className="relative"
             >
-              <div className="mb-5 h-[clamp(48px,7vh,76px)] w-[min(76vw,520px)]">
-                <SignatureWord className="h-full w-full opacity-70" />
-              </div>
-
               <div className="flex flex-wrap gap-2.5">
                 {publicationFeatures.map((item) => (
                   <span className="about-proof-pill" key={item.title}>{item.title}</span>
@@ -287,13 +212,20 @@ export function AboutPage() {
                   and small details that can make a photograph feel special.
                 </p>
 
-                <figure className="about-author-card">
-                  <img src={samPortrait} alt="Samuel Cary" />
-                  <figcaption>
+                <a
+                  href={site.personalWebsite}
+                  className="about-author-card group hover:border-gold/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+                  aria-label="Visit Samuel Cary's personal site"
+                >
+                  <img src={samPortrait} alt="" className="rounded-md !object-cover object-[50%_30%]" />
+                  <div>
                     <span>Photographer</span>
                     <strong>Samuel Cary</strong>
-                  </figcaption>
-                </figure>
+                    <div className="mt-2 flex items-center gap-1 text-xs text-gold-100">
+                      Personal site <ArrowUpRight size={13} aria-hidden="true" />
+                    </div>
+                  </div>
+                </a>
               </div>
 
               <div className="mt-6 max-w-[40rem] space-y-4 text-base leading-8 text-ivory/76">
@@ -331,6 +263,17 @@ export function AboutPage() {
                   className="about-action-ghost"
                 >
                   Instagram
+                </a>
+              </div>
+
+              <div className="mt-8 max-w-[40rem] border-t border-white/10 pt-5 text-sm leading-7 text-ivory/76">
+                <p>Outside the studio, I build websites and work on technology projects.</p>
+                <a
+                  href={site.personalWebsite}
+                  className="inline-flex min-h-11 items-center gap-2 text-gold-100 underline underline-offset-4 hover:text-ivory"
+                >
+                  More about Samuel Cary
+                  <ArrowUpRight size={16} aria-hidden="true" />
                 </a>
               </div>
             </motion.div>

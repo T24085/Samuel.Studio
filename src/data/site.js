@@ -10,6 +10,7 @@ export const site = {
   email: 'ops@ondefiant.com',
   phone: '832-310-9880',
   website: 'https://www.samuel.studio',
+  personalWebsite: 'https://me.samuel.studio/',
   socials: [
     { label: 'Instagram', href: 'https://www.instagram.com/ssp.capture/', external: true },
     { label: 'TikTok', href: 'https://www.tiktok.com/@samuelcary.art', external: true },
